@@ -806,6 +806,8 @@ def run_block(cfg: RunnerConfig, mask: MaskSpec, n: int, ppm: int, topo: str, se
             "MASK_NAME": mask.name,
             "MASK_FILE": str(mask.file.resolve()),
             "AGENT_LOG_PATH": str((work_dir / "agent.log").resolve()),
+            # Avoid slow git describe/status during Contiki builds on mounted worktrees.
+            "RELSTR": os.environ.get("RELSTR", "local"),
             # avoid BLAS over-subscription
             "OMP_NUM_THREADS": "1",
             "OPENBLAS_NUM_THREADS": "1",
