@@ -100,7 +100,7 @@ function printNNMaxSummaryOnce(){
 }
 
 // ======================================================================
-//  MASK YAML LOADER (supports 13 metrics)
+//  MASK YAML LOADER (supports 12 metrics)
 // ======================================================================
 function loadMaskYaml(path){
   var Files = Java.type("java.nio.file.Files");
@@ -122,10 +122,9 @@ function loadMaskYaml(path){
       // LINK
       etx:false, rssi:false, pfi:false,
       // NODE
-      re:false, bdi:false, qo:false, qlr:false, hc:false,
-      si:false, tv:false, pc:false,
+      re:false, qo:false, mpiq:false, qlr:false, si:false, cc:false,
       // NETWORK
-      wr:false, str:false
+      hc:false, str:false, sr:false
     }
   };
 
@@ -170,9 +169,9 @@ function loadMaskYaml(path){
 // FIXED FEATURE ORDER (must match node.c + agent.java)
 // ======================================================================
 var ORDER = [
-  "etx","rssi","pfi",        // LINK (3)
-  "re","bdi","qo","qlr","hc","si","tv","pc",   // NODE (8)
-  "wr","str"                // NETWORK (2)
+  "etx","rssi","pfi",                    // LINK (3)
+  "re","qo","mpiq","qlr","si","cc",      // NODE (6)
+  "hc","str","sr"                        // NETWORK (3)
 ];
 
 // ======================================================================
@@ -315,9 +314,14 @@ function rankToHops(rank){
   if(rank<RPL_ROOT_RANK) return 0;
   return Math.floor((rank - RPL_ROOT_RANK)/RPL_MIN_HOPRANKINC);
 }
+// Calibrated to this project's actual UDGM radio config (transmitting_range
+// 150m, interference_range 160m -> SS_STRONG=-10dBm .. SS_WEAK=-95dBm, per
+// AbstractRadioMedium/UDGM). The old (dbm+100)/7 mapping assumed -100..-30dBm,
+// which saturated at 10 for anything within ~35m and lost resolution exactly
+// where multiple close candidates need distinguishing.
 function rssiTo0to10(dbm){
   if(dbm===0x7fff || dbm===32767) return 0; // unknown sentinel
-  var v=(dbm+100)/7.0;
+  var v=(dbm+95)/8.5;
   if(v<0) v=0; if(v>10) v=10;
   return v;
 }
@@ -445,12 +449,12 @@ function broadcastGlobalStop(triggerNodeId){
 }
 
 // ======================================================================
-// BUILD FEATURE MATRIX (13 metrics, masked, PFI per-parent)
+// BUILD FEATURE MATRIX (12 metrics, masked, PFI per-parent)
 // ======================================================================
 function buildCandidateMatrixFor(mote, candIds, candEtx){
 
   var S=[];
-  var hcArr=[], reArr=[], qlrArr=[];
+  var hcArr=[], reArr=[], qoArr=[];
   var rssiArr = [];
   try { rssiArr = getI16Array(mote,"status_link_rssi_dbm",K); }
   catch(e){ rssiArr = [0x7fff,0x7fff,0x7fff,0x7fff]; }
@@ -469,23 +473,22 @@ function buildCandidateMatrixFor(mote, candIds, candEtx){
       switch(j){
 
         // LINK --------------------------------------
-        case 0: val = candEtx[r]; break;                                              // ETX
+        case 0: val = candEtx[r]; break;                                              // ETX (pure link ETX)
         case 1: val = rssiTo0to10((r < rssiArr.length) ? rssiArr[r] : 0x7fff); break; // RSSI
-        case 2: val = (r < pfiArr.length) ? pfiArr[r] : 0.0; break;                  // PFI
+        case 2: val = (r < pfiArr.length) ? pfiArr[r] : 0.0; break;                  // PFI (windowed)
 
         // NODE --------------------------------------
-        case 3:  val = pm ? getDouble0(pm,"status_residual_energy") : 0; break;
-        case 4:  val = pm ? getDouble0(pm,"status_bdi") : 0; break;
-        case 5:  val = pm ? getInt320(pm,"status_qo") : 0; break;
-        case 6:  val = pm ? getDouble0(pm,"status_qlr") : 0; break;
-        case 7:  val = rankToHops(pm ? getInt160(pm,"status_rank") : 0); break;
-        case 8:  val = pm ? getDouble0(pm,"status_si") : 0; break;
-        case 9:  val = pm ? getDouble0(pm,"status_tv") : 0; break;
-        case 10: val = pm ? getInt160(pm,"status_pc") : 0; break;
+        case 3: val = pm ? getDouble0(pm,"status_residual_energy") : 0; break;        // RE
+        case 4: val = pm ? getInt320(pm,"status_qo") : 0; break;                      // QO
+        case 5: val = pm ? getInt320(pm,"status_mpiq") : 0; break;                    // MPIQ
+        case 6: val = pm ? getDouble0(pm,"status_qlr") : 0; break;                    // QLR (windowed)
+        case 7: val = pm ? getDouble0(pm,"status_si") : 0; break;                     // SI (windowed)
+        case 8: val = pm ? getInt160(pm,"status_cc") : 0; break;                      // CC (was PC)
 
         // NETWORK -----------------------------------
-        case 11: val = pm ? getDouble0(pm,"status_wr") : 0; break;
-        case 12: val = pm ? getDouble0(pm,"status_str") : 0; break;
+        case 9:  val = rankToHops(pm ? getInt160(pm,"status_rank") : 0); break;        // HC
+        case 10: val = pm ? getDouble0(pm,"status_str") : 0; break;                    // STR (real stretch)
+        case 11: val = pm ? getInt320(pm,"status_sr") : 0; break;                      // SR
       }
 
       row.push(val);
@@ -493,13 +496,16 @@ function buildCandidateMatrixFor(mote, candIds, candEtx){
 
     S.push(Java.to(row,"double[]"));
 
-    // Reward arrays (hc, re, qlr) from parent snapshot
+    // Reward arrays (hc, re, qo) from parent snapshot.
+    // qo = status_qo (live queue occupancy, 0..QUEUEBUF_CONF_NUM), matching
+    // the paper's QU(a) = q/Q congestion term (Eq. 12) -- NOT status_qlr,
+    // which is a cumulative-since-boot loss ratio the paper doesn't use here.
     if(pm){
       hcArr.push(rankToHops(getInt160(pm,"status_rank")));
       reArr.push(getDouble0(pm,"status_residual_energy"));
-      qlrArr.push(getDouble0(pm,"status_qlr"));
+      qoArr.push(getInt320(pm,"status_qo"));
     } else {
-      hcArr.push(0); reArr.push(0); qlrArr.push(0);
+      hcArr.push(0); reArr.push(0); qoArr.push(0);
     }
   }
 
@@ -507,7 +513,7 @@ function buildCandidateMatrixFor(mote, candIds, candEtx){
     SArr  : Java.to(S,"double[][]"),
     hcArr : Java.to(hcArr,"double[]"),
     reArr : Java.to(reArr,"double[]"),
-    qlrArr: Java.to(qlrArr,"double[]")
+    qoArr : Java.to(qoArr,"double[]")
   };
 }
 
@@ -523,7 +529,10 @@ function decideAndSetParentFor(mote){
   if(nn<=0){ setInt8(mote,"agent_waiting",0); return; }
 
   var ids = getU8Array(mote,"status_neighbor_ids",K);
-  var exs = getU16Array(mote,"status_etx_x100",K);
+  // status_link_etx_x100 = pure per-link ETX (the real ETX feature).
+  // status_etx_x100 (path-cost proxy) is still exported by node.c for its own
+  // internal top-K ranking, but is no longer read here.
+  var exs = getU16Array(mote,"status_link_etx_x100",K);
 
   var candIds=[], candEtx=[];
   for(var i=0;i<nn && i<K;i++){       // safety: never exceed K
@@ -568,7 +577,7 @@ function decideAndSetParentFor(mote){
       Java.to(candIds,"int[]"),
       mats.hcArr,
       mats.reArr,
-      mats.qlrArr
+      mats.qoArr
   );
 
   var idx = (typeof choice==="number") ? (choice|0) : 0;
@@ -607,7 +616,7 @@ function assignParentsAll(){
 
 var cfg  = loadMaskYaml(MASK_PATH);
 var mask = cfg ? buildMaskFromConfig(cfg)
-               : Java.to([true,false,false,false,false,false,false,false,false,false,false,false,false],
+               : Java.to([true,false,false,false,false,false,false,false,false,false,false,false],
                          "boolean[]");
 
 var agent = new Agent(K, mask, INIT_ENERGY);
@@ -636,8 +645,13 @@ while(true){
       }
       continue;
     }
-    agent.endPhase();
+    // assignParentsAll() first: decide() closes each mote's previous-phase
+    // episode using this phase's fresh metrics (the actual outcome of that
+    // decision), then opens a new one for the choice made now. endPhase()
+    // must run after, so training samples from those freshly-closed
+    // transitions rather than stale ones.
     assignParentsAll();
+    agent.endPhase();
     printDecisionSummaryOnce();
 	  continue;
 	}

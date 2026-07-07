@@ -1,25 +1,24 @@
 run:
-  id: solo_bdi
-  notes: "SOLO feature mask: only bdi enabled"
+  id: solo_sr
+  notes: "SOLO feature mask: only sr enabled"
 
 features:
   all: false
 
   # LINK
   etx:  false
-  rssi: false
+  rssi:  false
   pfi:  false
 
   # NODE
   re:  false
-  bdi:  true
   qo:  false
+  mpiq:  false
   qlr:  false
-  hc:  false
   si:  false
-  tv:  false
-  pc:  false
+  cc:  false
 
   # NETWORK
-  wr:   false
+  hc:  false
   str:  false
+  sr:  true

@@ -59,7 +59,7 @@
  *  DO NOT TOUCH NAMES (your scripts depend on these)
  * ============================================================*/
 
-/* raw counters */
+/* raw counters (lifetime cumulative -- feed the final WRAPUP log, never reset) */
 uint32_t status_gen_count       = 0;
 uint32_t status_fwd_count       = 0;
 uint32_t status_qloss_count     = 0;
@@ -67,27 +67,40 @@ double   status_residual_energy = INIT_ENERGY_J;
 uint16_t status_rank            = 0;
 
 /* derived metrics */
-double   status_bdi             = 0.0;
-double   status_qlr             = 0.0;
-double   status_wr              = 0.0;
-uint16_t status_pc              = 0;
+double   status_qlr             = 0.0;   /* windowed queue-loss ratio */
+uint16_t status_cc              = 0;     /* Child Count (was: status_pc) */
 uint32_t status_parent_switches = 0;
 
 /* new metrics */
-double   status_si              = 0.0;   /* Stability Index */
-double   status_tv              = 0.0;   /* Trust Value */
-double   status_str             = 0.0;   /* Stretch of Rank */
-uint32_t status_qo              = 0;     /* Queue occupancy snapshot */
+double   status_si              = 0.0;   /* Stability Index (windowed) */
+double   status_str             = 0.0;   /* Stretch of Rank: own rank - best rank achievable via any neighbor */
+uint32_t status_qo              = 0;     /* Queue occupancy snapshot (instantaneous) */
+uint32_t status_mpiq            = 0;     /* Max Packets In Queue (windowed peak of status_qo) */
+uint32_t status_sr              = 0;     /* Step of Rank: windowed sum of |rank deltas| */
 uint8_t  status_global_stop     = 0;     /* set by simulation.js to stop all nodes */
 
-/* PFI counters */
+/* Windowed counters -- reset every METRIC_WINDOW_S so QLR/PFI/SI/MPIQ/SR reflect
+ * recent conditions instead of a lifetime-since-boot average. Separate from the
+ * cumulative counters above, which must stay untouched for WRAPUP/run.py's
+ * final aggregate metrics. */
+#define METRIC_WINDOW_S 10
+static uint32_t window_fwd_count       = 0;
+static uint32_t window_qloss_count     = 0;
+static uint32_t window_parent_switches = 0;
+static uint32_t window_qo_max          = 0;
+static uint32_t window_rank_churn      = 0;
+static uint16_t prev_rank_for_step     = 0;
+static uint32_t window_tick_s          = 0;
+
+/* PFI counters (windowed -- reset alongside the window above) */
 static uint32_t parent_tx_ok[256];
 static uint32_t parent_tx_attempts[256];
 double   status_pfi[MAX_PARENTS_FOR_AGENT];
 
 /* neighbor candidates */
 uint8_t  status_neighbor_ids[MAX_PARENTS_FOR_AGENT];
-uint16_t status_etx_x100[MAX_PARENTS_FOR_AGENT];
+uint16_t status_etx_x100[MAX_PARENTS_FOR_AGENT];       /* path-cost proxy (link ETX + hop term); used internally for top-K ranking only */
+uint16_t status_link_etx_x100[MAX_PARENTS_FOR_AGENT];  /* pure per-link ETX, no hop term -- the real ETX feature */
 int16_t  status_link_rssi_dbm[MAX_PARENTS_FOR_AGENT];
 uint8_t  status_num_neighbors = 0;
 
@@ -246,6 +259,7 @@ static void enforce_agent_parent_if_needed(void) {
 
       if(state.last_parent_id != agent_parent) {
         state.parent_switches++;
+        window_parent_switches++;
         state.last_parent_id = agent_parent;
       }
       return;
@@ -280,12 +294,14 @@ static void sniff_output(int mac_status) {
   switch(mac_status) {
     case MAC_TX_QUEUE_FULL:
       state.q_loss_count++;
+      window_qloss_count++;
       return;
 
     case MAC_TX_OK:
       if(parent_id < 256) parent_tx_ok[parent_id]++;
       if(len) consume_energy(tx_energy(d, len*8));
       state.fwd_count++;
+      window_fwd_count++;
       return;
 
     default:
@@ -297,9 +313,9 @@ static void sniff_output(int mac_status) {
 /* ============================================================
  * TOP-K NEIGHBORS BY ETX
  * ============================================================*/
-static void topk_insert(uint8_t *ids, uint16_t *etx, int16_t *rssi,
+static void topk_insert(uint8_t *ids, uint16_t *etx, uint16_t *linketx, int16_t *rssi,
                         uint8_t *k, uint8_t K,
-                        uint8_t nid, uint16_t ex, int16_t r)
+                        uint8_t nid, uint16_t ex, uint16_t lex, int16_t r)
 {
   uint8_t pos = 0;
   while(pos < *k) {
@@ -308,14 +324,14 @@ static void topk_insert(uint8_t *ids, uint16_t *etx, int16_t *rssi,
   }
   if(*k < K) {
     for(uint8_t j = *k; j > pos; j--) {
-      ids[j]=ids[j-1]; etx[j]=etx[j-1]; rssi[j]=rssi[j-1];
+      ids[j]=ids[j-1]; etx[j]=etx[j-1]; linketx[j]=linketx[j-1]; rssi[j]=rssi[j-1];
     }
-    ids[pos]=nid; etx[pos]=ex; rssi[pos]=r; (*k)++;
+    ids[pos]=nid; etx[pos]=ex; linketx[pos]=lex; rssi[pos]=r; (*k)++;
   } else if(pos < K) {
     for(uint8_t j = K-1; j > pos; j--) {
-      ids[j]=ids[j-1]; etx[j]=etx[j-1]; rssi[j]=rssi[j-1];
+      ids[j]=ids[j-1]; etx[j]=etx[j-1]; linketx[j]=linketx[j-1]; rssi[j]=rssi[j-1];
     }
-    ids[pos]=nid; etx[pos]=ex; rssi[pos]=r;
+    ids[pos]=nid; etx[pos]=ex; linketx[pos]=lex; rssi[pos]=r;
   }
 }
 
@@ -323,9 +339,13 @@ static void refresh_etx_table(void) {
   status_num_neighbors = 0;
 
   uint8_t  tids[MAX_PARENTS_FOR_AGENT] = {0};
-  uint16_t tcost[MAX_PARENTS_FOR_AGENT] = {0};  /* path-cost proxy x100 */
+  uint16_t tcost[MAX_PARENTS_FOR_AGENT] = {0};    /* path-cost proxy x100 (ranking only) */
+  uint16_t tlink[MAX_PARENTS_FOR_AGENT] = {0};    /* pure link ETX x100 */
   int16_t  trssi[MAX_PARENTS_FOR_AGENT] = {0};
   uint8_t  k = 0;
+
+  /* Best rank achievable via ANY neighbor (not just top-K), for real STR. */
+  uint16_t min_rank_via = RPL_INFINITE_RANK;
 
   rpl_dag_t *dag = rpl_get_any_dag();
   if(!dag) goto clear;
@@ -355,6 +375,8 @@ static void refresh_etx_table(void) {
       continue; /* no valid route via this neighbor */
     }
 
+    if(rank_via < min_rank_via) min_rank_via = rank_via;
+
     uint32_t hop_via =
       (uint32_t)((rank_via - RPL_ROOT_RANK) / RPL_MIN_HOPRANKINC);
 
@@ -364,19 +386,26 @@ static void refresh_etx_table(void) {
 
     int16_t rssi = st->rssi;
 
-    topk_insert(tids, tcost, trssi, &k, MAX_PARENTS_FOR_AGENT,
-                (uint8_t)ip_to_nodeid(ip), (uint16_t)path_x100, rssi);
+    topk_insert(tids, tcost, tlink, trssi, &k, MAX_PARENTS_FOR_AGENT,
+                (uint8_t)ip_to_nodeid(ip), (uint16_t)path_x100, (uint16_t)link_x100, rssi);
   }
 
 clear:
   for(uint8_t i = 0; i < MAX_PARENTS_FOR_AGENT; i++) {
-    status_neighbor_ids[i]  = (i < k) ? tids[i]  : 0;
-    status_etx_x100[i]      = (i < k) ? tcost[i] : 0;  /* NOW: path-cost proxy */
-    status_link_rssi_dbm[i] = (i < k) ? trssi[i] : 0;
+    status_neighbor_ids[i]     = (i < k) ? tids[i]  : 0;
+    status_etx_x100[i]         = (i < k) ? tcost[i] : 0;  /* path-cost proxy, ranking only */
+    status_link_etx_x100[i]    = (i < k) ? tlink[i] : 0;  /* pure link ETX -- the real ETX feature */
+    status_link_rssi_dbm[i]    = (i < k) ? trssi[i] : 0;
   }
 
   status_num_neighbors = k;
   if(status_num_neighbors > nn_max) nn_max = status_num_neighbors;
+
+  /* STR: real stretch -- own rank vs. the best rank achievable via any
+   * neighbor. status_rank is already set earlier in refresh_status() before
+   * this function runs. */
+  status_str = (min_rank_via != RPL_INFINITE_RANK && status_rank > min_rank_via) ?
+               (double)(status_rank - min_rank_via) : 0.0;
 }
 
 /* ============================================================
@@ -398,60 +427,52 @@ static void refresh_status(void)
 	ever_joined_dodag = 1;
   }
 
-  /* QO — queue occupancy snapshot: used = TOTAL - FREE */
+  /* QO — queue occupancy snapshot: used = TOTAL - FREE (instantaneous) */
   status_qo = (uint32_t)(QUEUEBUF_CONF_NUM - queuebuf_numfree());
+  if(status_qo > window_qo_max) window_qo_max = status_qo;
 
-
-  /* BDI */
-  status_bdi = 1.0 - (status_residual_energy / INIT_ENERGY_J);
-  if(status_bdi < 0) status_bdi=0;
-  if(status_bdi > 1) status_bdi=1;
-
-  /* QLR */
-  uint32_t attempts = status_fwd_count + status_qloss_count;
-  status_qlr = (attempts>0) ?
-               (double)status_qloss_count / attempts : 0.0;
-
-  /* WR */
-  uint8_t p = get_parent_id();
-  uint32_t a = 0, s = 0;
-
-  if(p < 256) {
-    a = parent_tx_attempts[p];
-    s = parent_tx_ok[p];
+  /* SR — step of rank: accumulate |delta| since the last tick, within the window */
+  {
+    uint16_t delta = (status_rank >= prev_rank_for_step) ?
+                     (uint16_t)(status_rank - prev_rank_for_step) :
+                     (uint16_t)(prev_rank_for_step - status_rank);
+    window_rank_churn += delta;
+    prev_rank_for_step = status_rank;
   }
 
-  status_wr = (a > 0) ? ((double)s / a) : 0.0;
+  /* QLR — windowed loss ratio (recent, not lifetime-cumulative) */
+  {
+    uint32_t attempts = window_fwd_count + window_qloss_count;
+    status_qlr = (attempts>0) ?
+                 (double)window_qloss_count / attempts : 0.0;
+  }
 
-  /* PC — number of children */
-  status_pc = 0;
+  /* CC — Child Count: number of children (was: PC) */
+  status_cc = 0;
   {
     uip_ds6_route_t *r = uip_ds6_route_head();
     while(r) {
       const uip_ipaddr_t *nh = uip_ds6_route_nexthop(r);
       if(nh && ip_to_nodeid(nh) == node_id) {
-        status_pc++;
+        status_cc++;
       }
       r = uip_ds6_route_next(r);
     }
   }
 
-  /* SI — stability */
-  status_si = 1.0 / (1.0 + (double)state.parent_switches);
+  /* SI — stability (windowed switch count, not lifetime-cumulative) */
+  status_si = 1.0 / (1.0 + (double)window_parent_switches);
 
-  /* TV — trust */
-  uint32_t total = status_fwd_count + status_qloss_count;
-  status_tv = (total>0) ?
-              (double)status_fwd_count / total : 1.0;
+  /* MPIQ — windowed peak queue occupancy */
+  status_mpiq = window_qo_max;
 
-  /* STR — stretch of rank */
-  status_str = (status_rank >= RPL_ROOT_RANK) ?
-               (double)(status_rank - RPL_ROOT_RANK) : 0;
+  /* SR export */
+  status_sr = window_rank_churn;
 
-  /* FIRST: rebuild parent table so status_neighbor_ids[] is current */
+  /* FIRST: rebuild parent table so status_neighbor_ids[] is current (also computes STR) */
   refresh_etx_table();
 
-  /* THEN: PFI — per top-K parent for current neighbors */
+  /* THEN: PFI — per top-K parent for current neighbors (windowed counters) */
   for(uint8_t i=0; i<MAX_PARENTS_FOR_AGENT; i++){
     uint8_t cand = status_neighbor_ids[i];
 
@@ -464,6 +485,20 @@ static void refresh_status(void)
     }
 
     status_pfi[i] = (aa > 0) ? ((double)ss / aa) : 0.0;
+  }
+
+  /* Window rollover -- done last so this tick's exported values still
+   * reflect the window that just elapsed. */
+  window_tick_s++;
+  if(window_tick_s >= METRIC_WINDOW_S) {
+    window_tick_s = 0;
+    window_fwd_count = 0;
+    window_qloss_count = 0;
+    window_parent_switches = 0;
+    window_qo_max = 0;
+    window_rank_churn = 0;
+    memset(parent_tx_ok, 0, sizeof(parent_tx_ok));
+    memset(parent_tx_attempts, 0, sizeof(parent_tx_attempts));
   }
 }
 

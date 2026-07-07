@@ -26,21 +26,24 @@ import java.util.*;
  * FINAL — Lei & Liu (2024) CNN-based Double Dueling DQN
  * Inputs: K × Factive matrix of selected RPL metrics.
  *
- * FINAL FIXED FEATURE ORDER (matches controller.js + node.c):
+ * FINAL FIXED FEATURE ORDER (matches simulation.js + node.c):
  *
- * 0 ETX
- * 1 RSSI
- * 2 PFI
- * 3 RE
- * 4 BDI
- * 5 QO
- * 6 QLR
- * 7 HC
- * 8 SI
- * 9 TV
- * 10 PC
- * 11 WR
- * 12 STR
+ * 0  ETX  (pure per-link ETX)
+ * 1  RSSI
+ * 2  PFI  (windowed)
+ * 3  RE
+ * 4  QO
+ * 5  MPIQ (windowed peak queue occupancy)
+ * 6  QLR  (windowed)
+ * 7  SI   (windowed)
+ * 8  CC   (Child Count; was PC)
+ * 9  HC
+ * 10 STR  (real stretch: own rank - best rank via any neighbor)
+ * 11 SR   (windowed rank churn)
+ *
+ * BDI/TV/WR were dropped: BDI ≡ 1-RE/E0 and TV ≡ 1-QLR are exact algebraic
+ * duplicates of other features here; WR was structurally just PFI evaluated
+ * at the current parent's index. See the feature audit for the full writeup.
  */
 public class Agent implements Serializable {
 
@@ -92,18 +95,17 @@ public class Agent implements Serializable {
     private static final int IDX_PFI = 2;
 
     private static final int IDX_RE = 3;
-    private static final int IDX_BDI = 4;
-    private static final int IDX_QO = 5;
+    private static final int IDX_QO = 4;
+    private static final int IDX_MPIQ = 5;
     private static final int IDX_QLR = 6;
-    private static final int IDX_HC = 7;
-    private static final int IDX_SI = 8;
-    private static final int IDX_TV = 9;
-    private static final int IDX_PC = 10;
+    private static final int IDX_SI = 7;
+    private static final int IDX_CC = 8;
 
-    private static final int IDX_WR = 11;
-    private static final int IDX_STR = 12;
+    private static final int IDX_HC = 9;
+    private static final int IDX_STR = 10;
+    private static final int IDX_SR = 11;
 
-    private static final int FTOTAL = 13;
+    private static final int FTOTAL = 12;
 
     // -------------------------------------------------------------------
     public static class Counters {
@@ -116,12 +118,12 @@ public class Agent implements Serializable {
         final double[] sFlat;
         final int a;
         final int parentId;
-        final double hcSnap, reSnap, qlSnap;
+        final double hcSnap, reSnap, qoSnap;
 
-        Episode(double[] s, int a, int pid, double hc, double re, double ql) {
+        Episode(double[] s, int a, int pid, double hc, double re, double qo) {
             this.sFlat = s; this.a = a;
             this.parentId = pid;
-            this.hcSnap = hc; this.reSnap = re; this.qlSnap = ql;
+            this.hcSnap = hc; this.reSnap = re; this.qoSnap = qo;
         }
     }
 
@@ -173,8 +175,12 @@ public class Agent implements Serializable {
     private final Map<Transition,Double> pri = new IdentityHashMap<>();
     private double perAlpha = 0.6;
 
-    private double w_qlr = 1.0;
-    private double w_ecr = 1.0;
+    // Lei & Liu (2024) Eq. 11, Table 1: w1 = w2 = 0.5
+    private double w_qu = 0.5;
+    private double w_ecr = 0.5;
+
+    // QUEUEBUF_CONF_NUM is fixed at 8 across all PPM Makefiles (Q in Eq. 12)
+    private static final double QUEUE_CAP = 8.0;
 
     private final Random rnd = new Random(SEED);
 
@@ -263,51 +269,53 @@ public class Agent implements Serializable {
             int[] candIds,
             double[] hcArr,
             double[] reArr,
-            double[] qlrArr)
+            double[] qoArr)
     {
         double[] flat = flatten(S);
 
         // Close previous episode for this mote
         Episode prev = open.remove(moteId);
         if (prev != null) {
-            double r = computeReward(prev, candIds, hcArr, reArr, qlrArr);
+            double r = computeReward(prev, candIds, hcArr, reArr, qoArr);
             addReplay(new Transition(prev.sFlat, prev.a, r, flat, false, copyValid(valid)));
         }
 
         double[] q = qValues(online, flat);
         int greedy = argmaxMasked(q, valid);
-        trackPolicyEvidence(valid, candIds, hcArr, reArr, qlrArr, greedy);
+        trackPolicyEvidence(valid, candIds, hcArr, reArr, qoArr, greedy);
         int action = (rnd.nextDouble() < epsilon)
                 ? randomValid(valid)
                 : greedy;
 
 		// DEBUG line:
-		logDecisionDebug(moteId, S, valid, candIds, hcArr, reArr, qlrArr, q, action);
+		logDecisionDebug(moteId, S, valid, candIds, hcArr, reArr, qoArr, q, action);
 
         int pid = 0;
-        double hc = 0, re = 0, ql = 0;
+        double hc = 0, re = 0, qo = 0;
 
         if (action >= 0 && action < candIds.length) {
             pid = candIds[action];
             hc = safe(hcArr, action);
             re = safe(reArr, action);
-            ql = safe(qlrArr, action);
+            qo = safe(qoArr, action);
         }
 
-        open.put(moteId, new Episode(flat, action, pid, hc, re, ql));
+        open.put(moteId, new Episode(flat, action, pid, hc, re, qo));
         return action;
     }
 
     // -------------------------------------------------------------------
     // END PHASE
+    //
+    // NOTE: this must NOT close/clear `open`. Episodes are closed by
+    // decide()'s own prev-episode branch, using that mote's fresh
+    // candIds/hcArr/reArr/qlrArr for the *current* phase — i.e. the
+    // actual outcome of the previous decision, not a decision-time
+    // snapshot. Call assignParentsAll() (which drives decide()) before
+    // endPhase() each phase so those transitions land in the replay
+    // buffer before we train on it.
     // -------------------------------------------------------------------
     public synchronized void endPhase() {
-
-        for (Episode ep : open.values()) {
-            double r = reward(ep.hcSnap, ep.reSnap, ep.qlSnap);
-            addReplay(new Transition(ep.sFlat, ep.a, r, ep.sFlat, true, null));
-        }
-        open.clear();
 
         if (!replay.isEmpty()) trainOneBatch();
 
@@ -490,7 +498,7 @@ public class Agent implements Serializable {
             int[] candIds,
             double[] hcArr,
             double[] reArr,
-            double[] qlrArr,
+            double[] qoArr,
             int greedy)
     {
         int candidates = (candIds == null) ? 0 : candIds.length;
@@ -508,7 +516,7 @@ public class Agent implements Serializable {
             if (!ok) continue;
 
             validCount++;
-            double rewardNow = reward(safe(hcArr, i), safe(reArr, i), safe(qlrArr, i));
+            double rewardNow = reward(safe(hcArr, i), safe(reArr, i), safe(qoArr, i));
             if (rewardNow > bestReward) {
                 bestReward = rewardNow;
                 best = i;
@@ -517,7 +525,7 @@ public class Agent implements Serializable {
 
         if (validCount < 2 || greedy < 0 || greedy >= upper || best < 0) return;
 
-        double greedyReward = reward(safe(hcArr, greedy), safe(reArr, greedy), safe(qlrArr, greedy));
+        double greedyReward = reward(safe(hcArr, greedy), safe(reArr, greedy), safe(qoArr, greedy));
 
         policyEvalChoiceStates++;
         policyEvalGreedyRewardSum += greedyReward;
@@ -568,7 +576,7 @@ public class Agent implements Serializable {
 			int[] candIds,
 			double[] hcArr,
 			double[] reArr,
-			double[] qlrArr,
+			double[] qoArr,
 			double[] qValues,
 			int action)
 	{
@@ -601,11 +609,11 @@ public class Agent implements Serializable {
 
 			double hc = (hcArr != null && i < hcArr.length) ? hcArr[i] : 0.0;
 			double re = (reArr != null && i < reArr.length) ? reArr[i] : 0.0;
-			double ql = (qlrArr != null && i < qlrArr.length) ? qlrArr[i] : 0.0;
+			double qo = (qoArr != null && i < qoArr.length) ? qoArr[i] : 0.0;
 
 			sb.append(" hc=").append(String.format("%.2f", hc))
 			  .append(" re=").append(String.format("%.1f", re))
-			  .append(" qlr=").append(String.format("%.3f", ql));
+			  .append(" qo=").append(String.format("%.3f", qo));
 
 			sb.append("\n");
 		}
@@ -620,36 +628,24 @@ public class Agent implements Serializable {
 		log(sb.toString());
 	}
     
-	private double reward(double hc, double re, double qlr) {
+	// Lei & Liu (2024) Eq. 10-13: rank(a) = HC(a) + w1*QU(a) + w2*ECR(a),
+	// reward = 1/rank(a). HC is raw/unnormalized (Eq. 11); QU = q/Q (Eq. 12);
+	// ECR = 1 - RE/E0 (Eq. 13). qo is the raw queue-buffer count (0..QUEUE_CAP).
+	// EPS is a numerical-stability floor not present in the paper (rank(a)
+	// can be exactly 0 for a node directly under the root with full energy
+	// and an empty queue), kept minimal so it doesn't distort real values.
+	private double reward(double hc, double re, double qo) {
 
         double ecr = 1.0 - Math.max(0.0, Math.min(1.0, re / initialEnergy));
-        double hcN = Math.max(0.0, Math.min(1.0, hc / HOP_NORM));
-        double q = Math.max(0.0, Math.min(1.0, qlr));
+        double qu = Math.max(0.0, Math.min(1.0, qo / QUEUE_CAP));
 
-        double R = hcN + w_qlr*q + w_ecr*ecr;
-        return 1.0 / (1.0 + R + EPS);
+        double rank = hc + w_qu*qu + w_ecr*ecr;
+        return 1.0 / (rank + EPS);
     }
-	
-	// DEBUG REWARD: make the agent love *bad* links
-	/*
-	private double reward(double hc, double re, double qlr) {
 
-		// same normalisations as before
-		double ecr = 1.0 - Math.max(0.0, Math.min(1.0, re / initialEnergy));
-		double hcN = Math.max(0.0, Math.min(1.0, hc / HOP_NORM));
-		double q   = Math.max(0.0, Math.min(1.0, qlr));
-
-		// "badness" score: high hop-count, high loss, high energy
-		double Rbad = hcN + q + ecr;
-
-		// IMPORTANT: now we directly return Rbad,
-		// so higher "badness" means higher reward
-		return Rbad;
-	}
-	*/
     private double computeReward(Episode ep,
                                  int[] candIds,
-                                 double[] hcArr, double[] reArr, double[] qlrArr)
+                                 double[] hcArr, double[] reArr, double[] qoArr)
     {
         int idx = -1;
         for (int i=0;i<candIds.length;i++)
@@ -657,9 +653,9 @@ public class Agent implements Serializable {
 
         double hc = (idx>=0) ? safe(hcArr,idx) : ep.hcSnap;
         double re = (idx>=0) ? safe(reArr,idx) : ep.reSnap;
-        double ql = (idx>=0) ? safe(qlrArr,idx) : ep.qlSnap;
+        double qo = (idx>=0) ? safe(qoArr,idx) : ep.qoSnap;
 
-        return reward(hc,re,ql);
+        return reward(hc,re,qo);
     }
 
     // -------------------------------------------------------------------
@@ -675,31 +671,33 @@ public class Agent implements Serializable {
             case IDX_ETX:  return Math.min(Math.max(v,0.0),10.0) / 10.0;
             case IDX_RSSI: return Math.min(Math.max(v,0.0),10.0) / 10.0;
 
-            // PFI in [0,1]
+            // PFI (windowed) in [0,1]
             case IDX_PFI:  return Math.max(0.0, Math.min(1.0, v));
 
             // ---------------- NODE ----------------
             case IDX_RE:   return Math.max(0.0, Math.min(1.0, v / initialEnergy));
-            case IDX_BDI:  return Math.max(0.0, Math.min(1.0, v));
 
-            // QO must be normalized (QUEUEBUF=8)
-            case IDX_QO:   return Math.max(0.0, Math.min(1.0, v / 8.0));
+            // QO and MPIQ share the same bound (QUEUEBUF=8)
+            case IDX_QO:   return Math.max(0.0, Math.min(1.0, v / QUEUE_CAP));
+            case IDX_MPIQ: return Math.max(0.0, Math.min(1.0, v / QUEUE_CAP));
 
+            // QLR, SI (both windowed) already ∈ [0,1]
             case IDX_QLR:  return Math.max(0.0, Math.min(1.0, v));
-            case IDX_HC:   return Math.max(0.0, Math.min(1.0, v / HOP_NORM));
-
-            // SI and TV already ∈ [0,1]
             case IDX_SI:   return Math.max(0.0, Math.min(1.0, v));
-            case IDX_TV:   return Math.max(0.0, Math.min(1.0, v));
 
-            // For safety limit PC to [0,10]
-            case IDX_PC:   return Math.min(Math.max(v,0.0),10.0) / 10.0;
+            // CC (Child Count, was PC): safety-limit to [0,10]
+            case IDX_CC:   return Math.min(Math.max(v,0.0),10.0) / 10.0;
 
             // ---------------- NETWORK ----------------
-            case IDX_WR:   return Math.max(0.0, Math.min(1.0, v));
+            case IDX_HC:   return Math.max(0.0, Math.min(1.0, v / HOP_NORM));
 
-            // STR may be large
-            case IDX_STR:  return Math.log1p(Math.max(0.0, v)) / 5.0;
+            // STR (real stretch: own rank - best rank via any neighbor) and
+            // SR (windowed rank churn) are both rank-derived and typically
+            // much smaller in magnitude than the old raw-rank STR was, so
+            // this divisor is a reasoned estimate pending real run data --
+            // revisit once we have actual STR/SR distributions to calibrate against.
+            case IDX_STR:  return Math.log1p(Math.max(0.0, v)) / 8.0;
+            case IDX_SR:   return Math.log1p(Math.max(0.0, v)) / 8.0;
         }
 
         return 0.0;
@@ -756,4 +754,36 @@ public class Agent implements Serializable {
         for (double v:a) if (Double.isFinite(v)){ s+=v; n++; }
         return n>0? (s/n):0.0;
     }
+
+    // -------------------------------------------------------------------
+    // TEST-ONLY VISIBILITY HOOKS (package-private; no production callers)
+    // -------------------------------------------------------------------
+    static final class ReplaySample {
+        final double reward;
+        final boolean done;
+        ReplaySample(double reward, boolean done) { this.reward = reward; this.done = done; }
+    }
+
+    synchronized List<ReplaySample> debugReplaySnapshot() {
+        List<ReplaySample> out = new ArrayList<>();
+        for (Transition t : replay) out.add(new ReplaySample(t.r, t.done));
+        return out;
+    }
+
+    synchronized int debugOpenEpisodeCount() {
+        return open.size();
+    }
+
+    double debugReward(double hc, double re, double qo) {
+        return reward(hc, re, qo);
+    }
+
+    double debugScale(int idx, double v) { return scale(idx, v); }
+    static int debugFTotal()  { return FTOTAL; }
+    static int debugIdxEtx()  { return IDX_ETX; }
+    static int debugIdxHc()   { return IDX_HC; }
+    static int debugIdxStr()  { return IDX_STR; }
+    static int debugIdxSr()   { return IDX_SR; }
+    static int debugIdxMpiq() { return IDX_MPIQ; }
+    static int debugIdxCc()   { return IDX_CC; }
 }
