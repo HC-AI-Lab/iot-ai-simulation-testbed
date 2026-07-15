@@ -13,6 +13,13 @@ if(MASK_PATH === null || (""+MASK_PATH).trim().length === 0) {
 
 var RPL_ROOT_RANK      = 256;
 var RPL_MIN_HOPRANKINC = 256;
+var RPL_INFINITE_RANK  = 0xFFFF; // rpl-const.h -- RPL's own "no valid path" sentinel
+
+// Worst-case hop value substituted when a candidate's live status_rank is
+// invalid (0 = no dag joined, or RPL_INFINITE_RANK = no valid path right
+// now). Must match Agent.java's HOP_NORM so it scales to exactly 1.0
+// (maximally bad) instead of colliding with real hop counts.
+var HOP_INVALID_FALLBACK = 16;
 
 // ===================== DEBUG (single node, once per phase) =====================
 // This is SAFE: it only prints for one node, once per TRAIN and once per RETRAIN.
@@ -310,9 +317,29 @@ function u32(x){ return (x>>>0); }
 // ======================================================================
 // Rank/Hop utilities
 // ======================================================================
+// Returns -1 (sentinel) for RPL's invalid-rank states instead of silently
+// producing a number that looks like a real hop count:
+//   rank < RPL_ROOT_RANK    -> dag not joined (status_rank defaults to 0), or
+//                               any other value below the root's own rank,
+//                               which is never valid for a joined non-root node.
+//   rank >= RPL_INFINITE_RANK -> RPL's own "no valid path" sentinel (0xFFFF).
+// Without this check, rank=0 mapped to hc=0 ("right next to the root" --
+// the opposite of what it means) and rank=RPL_INFINITE_RANK mapped to
+// hc=254 (floor((0xFFFF-256)/256)), a plausible-looking but meaningless
+// extreme hop count. Confirmed against a real run: ~72% of all HC readings
+// were one of these two silently-corrupted values.
 function rankToHops(rank){
-  if(rank<RPL_ROOT_RANK) return 0;
+  if(rank < RPL_ROOT_RANK || rank >= RPL_INFINITE_RANK) return -1;
   return Math.floor((rank - RPL_ROOT_RANK)/RPL_MIN_HOPRANKINC);
+}
+
+// Use this wherever a hop-count FEATURE OR REWARD VALUE is needed (not just
+// diagnostics) -- substitutes a fixed worst-case value for the invalid
+// sentinel so it scales to a distinct, learnable "maximally bad" signal
+// instead of collapsing back into a real hop-count range.
+function rankToHopsOrWorstCase(rank){
+  var hops = rankToHops(rank);
+  return (hops < 0) ? HOP_INVALID_FALLBACK : hops;
 }
 // Calibrated to this project's actual UDGM radio config (transmitting_range
 // 150m, interference_range 160m -> SS_STRONG=-10dBm .. SS_WEAK=-95dBm, per
@@ -486,7 +513,7 @@ function buildCandidateMatrixFor(mote, candIds, candEtx){
         case 8: val = pm ? getInt160(pm,"status_cc") : 0; break;                      // CC (was PC)
 
         // NETWORK -----------------------------------
-        case 9:  val = rankToHops(pm ? getInt160(pm,"status_rank") : 0); break;        // HC
+        case 9:  val = rankToHopsOrWorstCase(pm ? getInt160(pm,"status_rank") : 0); break; // HC
         case 10: val = pm ? getDouble0(pm,"status_str") : 0; break;                    // STR (real stretch)
         case 11: val = pm ? getInt320(pm,"status_sr") : 0; break;                      // SR
       }
@@ -501,11 +528,11 @@ function buildCandidateMatrixFor(mote, candIds, candEtx){
     // the paper's QU(a) = q/Q congestion term (Eq. 12) -- NOT status_qlr,
     // which is a cumulative-since-boot loss ratio the paper doesn't use here.
     if(pm){
-      hcArr.push(rankToHops(getInt160(pm,"status_rank")));
+      hcArr.push(rankToHopsOrWorstCase(getInt160(pm,"status_rank")));
       reArr.push(getDouble0(pm,"status_residual_energy"));
       qoArr.push(getInt320(pm,"status_qo"));
     } else {
-      hcArr.push(0); reArr.push(0); qoArr.push(0);
+      hcArr.push(HOP_INVALID_FALLBACK); reArr.push(0); qoArr.push(0);
     }
   }
 
@@ -562,7 +589,7 @@ function decideAndSetParentFor(mote){
   ctrs.delivered      = u32(getInt320(mote,"status_fwd_count"));
   ctrs.dropped        = u32(getInt320(mote,"status_qloss_count"));
   ctrs.residualEnergy = getDouble0(mote,"status_residual_energy");
-  ctrs.hopCount       = rankToHops(getInt160(mote,"status_rank"));
+  ctrs.hopCount       = rankToHopsOrWorstCase(getInt160(mote,"status_rank"));
   ctrs.rankViolations = u32(getInt320(mote,"status_parent_switches"));
   ctrs.etx            = (exs && exs.length>0) ? exs[0] : 0; // not used in Agent now, but fine
 
