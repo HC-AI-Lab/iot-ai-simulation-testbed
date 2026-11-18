@@ -1,0 +1,1010 @@
+{
+  "meta": {
+    "version": 2,
+    "mask_file": "/workspace/masks/ga_search_pool.yaml",
+    "search_features": [
+      "rssi",
+      "pfi",
+      "qo",
+      "mpiq",
+      "si",
+      "cc",
+      "hc",
+      "sr"
+    ],
+    "feature_order": [
+      "etx",
+      "rssi",
+      "pfi",
+      "re",
+      "qo",
+      "mpiq",
+      "qlr",
+      "si",
+      "cc",
+      "hc",
+      "str",
+      "sr"
+    ],
+    "allow_empty_mask": false,
+    "nodes": [
+      100
+    ],
+    "ppms": [
+      120
+    ],
+    "topologies": 10,
+    "topology_ids": [],
+    "traffic_seeds": [
+      1
+    ],
+    "duration_sf": 6000,
+    "warmup_sf": 12,
+    "sim_seed": 67890,
+    "agent_seed": 12345,
+    "tx_range": null,
+    "int_range": null,
+    "weights": {
+      "w_nlt": 0.5,
+      "w_prr": 0.25,
+      "w_dly": 0.25
+    },
+    "delay_scale_ms": 1000.0,
+    "prr_min": 0.85,
+    "lambda_stability": 0.1,
+    "beta_prr_penalty": 2.0,
+    "gamma_missing_penalty": 1.0
+  },
+  "masks": {
+    "qo-si-hc__00101010": {
+      "mask_id": "qo-si-hc__00101010",
+      "mask_label": "qo-si-hc",
+      "bits": [
+        0,
+        0,
+        1,
+        0,
+        1,
+        0,
+        1,
+        0
+      ],
+      "selected_features": [
+        "qo",
+        "si",
+        "hc"
+      ],
+      "fitness": -0.6285508189921059,
+      "detail": {
+        "mu": 0.40707339250661395,
+        "sigma": 0.0,
+        "prr_penalty": 1.0356242114987197,
+        "missing_penalty": 0.0,
+        "missing_fraction": 0.0,
+        "score_mean": 0.40707339250661395,
+        "prr_mean": 0.33218789425064016,
+        "nlt_mean": 919795.5,
+        "delay_mean": 3139.194510739857,
+        "runs_total_mean": 10.0,
+        "runs_valid_mean": 10.0,
+        "expected_runs_per_scenario": 10,
+        "scenario_coverage_mean": 1.0,
+        "expected_scenarios": 1,
+        "found_scenarios": 1
+      },
+      "scenarios": [
+        {
+          "nodes": 100,
+          "ppm": 120,
+          "prr": 0.33218789425064016,
+          "nlt": 919795.5,
+          "delay": 3139.194510739857,
+          "runs_total": 10,
+          "runs_valid": 10,
+          "path": "/workspace/results/data/ga_search/runs/gen_001/logs/N100_PPM120/qo-si-hc__00101010/aggregated_results.json"
+        }
+      ],
+      "generation_evaluated": 1
+    },
+    "pfi-mpiq-hc__01010010": {
+      "mask_id": "pfi-mpiq-hc__01010010",
+      "mask_label": "pfi-mpiq-hc",
+      "bits": [
+        0,
+        1,
+        0,
+        1,
+        0,
+        0,
+        1,
+        0
+      ],
+      "selected_features": [
+        "pfi",
+        "mpiq",
+        "hc"
+      ],
+      "fitness": -0.6031097603776446,
+      "detail": {
+        "mu": 0.4304795248939258,
+        "sigma": 0.0,
+        "prr_penalty": 1.0335892852715705,
+        "missing_penalty": 0.0,
+        "missing_fraction": 0.0,
+        "score_mean": 0.4304795248939258,
+        "prr_mean": 0.33320535736421475,
+        "nlt_mean": 952919.7,
+        "delay_mean": 3045.0581947743467,
+        "runs_total_mean": 10.0,
+        "runs_valid_mean": 10.0,
+        "expected_runs_per_scenario": 10,
+        "scenario_coverage_mean": 1.0,
+        "expected_scenarios": 1,
+        "found_scenarios": 1
+      },
+      "scenarios": [
+        {
+          "nodes": 100,
+          "ppm": 120,
+          "prr": 0.33320535736421475,
+          "nlt": 952919.7,
+          "delay": 3045.0581947743467,
+          "runs_total": 10,
+          "runs_valid": 10,
+          "path": "/workspace/results/data/ga_search/runs/gen_001/logs/N100_PPM120/pfi-mpiq-hc__01010010/aggregated_results.json"
+        }
+      ],
+      "generation_evaluated": 1
+    },
+    "rssi-pfi-mpiq-si__11011000": {
+      "mask_id": "rssi-pfi-mpiq-si__11011000",
+      "mask_label": "rssi-pfi-mpiq-si",
+      "bits": [
+        1,
+        1,
+        0,
+        1,
+        1,
+        0,
+        0,
+        0
+      ],
+      "selected_features": [
+        "rssi",
+        "pfi",
+        "mpiq",
+        "si"
+      ],
+      "fitness": -0.7178931348665569,
+      "detail": {
+        "mu": 0.3869647296156213,
+        "sigma": 0.0,
+        "prr_penalty": 1.1048578644821783,
+        "missing_penalty": 0.0,
+        "missing_fraction": 0.0,
+        "score_mean": 0.3869647296156213,
+        "prr_mean": 0.2975710677589108,
+        "nlt_mean": 904535.7,
+        "delay_mean": 3265.112171837709,
+        "runs_total_mean": 10.0,
+        "runs_valid_mean": 10.0,
+        "expected_runs_per_scenario": 10,
+        "scenario_coverage_mean": 1.0,
+        "expected_scenarios": 1,
+        "found_scenarios": 1
+      },
+      "scenarios": [
+        {
+          "nodes": 100,
+          "ppm": 120,
+          "prr": 0.2975710677589108,
+          "nlt": 904535.7,
+          "delay": 3265.112171837709,
+          "runs_total": 10,
+          "runs_valid": 10,
+          "path": "/workspace/results/data/ga_search/runs/gen_001/logs/N100_PPM120/rssi-pfi-mpiq-si__11011000/aggregated_results.json"
+        }
+      ],
+      "generation_evaluated": 1
+    },
+    "qo-cc__00100100": {
+      "mask_id": "qo-cc__00100100",
+      "mask_label": "qo-cc",
+      "bits": [
+        0,
+        0,
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "selected_features": [
+        "qo",
+        "cc"
+      ],
+      "fitness": -0.5153030578572799,
+      "detail": {
+        "mu": 0.43886595929756816,
+        "sigma": 0.0,
+        "prr_penalty": 0.9541690171548481,
+        "missing_penalty": 0.0,
+        "missing_fraction": 0.0,
+        "score_mean": 0.43886595929756816,
+        "prr_mean": 0.3729154914225759,
+        "nlt_mean": 946721.2,
+        "delay_mean": 2848.0284023668637,
+        "runs_total_mean": 10.0,
+        "runs_valid_mean": 10.0,
+        "expected_runs_per_scenario": 10,
+        "scenario_coverage_mean": 1.0,
+        "expected_scenarios": 1,
+        "found_scenarios": 1
+      },
+      "scenarios": [
+        {
+          "nodes": 100,
+          "ppm": 120,
+          "prr": 0.3729154914225759,
+          "nlt": 946721.2,
+          "delay": 2848.0284023668637,
+          "runs_total": 10,
+          "runs_valid": 10,
+          "path": "/workspace/results/data/ga_search/runs/gen_001/logs/N100_PPM120/qo-cc__00100100/aggregated_results.json"
+        }
+      ],
+      "generation_evaluated": 1
+    },
+    "rssi-pfi-qo-mpiq-sr__11110001": {
+      "mask_id": "rssi-pfi-qo-mpiq-sr__11110001",
+      "mask_label": "rssi-pfi-qo-mpiq-sr",
+      "bits": [
+        1,
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        1
+      ],
+      "selected_features": [
+        "rssi",
+        "pfi",
+        "qo",
+        "mpiq",
+        "sr"
+      ],
+      "fitness": -0.7257826232023442,
+      "detail": {
+        "mu": 0.39564133895861475,
+        "sigma": 0.0,
+        "prr_penalty": 1.121423962160959,
+        "missing_penalty": 0.0,
+        "missing_fraction": 0.0,
+        "score_mean": 0.39564133895861475,
+        "prr_mean": 0.28928801891952044,
+        "nlt_mean": 919941.0,
+        "delay_mean": 3216.3456057007124,
+        "runs_total_mean": 10.0,
+        "runs_valid_mean": 10.0,
+        "expected_runs_per_scenario": 10,
+        "scenario_coverage_mean": 1.0,
+        "expected_scenarios": 1,
+        "found_scenarios": 1
+      },
+      "scenarios": [
+        {
+          "nodes": 100,
+          "ppm": 120,
+          "prr": 0.28928801891952044,
+          "nlt": 919941.0,
+          "delay": 3216.3456057007124,
+          "runs_total": 10,
+          "runs_valid": 10,
+          "path": "/workspace/results/data/ga_search/runs/gen_001/logs/N100_PPM120/rssi-pfi-qo-mpiq-sr__11110001/aggregated_results.json"
+        }
+      ],
+      "generation_evaluated": 1
+    },
+    "rssi-cc-hc-sr__10000111": {
+      "mask_id": "rssi-cc-hc-sr__10000111",
+      "mask_label": "rssi-cc-hc-sr",
+      "bits": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1
+      ],
+      "selected_features": [
+        "rssi",
+        "cc",
+        "hc",
+        "sr"
+      ],
+      "fitness": -0.6985846764906893,
+      "detail": {
+        "mu": 0.3687673825272075,
+        "sigma": 0.0,
+        "prr_penalty": 1.0673520590178969,
+        "missing_penalty": 0.0,
+        "missing_fraction": 0.0,
+        "score_mean": 0.3687673825272075,
+        "prr_mean": 0.3163239704910515,
+        "nlt_mean": 868202.9,
+        "delay_mean": 3134.125148986889,
+        "runs_total_mean": 10.0,
+        "runs_valid_mean": 10.0,
+        "expected_runs_per_scenario": 10,
+        "scenario_coverage_mean": 1.0,
+        "expected_scenarios": 1,
+        "found_scenarios": 1
+      },
+      "scenarios": [
+        {
+          "nodes": 100,
+          "ppm": 120,
+          "prr": 0.3163239704910515,
+          "nlt": 868202.9,
+          "delay": 3134.125148986889,
+          "runs_total": 10,
+          "runs_valid": 10,
+          "path": "/workspace/results/data/ga_search/runs/gen_001/logs/N100_PPM120/rssi-cc-hc-sr__10000111/aggregated_results.json"
+        }
+      ],
+      "generation_evaluated": 1
+    },
+    "si__00001000": {
+      "mask_id": "si__00001000",
+      "mask_label": "si",
+      "bits": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "selected_features": [
+        "si"
+      ],
+      "fitness": -0.6457484824832482,
+      "detail": {
+        "mu": 0.3954546245647743,
+        "sigma": 0.0,
+        "prr_penalty": 1.0412031070480225,
+        "missing_penalty": 0.0,
+        "missing_fraction": 0.0,
+        "score_mean": 0.3954546245647743,
+        "prr_mean": 0.3293984464759887,
+        "nlt_mean": 903408.2,
+        "delay_mean": 3138.875,
+        "runs_total_mean": 10.0,
+        "runs_valid_mean": 10.0,
+        "expected_runs_per_scenario": 10,
+        "scenario_coverage_mean": 1.0,
+        "expected_scenarios": 1,
+        "found_scenarios": 1
+      },
+      "scenarios": [
+        {
+          "nodes": 100,
+          "ppm": 120,
+          "prr": 0.3293984464759887,
+          "nlt": 903408.2,
+          "delay": 3138.875,
+          "runs_total": 10,
+          "runs_valid": 10,
+          "path": "/workspace/results/data/ga_search/runs/gen_001/logs/N100_PPM120/si__00001000/aggregated_results.json"
+        }
+      ],
+      "generation_evaluated": 1
+    },
+    "qo-mpiq-cc-sr__00110101": {
+      "mask_id": "qo-mpiq-cc-sr__00110101",
+      "mask_label": "qo-mpiq-cc-sr",
+      "bits": [
+        0,
+        0,
+        1,
+        1,
+        0,
+        1,
+        0,
+        1
+      ],
+      "selected_features": [
+        "qo",
+        "mpiq",
+        "cc",
+        "sr"
+      ],
+      "fitness": -0.6398755111409584,
+      "detail": {
+        "mu": 0.43436872746760047,
+        "sigma": 0.0,
+        "prr_penalty": 1.0742442386085589,
+        "missing_penalty": 0.0,
+        "missing_fraction": 0.0,
+        "score_mean": 0.43436872746760047,
+        "prr_mean": 0.31287788069572053,
+        "nlt_mean": 969777.2,
+        "delay_mean": 3256.4609843937574,
+        "runs_total_mean": 10.0,
+        "runs_valid_mean": 10.0,
+        "expected_runs_per_scenario": 10,
+        "scenario_coverage_mean": 1.0,
+        "expected_scenarios": 1,
+        "found_scenarios": 1
+      },
+      "scenarios": [
+        {
+          "nodes": 100,
+          "ppm": 120,
+          "prr": 0.31287788069572053,
+          "nlt": 969777.2,
+          "delay": 3256.4609843937574,
+          "runs_total": 10,
+          "runs_valid": 10,
+          "path": "/workspace/results/data/ga_search/runs/gen_002/logs/N100_PPM120/qo-mpiq-cc-sr__00110101/aggregated_results.json"
+        }
+      ],
+      "generation_evaluated": 2
+    },
+    "pfi-si__01001000": {
+      "mask_id": "pfi-si__01001000",
+      "mask_label": "pfi-si",
+      "bits": [
+        0,
+        1,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "selected_features": [
+        "pfi",
+        "si"
+      ],
+      "fitness": -0.7333049165759369,
+      "detail": {
+        "mu": 0.3419109701143333,
+        "sigma": 0.0,
+        "prr_penalty": 1.0752158866902701,
+        "missing_penalty": 0.0,
+        "missing_fraction": 0.0,
+        "score_mean": 0.3419109701143333,
+        "prr_mean": 0.31239205665486497,
+        "nlt_mean": 828417.1,
+        "delay_mean": 3076.0846245530392,
+        "runs_total_mean": 10.0,
+        "runs_valid_mean": 10.0,
+        "expected_runs_per_scenario": 10,
+        "scenario_coverage_mean": 1.0,
+        "expected_scenarios": 1,
+        "found_scenarios": 1
+      },
+      "scenarios": [
+        {
+          "nodes": 100,
+          "ppm": 120,
+          "prr": 0.31239205665486497,
+          "nlt": 828417.1,
+          "delay": 3076.0846245530392,
+          "runs_total": 10,
+          "runs_valid": 10,
+          "path": "/workspace/results/data/ga_search/runs/gen_002/logs/N100_PPM120/pfi-si__01001000/aggregated_results.json"
+        }
+      ],
+      "generation_evaluated": 2
+    },
+    "pfi-qo-cc__01100100": {
+      "mask_id": "pfi-qo-cc__01100100",
+      "mask_label": "pfi-qo-cc",
+      "bits": [
+        0,
+        1,
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "selected_features": [
+        "pfi",
+        "qo",
+        "cc"
+      ],
+      "fitness": -0.6274264261621674,
+      "detail": {
+        "mu": 0.3513288523455784,
+        "sigma": 0.0,
+        "prr_penalty": 0.9787552785077458,
+        "missing_penalty": 0.0,
+        "missing_fraction": 0.0,
+        "score_mean": 0.3513288523455784,
+        "prr_mean": 0.3606223607461271,
+        "nlt_mean": 820340.7,
+        "delay_mean": 2862.638625592417,
+        "runs_total_mean": 10.0,
+        "runs_valid_mean": 10.0,
+        "expected_runs_per_scenario": 10,
+        "scenario_coverage_mean": 1.0,
+        "expected_scenarios": 1,
+        "found_scenarios": 1
+      },
+      "scenarios": [
+        {
+          "nodes": 100,
+          "ppm": 120,
+          "prr": 0.3606223607461271,
+          "nlt": 820340.7,
+          "delay": 2862.638625592417,
+          "runs_total": 10,
+          "runs_valid": 10,
+          "path": "/workspace/results/data/ga_search/runs/gen_002/logs/N100_PPM120/pfi-qo-cc__01100100/aggregated_results.json"
+        }
+      ],
+      "generation_evaluated": 2
+    },
+    "qo__00100000": {
+      "mask_id": "qo__00100000",
+      "mask_label": "qo",
+      "bits": [
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "selected_features": [
+        "qo"
+      ],
+      "fitness": -0.5556163989686163,
+      "detail": {
+        "mu": 0.4033355652933138,
+        "sigma": 0.0,
+        "prr_penalty": 0.9589519642619301,
+        "missing_penalty": 0.0,
+        "missing_fraction": 0.0,
+        "score_mean": 0.4033355652933138,
+        "prr_mean": 0.37052401786903494,
+        "nlt_mean": 896919.6,
+        "delay_mean": 2975.289786223278,
+        "runs_total_mean": 10.0,
+        "runs_valid_mean": 10.0,
+        "expected_runs_per_scenario": 10,
+        "scenario_coverage_mean": 1.0,
+        "expected_scenarios": 1,
+        "found_scenarios": 1
+      },
+      "scenarios": [
+        {
+          "nodes": 100,
+          "ppm": 120,
+          "prr": 0.37052401786903494,
+          "nlt": 896919.6,
+          "delay": 2975.289786223278,
+          "runs_total": 10,
+          "runs_valid": 10,
+          "path": "/workspace/results/data/ga_search/runs/gen_003/logs/N100_PPM120/qo__00100000/aggregated_results.json"
+        }
+      ],
+      "generation_evaluated": 3
+    },
+    "qo-mpiq-cc__00110100": {
+      "mask_id": "qo-mpiq-cc__00110100",
+      "mask_label": "qo-mpiq-cc",
+      "bits": [
+        0,
+        0,
+        1,
+        1,
+        0,
+        1,
+        0,
+        0
+      ],
+      "selected_features": [
+        "qo",
+        "mpiq",
+        "cc"
+      ],
+      "fitness": -0.6114509034233562,
+      "detail": {
+        "mu": 0.40699530031662823,
+        "sigma": 0.0,
+        "prr_penalty": 1.0184462037399844,
+        "missing_penalty": 0.0,
+        "missing_fraction": 0.0,
+        "score_mean": 0.40699530031662823,
+        "prr_mean": 0.34077689813000783,
+        "nlt_mean": 917643.9,
+        "delay_mean": 3215.035629453682,
+        "runs_total_mean": 10.0,
+        "runs_valid_mean": 10.0,
+        "expected_runs_per_scenario": 10,
+        "scenario_coverage_mean": 1.0,
+        "expected_scenarios": 1,
+        "found_scenarios": 1
+      },
+      "scenarios": [
+        {
+          "nodes": 100,
+          "ppm": 120,
+          "prr": 0.34077689813000783,
+          "nlt": 917643.9,
+          "delay": 3215.035629453682,
+          "runs_total": 10,
+          "runs_valid": 10,
+          "path": "/workspace/results/data/ga_search/runs/gen_003/logs/N100_PPM120/qo-mpiq-cc__00110100/aggregated_results.json"
+        }
+      ],
+      "generation_evaluated": 3
+    },
+    "qo-cc-hc__00100110": {
+      "mask_id": "qo-cc-hc__00100110",
+      "mask_label": "qo-cc-hc",
+      "bits": [
+        0,
+        0,
+        1,
+        0,
+        0,
+        1,
+        1,
+        0
+      ],
+      "selected_features": [
+        "qo",
+        "cc",
+        "hc"
+      ],
+      "fitness": -0.5497724860426474,
+      "detail": {
+        "mu": 0.425295160371996,
+        "sigma": 0.0,
+        "prr_penalty": 0.9750676464146434,
+        "missing_penalty": 0.0,
+        "missing_fraction": 0.0,
+        "score_mean": 0.425295160371996,
+        "prr_mean": 0.3624661767926783,
+        "nlt_mean": 933035.0,
+        "delay_mean": 2983.3861740166867,
+        "runs_total_mean": 10.0,
+        "runs_valid_mean": 10.0,
+        "expected_runs_per_scenario": 10,
+        "scenario_coverage_mean": 1.0,
+        "expected_scenarios": 1,
+        "found_scenarios": 1
+      },
+      "scenarios": [
+        {
+          "nodes": 100,
+          "ppm": 120,
+          "prr": 0.3624661767926783,
+          "nlt": 933035.0,
+          "delay": 2983.3861740166867,
+          "runs_total": 10,
+          "runs_valid": 10,
+          "path": "/workspace/results/data/ga_search/runs/gen_003/logs/N100_PPM120/qo-cc-hc__00100110/aggregated_results.json"
+        }
+      ],
+      "generation_evaluated": 3
+    },
+    "qo-hc__00100010": {
+      "mask_id": "qo-hc__00100010",
+      "mask_label": "qo-hc",
+      "bits": [
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      "selected_features": [
+        "qo",
+        "hc"
+      ],
+      "fitness": -0.661427566069594,
+      "detail": {
+        "mu": 0.34066619633704687,
+        "sigma": 0.0,
+        "prr_penalty": 1.0020937624066408,
+        "missing_penalty": 0.0,
+        "missing_fraction": 0.0,
+        "score_mean": 0.34066619633704687,
+        "prr_mean": 0.34895311879667956,
+        "nlt_mean": 810774.0,
+        "delay_mean": 2963.310262529833,
+        "runs_total_mean": 10.0,
+        "runs_valid_mean": 10.0,
+        "expected_runs_per_scenario": 10,
+        "scenario_coverage_mean": 1.0,
+        "expected_scenarios": 1,
+        "found_scenarios": 1
+      },
+      "scenarios": [
+        {
+          "nodes": 100,
+          "ppm": 120,
+          "prr": 0.34895311879667956,
+          "nlt": 810774.0,
+          "delay": 2963.310262529833,
+          "runs_total": 10,
+          "runs_valid": 10,
+          "path": "/workspace/results/data/ga_search/runs/gen_004/logs/N100_PPM120/qo-hc__00100010/aggregated_results.json"
+        }
+      ],
+      "generation_evaluated": 4
+    },
+    "rssi-qo-cc__10100100": {
+      "mask_id": "rssi-qo-cc__10100100",
+      "mask_label": "rssi-qo-cc",
+      "bits": [
+        1,
+        0,
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "selected_features": [
+        "rssi",
+        "qo",
+        "cc"
+      ],
+      "fitness": -0.7293585419233534,
+      "detail": {
+        "mu": 0.36213404083808765,
+        "sigma": 0.0,
+        "prr_penalty": 1.091492582761441,
+        "missing_penalty": 0.0,
+        "missing_fraction": 0.0,
+        "score_mean": 0.36213404083808765,
+        "prr_mean": 0.30425370861927953,
+        "nlt_mean": 865117.4,
+        "delay_mean": 3288.688995215311,
+        "runs_total_mean": 10.0,
+        "runs_valid_mean": 10.0,
+        "expected_runs_per_scenario": 10,
+        "scenario_coverage_mean": 1.0,
+        "expected_scenarios": 1,
+        "found_scenarios": 1
+      },
+      "scenarios": [
+        {
+          "nodes": 100,
+          "ppm": 120,
+          "prr": 0.30425370861927953,
+          "nlt": 865117.4,
+          "delay": 3288.688995215311,
+          "runs_total": 10,
+          "runs_valid": 10,
+          "path": "/workspace/results/data/ga_search/runs/gen_004/logs/N100_PPM120/rssi-qo-cc__10100100/aggregated_results.json"
+        }
+      ],
+      "generation_evaluated": 4
+    },
+    "qo-mpiq-si-cc__00111100": {
+      "mask_id": "qo-mpiq-si-cc__00111100",
+      "mask_label": "qo-mpiq-si-cc",
+      "bits": [
+        0,
+        0,
+        1,
+        1,
+        1,
+        1,
+        0,
+        0
+      ],
+      "selected_features": [
+        "qo",
+        "mpiq",
+        "si",
+        "cc"
+      ],
+      "fitness": -0.6746701203132854,
+      "detail": {
+        "mu": 0.3314633862363486,
+        "sigma": 0.0,
+        "prr_penalty": 1.006133506549634,
+        "missing_penalty": 0.0,
+        "missing_fraction": 0.0,
+        "score_mean": 0.3314633862363486,
+        "prr_mean": 0.346933246725183,
+        "nlt_mean": 799795.8,
+        "delay_mean": 3076.259303721489,
+        "runs_total_mean": 10.0,
+        "runs_valid_mean": 10.0,
+        "expected_runs_per_scenario": 10,
+        "scenario_coverage_mean": 1.0,
+        "expected_scenarios": 1,
+        "found_scenarios": 1
+      },
+      "scenarios": [
+        {
+          "nodes": 100,
+          "ppm": 120,
+          "prr": 0.346933246725183,
+          "nlt": 799795.8,
+          "delay": 3076.259303721489,
+          "runs_total": 10,
+          "runs_valid": 10,
+          "path": "/workspace/results/data/ga_search/runs/gen_005/logs/N100_PPM120/qo-mpiq-si-cc__00111100/aggregated_results.json"
+        }
+      ],
+      "generation_evaluated": 5
+    },
+    "qo-cc-sr__00100101": {
+      "mask_id": "qo-cc-sr__00100101",
+      "mask_label": "qo-cc-sr",
+      "bits": [
+        0,
+        0,
+        1,
+        0,
+        0,
+        1,
+        0,
+        1
+      ],
+      "selected_features": [
+        "qo",
+        "cc",
+        "sr"
+      ],
+      "fitness": -0.6487716976753358,
+      "detail": {
+        "mu": 0.38674128435768396,
+        "sigma": 0.0,
+        "prr_penalty": 1.0355129820330198,
+        "missing_penalty": 0.0,
+        "missing_fraction": 0.0,
+        "score_mean": 0.38674128435768396,
+        "prr_mean": 0.3322435089834901,
+        "nlt_mean": 886489.1,
+        "delay_mean": 2980.8299643281807,
+        "runs_total_mean": 10.0,
+        "runs_valid_mean": 10.0,
+        "expected_runs_per_scenario": 10,
+        "scenario_coverage_mean": 1.0,
+        "expected_scenarios": 1,
+        "found_scenarios": 1
+      },
+      "scenarios": [
+        {
+          "nodes": 100,
+          "ppm": 120,
+          "prr": 0.3322435089834901,
+          "nlt": 886489.1,
+          "delay": 2980.8299643281807,
+          "runs_total": 10,
+          "runs_valid": 10,
+          "path": "/workspace/results/data/ga_search/runs/gen_006/logs/N100_PPM120/qo-cc-sr__00100101/aggregated_results.json"
+        }
+      ],
+      "generation_evaluated": 6
+    },
+    "mpiq-cc-sr__00010101": {
+      "mask_id": "mpiq-cc-sr__00010101",
+      "mask_label": "mpiq-cc-sr",
+      "bits": [
+        0,
+        0,
+        0,
+        1,
+        0,
+        1,
+        0,
+        1
+      ],
+      "selected_features": [
+        "mpiq",
+        "cc",
+        "sr"
+      ],
+      "fitness": -0.7133415820173847,
+      "detail": {
+        "mu": 0.37816151001335546,
+        "sigma": 0.0,
+        "prr_penalty": 1.0915030920307403,
+        "missing_penalty": 0.0,
+        "missing_fraction": 0.0,
+        "score_mean": 0.37816151001335546,
+        "prr_mean": 0.3042484539846298,
+        "nlt_mean": 884500.0,
+        "delay_mean": 3001.128418549346,
+        "runs_total_mean": 10.0,
+        "runs_valid_mean": 10.0,
+        "expected_runs_per_scenario": 10,
+        "scenario_coverage_mean": 1.0,
+        "expected_scenarios": 1,
+        "found_scenarios": 1
+      },
+      "scenarios": [
+        {
+          "nodes": 100,
+          "ppm": 120,
+          "prr": 0.3042484539846298,
+          "nlt": 884500.0,
+          "delay": 3001.128418549346,
+          "runs_total": 10,
+          "runs_valid": 10,
+          "path": "/workspace/results/data/ga_search/runs/gen_006/logs/N100_PPM120/mpiq-cc-sr__00010101/aggregated_results.json"
+        }
+      ],
+      "generation_evaluated": 6
+    },
+    "rssi-qo-cc-sr__10100101": {
+      "mask_id": "rssi-qo-cc-sr__10100101",
+      "mask_label": "rssi-qo-cc-sr",
+      "bits": [
+        1,
+        0,
+        1,
+        0,
+        0,
+        1,
+        0,
+        1
+      ],
+      "selected_features": [
+        "rssi",
+        "qo",
+        "cc",
+        "sr"
+      ],
+      "fitness": -0.6643239711195194,
+      "detail": {
+        "mu": 0.40397877034529206,
+        "sigma": 0.0,
+        "prr_penalty": 1.0683027414648114,
+        "missing_penalty": 0.0,
+        "missing_fraction": 0.0,
+        "score_mean": 0.40397877034529206,
+        "prr_mean": 0.31584862926759427,
+        "nlt_mean": 920909.3,
+        "delay_mean": 3116.5828367103695,
+        "runs_total_mean": 10.0,
+        "runs_valid_mean": 10.0,
+        "expected_runs_per_scenario": 10,
+        "scenario_coverage_mean": 1.0,
+        "expected_scenarios": 1,
+        "found_scenarios": 1
+      },
+      "scenarios": [
+        {
+          "nodes": 100,
+          "ppm": 120,
+          "prr": 0.31584862926759427,
+          "nlt": 920909.3,
+          "delay": 3116.5828367103695,
+          "runs_total": 10,
+          "runs_valid": 10,
+          "path": "/workspace/results/data/ga_search/runs/gen_006/logs/N100_PPM120/rssi-qo-cc-sr__10100101/aggregated_results.json"
+        }
+      ],
+      "generation_evaluated": 6
+    }
+  }
+}

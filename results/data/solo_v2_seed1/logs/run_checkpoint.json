@@ -1,0 +1,817 @@
+{
+  "version": 2,
+  "created_at": "2026-08-04 17:47:02",
+  "updated_at": "2026-08-05 12:54:40",
+  "config": {
+    "ararl_dir": "/workspace/experiments/ararl",
+    "logs_dir": "/workspace/results/data/solo_v2_seed1/logs",
+    "gradle_root": "/workspace/contiki-ng/tools/cooja",
+    "nodes": [
+      100
+    ],
+    "ppms": [
+      120
+    ],
+    "topology_ids": [
+      "01",
+      "02",
+      "03",
+      "04",
+      "05",
+      "06",
+      "07",
+      "08",
+      "09",
+      "10"
+    ],
+    "masks": [
+      {
+        "name": "cc",
+        "file": "/workspace/masks/solo/cc.yaml"
+      },
+      {
+        "name": "etx",
+        "file": "/workspace/masks/solo/etx.yaml"
+      },
+      {
+        "name": "hc",
+        "file": "/workspace/masks/solo/hc.yaml"
+      },
+      {
+        "name": "mpiq",
+        "file": "/workspace/masks/solo/mpiq.yaml"
+      },
+      {
+        "name": "pfi",
+        "file": "/workspace/masks/solo/pfi.yaml"
+      },
+      {
+        "name": "qlr",
+        "file": "/workspace/masks/solo/qlr.yaml"
+      },
+      {
+        "name": "qo",
+        "file": "/workspace/masks/solo/qo.yaml"
+      },
+      {
+        "name": "re",
+        "file": "/workspace/masks/solo/re.yaml"
+      },
+      {
+        "name": "rssi",
+        "file": "/workspace/masks/solo/rssi.yaml"
+      },
+      {
+        "name": "si",
+        "file": "/workspace/masks/solo/si.yaml"
+      },
+      {
+        "name": "sr",
+        "file": "/workspace/masks/solo/sr.yaml"
+      },
+      {
+        "name": "str",
+        "file": "/workspace/masks/solo/str.yaml"
+      }
+    ],
+    "duration_sf": 180,
+    "warmup_sf": 12,
+    "sim_seed": 67890,
+    "agent_seed": 12345,
+    "traffic_seeds": [
+      1
+    ],
+    "tx_range": null,
+    "int_range": null,
+    "gradle_user_home": null,
+    "jobs": 12,
+    "work_root": "/workspace/_work_solo_v2_seed1",
+    "keep_work": false,
+    "dry_run": false,
+    "resume": false,
+    "error_log_tail": 50,
+    "heartbeat_secs": 60
+  },
+  "task_state": {
+    "cc|100|120|01|1": {
+      "status": "done",
+      "ok": true,
+      "run_dir": "/workspace/results/data/solo_v2_seed1/logs/N100_PPM120/topo01/seed1/cc",
+      "updated_at": "2026-08-04 19:55:18"
+    },
+    "cc|100|120|02|1": {
+      "status": "done",
+      "ok": true,
+      "run_dir": "/workspace/results/data/solo_v2_seed1/logs/N100_PPM120/topo02/seed1/cc",
+      "updated_at": "2026-08-04 19:31:35"
+    },
+    "cc|100|120|03|1": {
+      "status": "done",
+      "ok": true,
+      "run_dir": "/workspace/results/data/solo_v2_seed1/logs/N100_PPM120/topo03/seed1/cc",
+      "updated_at": "2026-08-04 19:26:44"
+    },
+    "cc|100|120|04|1": {
+      "status": "done",
+      "ok": true,
+      "run_dir": "/workspace/results/data/solo_v2_seed1/logs/N100_PPM120/topo04/seed1/cc",
+      "updated_at": "2026-08-04 19:51:19"
+    },
+    "cc|100|120|05|1": {
+      "status": "done",
+      "ok": true,
+      "run_dir": "/workspace/results/data/solo_v2_seed1/logs/N100_PPM120/topo05/seed1/cc",
+      "updated_at": "2026-08-04 19:56:22"
+    },
+    "cc|100|120|06|1": {
+      "status": "done",
+      "ok": true,
+      "run_dir": "/workspace/results/data/solo_v2_seed1/logs/N100_PPM120/topo06/seed1/cc",
+      "updated_at": "2026-08-04 19:04:53"
+    },
+    "cc|100|120|07|1": {
+      "status": "done",
+      "ok": true,
+      "run_dir": "/workspace/results/data/solo_v2_seed1/logs/N100_PPM120/topo07/seed1/cc",
+      "updated_at": "2026-08-04 19:49:32"
+    },
+    "cc|100|120|08|1": {
+      "status": "done",
+      "ok": true,
+      "run_dir": "/workspace/results/data/solo_v2_seed1/logs/N100_PPM120/topo08/seed1/cc",
+      "updated_at": "2026-08-04 19:26:35"
+    },
+    "cc|100|120|09|1": {
+      "status": "done",
+      "ok": true,
+      "run_dir": "/workspace/results/data/solo_v2_seed1/logs/N100_PPM120/topo09/seed1/cc",
+      "updated_at": "2026-08-04 19:49:54"
+    },
+    "cc|100|120|10|1": {
+      "status": "done",
+      "ok": true,
+      "run_dir": "/workspace/results/data/solo_v2_seed1/logs/N100_PPM120/topo10/seed1/cc",
+      "updated_at": "2026-08-04 19:35:54"
+    },
+    "etx|100|120|01|1": {
+      "status": "done",
+      "ok": true,
+      "run_dir": "/workspace/results/data/solo_v2_seed1/logs/N100_PPM120/topo01/seed1/etx",
+      "updated_at": "2026-08-04 19:39:35"
+    },
+    "etx|100|120|02|1": {
+      "status": "done",
+      "ok": true,
+      "run_dir": "/workspace/results/data/solo_v2_seed1/logs/N100_PPM120/topo02/seed1/etx",
+      "updated_at": "2026-08-04 19:34:21"
+    },
+    "etx|100|120|03|1": {
+      "status": "done",
+      "ok": true,
+      "run_dir": "/workspace/results/data/solo_v2_seed1/logs/N100_PPM120/topo03/seed1/etx",
+      "updated_at": "2026-08-04 21:17:02"
+    },
+    "etx|100|120|04|1": {
+      "status": "done",
+      "ok": true,
+      "run_dir": "/workspace/results/data/solo_v2_seed1/logs/N100_PPM120/topo04/seed1/etx",
+      "updated_at": "2026-08-04 22:08:56"
+    },
+    "etx|100|120|05|1": {
+      "status": "done",
+      "ok": true,
+      "run_dir": "/workspace/results/data/solo_v2_seed1/logs/N100_PPM120/topo05/seed1/etx",
+      "updated_at": "2026-08-04 21:13:51"
+    },
+    "etx|100|120|06|1": {
+      "status": "done",
+      "ok": true,
+      "run_dir": "/workspace/results/data/solo_v2_seed1/logs/N100_PPM120/topo06/seed1/etx",
+      "updated_at": "2026-08-04 20:42:09"
+    },
+    "etx|100|120|07|1": {
+      "status": "done",
+      "ok": true,
+      "run_dir": "/workspace/results/data/solo_v2_seed1/logs/N100_PPM120/topo07/seed1/etx",
+      "updated_at": "2026-08-04 21:36:21"
+    },
+    "etx|100|120|08|1": {
+      "status": "done",
+      "ok": true,
+      "run_dir": "/workspace/results/data/solo_v2_seed1/logs/N100_PPM120/topo08/seed1/etx",
+      "updated_at": "2026-08-04 21:30:48"
+    },
+    "etx|100|120|09|1": {
+      "status": "done",
+      "ok": true,
+      "run_dir": "/workspace/results/data/solo_v2_seed1/logs/N100_PPM120/topo09/seed1/etx",
+      "updated_at": "2026-08-04 21:32:13"
+    },
+    "etx|100|120|10|1": {
+      "status": "done",
+      "ok": true,
+      "run_dir": "/workspace/results/data/solo_v2_seed1/logs/N100_PPM120/topo10/seed1/etx",
+      "updated_at": "2026-08-04 21:55:34"
+    },
+    "hc|100|120|01|1": {
+      "status": "done",
+      "ok": true,
+      "run_dir": "/workspace/results/data/solo_v2_seed1/logs/N100_PPM120/topo01/seed1/hc",
+      "updated_at": "2026-08-04 22:07:24"
+    },
+    "hc|100|120|02|1": {
+      "status": "done",
+      "ok": true,
+      "run_dir": "/workspace/results/data/solo_v2_seed1/logs/N100_PPM120/topo02/seed1/hc",
+      "updated_at": "2026-08-04 21:44:50"
+    },
+    "hc|100|120|03|1": {
+      "status": "done",
+      "ok": true,
+      "run_dir": "/workspace/results/data/solo_v2_seed1/logs/N100_PPM120/topo03/seed1/hc",
+      "updated_at": "2026-08-04 21:51:18"
+    },
+    "hc|100|120|04|1": {
+      "status": "done",
+      "ok": true,
+      "run_dir": "/workspace/results/data/solo_v2_seed1/logs/N100_PPM120/topo04/seed1/hc",
+      "updated_at": "2026-08-04 21:39:39"
+    },
+    "hc|100|120|05|1": {
+      "status": "done",
+      "ok": true,
+      "run_dir": "/workspace/results/data/solo_v2_seed1/logs/N100_PPM120/topo05/seed1/hc",
+      "updated_at": "2026-08-04 22:40:31"
+    },
+    "hc|100|120|06|1": {
+      "status": "done",
+      "ok": true,
+      "run_dir": "/workspace/results/data/solo_v2_seed1/logs/N100_PPM120/topo06/seed1/hc",
+      "updated_at": "2026-08-04 22:59:31"
+    },
+    "hc|100|120|07|1": {
+      "status": "done",
+      "ok": true,
+      "run_dir": "/workspace/results/data/solo_v2_seed1/logs/N100_PPM120/topo07/seed1/hc",
+      "updated_at": "2026-08-04 23:22:27"
+    },
+    "hc|100|120|08|1": {
+      "status": "done",
+      "ok": true,
+      "run_dir": "/workspace/results/data/solo_v2_seed1/logs/N100_PPM120/topo08/seed1/hc",
+      "updated_at": "2026-08-04 23:22:09"
+    },
+    "hc|100|120|09|1": {
+      "status": "done",
+      "ok": true,
+      "run_dir": "/workspace/results/data/solo_v2_seed1/logs/N100_PPM120/topo09/seed1/hc",
+      "updated_at": "2026-08-04 23:30:03"
+    },
+    "hc|100|120|10|1": {
+      "status": "done",
+      "ok": true,
+      "run_dir": "/workspace/results/data/solo_v2_seed1/logs/N100_PPM120/topo10/seed1/hc",
+      "updated_at": "2026-08-04 23:44:06"
+    },
+    "mpiq|100|120|01|1": {
+      "status": "done",
+      "ok": true,
+      "run_dir": "/workspace/results/data/solo_v2_seed1/logs/N100_PPM120/topo01/seed1/mpiq",
+      "updated_at": "2026-08-04 23:38:50"
+    },
+    "mpiq|100|120|02|1": {
+      "status": "done",
+      "ok": true,
+      "run_dir": "/workspace/results/data/solo_v2_seed1/logs/N100_PPM120/topo02/seed1/mpiq",
+      "updated_at": "2026-08-04 23:44:34"
+    },
+    "mpiq|100|120|03|1": {
+      "status": "done",
+      "ok": true,
+      "run_dir": "/workspace/results/data/solo_v2_seed1/logs/N100_PPM120/topo03/seed1/mpiq",
+      "updated_at": "2026-08-04 23:33:54"
+    },
+    "mpiq|100|120|04|1": {
+      "status": "done",
+      "ok": true,
+      "run_dir": "/workspace/results/data/solo_v2_seed1/logs/N100_PPM120/topo04/seed1/mpiq",
+      "updated_at": "2026-08-05 00:20:46"
+    },
+    "mpiq|100|120|05|1": {
+      "status": "done",
+      "ok": true,
+      "run_dir": "/workspace/results/data/solo_v2_seed1/logs/N100_PPM120/topo05/seed1/mpiq",
+      "updated_at": "2026-08-05 00:28:51"
+    },
+    "mpiq|100|120|06|1": {
+      "status": "done",
+      "ok": true,
+      "run_dir": "/workspace/results/data/solo_v2_seed1/logs/N100_PPM120/topo06/seed1/mpiq",
+      "updated_at": "2026-08-04 23:28:10"
+    },
+    "mpiq|100|120|07|1": {
+      "status": "done",
+      "ok": true,
+      "run_dir": "/workspace/results/data/solo_v2_seed1/logs/N100_PPM120/topo07/seed1/mpiq",
+      "updated_at": "2026-08-05 00:29:52"
+    },
+    "mpiq|100|120|08|1": {
+      "status": "done",
+      "ok": true,
+      "run_dir": "/workspace/results/data/solo_v2_seed1/logs/N100_PPM120/topo08/seed1/mpiq",
+      "updated_at": "2026-08-05 00:32:49"
+    },
+    "mpiq|100|120|09|1": {
+      "status": "done",
+      "ok": true,
+      "run_dir": "/workspace/results/data/solo_v2_seed1/logs/N100_PPM120/topo09/seed1/mpiq",
+      "updated_at": "2026-08-05 01:26:41"
+    },
+    "mpiq|100|120|10|1": {
+      "status": "done",
+      "ok": true,
+      "run_dir": "/workspace/results/data/solo_v2_seed1/logs/N100_PPM120/topo10/seed1/mpiq",
+      "updated_at": "2026-08-05 01:23:18"
+    },
+    "pfi|100|120|01|1": {
+      "status": "done",
+      "ok": true,
+      "run_dir": "/workspace/results/data/solo_v2_seed1/logs/N100_PPM120/topo01/seed1/pfi",
+      "updated_at": "2026-08-05 01:40:29"
+    },
+    "pfi|100|120|02|1": {
+      "status": "done",
+      "ok": true,
+      "run_dir": "/workspace/results/data/solo_v2_seed1/logs/N100_PPM120/topo02/seed1/pfi",
+      "updated_at": "2026-08-05 01:06:03"
+    },
+    "pfi|100|120|03|1": {
+      "status": "done",
+      "ok": true,
+      "run_dir": "/workspace/results/data/solo_v2_seed1/logs/N100_PPM120/topo03/seed1/pfi",
+      "updated_at": "2026-08-05 01:20:46"
+    },
+    "pfi|100|120|04|1": {
+      "status": "done",
+      "ok": true,
+      "run_dir": "/workspace/results/data/solo_v2_seed1/logs/N100_PPM120/topo04/seed1/pfi",
+      "updated_at": "2026-08-05 01:23:34"
+    },
+    "pfi|100|120|05|1": {
+      "status": "done",
+      "ok": true,
+      "run_dir": "/workspace/results/data/solo_v2_seed1/logs/N100_PPM120/topo05/seed1/pfi",
+      "updated_at": "2026-08-05 01:59:10"
+    },
+    "pfi|100|120|06|1": {
+      "status": "done",
+      "ok": true,
+      "run_dir": "/workspace/results/data/solo_v2_seed1/logs/N100_PPM120/topo06/seed1/pfi",
+      "updated_at": "2026-08-05 01:16:06"
+    },
+    "pfi|100|120|07|1": {
+      "status": "done",
+      "ok": true,
+      "run_dir": "/workspace/results/data/solo_v2_seed1/logs/N100_PPM120/topo07/seed1/pfi",
+      "updated_at": "2026-08-05 02:18:56"
+    },
+    "pfi|100|120|08|1": {
+      "status": "done",
+      "ok": true,
+      "run_dir": "/workspace/results/data/solo_v2_seed1/logs/N100_PPM120/topo08/seed1/pfi",
+      "updated_at": "2026-08-05 02:10:25"
+    },
+    "pfi|100|120|09|1": {
+      "status": "done",
+      "ok": true,
+      "run_dir": "/workspace/results/data/solo_v2_seed1/logs/N100_PPM120/topo09/seed1/pfi",
+      "updated_at": "2026-08-05 02:26:03"
+    },
+    "pfi|100|120|10|1": {
+      "status": "done",
+      "ok": true,
+      "run_dir": "/workspace/results/data/solo_v2_seed1/logs/N100_PPM120/topo10/seed1/pfi",
+      "updated_at": "2026-08-05 02:18:54"
+    },
+    "qlr|100|120|01|1": {
+      "status": "done",
+      "ok": true,
+      "run_dir": "/workspace/results/data/solo_v2_seed1/logs/N100_PPM120/topo01/seed1/qlr",
+      "updated_at": "2026-08-05 03:13:25"
+    },
+    "qlr|100|120|02|1": {
+      "status": "done",
+      "ok": true,
+      "run_dir": "/workspace/results/data/solo_v2_seed1/logs/N100_PPM120/topo02/seed1/qlr",
+      "updated_at": "2026-08-05 03:03:39"
+    },
+    "qlr|100|120|03|1": {
+      "status": "done",
+      "ok": true,
+      "run_dir": "/workspace/results/data/solo_v2_seed1/logs/N100_PPM120/topo03/seed1/qlr",
+      "updated_at": "2026-08-05 03:00:29"
+    },
+    "qlr|100|120|04|1": {
+      "status": "done",
+      "ok": true,
+      "run_dir": "/workspace/results/data/solo_v2_seed1/logs/N100_PPM120/topo04/seed1/qlr",
+      "updated_at": "2026-08-05 03:40:06"
+    },
+    "qlr|100|120|05|1": {
+      "status": "done",
+      "ok": true,
+      "run_dir": "/workspace/results/data/solo_v2_seed1/logs/N100_PPM120/topo05/seed1/qlr",
+      "updated_at": "2026-08-05 03:36:48"
+    },
+    "qlr|100|120|06|1": {
+      "status": "done",
+      "ok": true,
+      "run_dir": "/workspace/results/data/solo_v2_seed1/logs/N100_PPM120/topo06/seed1/qlr",
+      "updated_at": "2026-08-05 03:00:44"
+    },
+    "qlr|100|120|07|1": {
+      "status": "done",
+      "ok": true,
+      "run_dir": "/workspace/results/data/solo_v2_seed1/logs/N100_PPM120/topo07/seed1/qlr",
+      "updated_at": "2026-08-05 03:46:46"
+    },
+    "qlr|100|120|08|1": {
+      "status": "done",
+      "ok": true,
+      "run_dir": "/workspace/results/data/solo_v2_seed1/logs/N100_PPM120/topo08/seed1/qlr",
+      "updated_at": "2026-08-05 03:50:34"
+    },
+    "qlr|100|120|09|1": {
+      "status": "done",
+      "ok": true,
+      "run_dir": "/workspace/results/data/solo_v2_seed1/logs/N100_PPM120/topo09/seed1/qlr",
+      "updated_at": "2026-08-05 04:18:47"
+    },
+    "qlr|100|120|10|1": {
+      "status": "done",
+      "ok": true,
+      "run_dir": "/workspace/results/data/solo_v2_seed1/logs/N100_PPM120/topo10/seed1/qlr",
+      "updated_at": "2026-08-05 04:12:25"
+    },
+    "qo|100|120|01|1": {
+      "status": "done",
+      "ok": true,
+      "run_dir": "/workspace/results/data/solo_v2_seed1/logs/N100_PPM120/topo01/seed1/qo",
+      "updated_at": "2026-08-05 04:29:18"
+    },
+    "qo|100|120|02|1": {
+      "status": "done",
+      "ok": true,
+      "run_dir": "/workspace/results/data/solo_v2_seed1/logs/N100_PPM120/topo02/seed1/qo",
+      "updated_at": "2026-08-05 04:17:17"
+    },
+    "qo|100|120|03|1": {
+      "status": "done",
+      "ok": true,
+      "run_dir": "/workspace/results/data/solo_v2_seed1/logs/N100_PPM120/topo03/seed1/qo",
+      "updated_at": "2026-08-05 04:58:44"
+    },
+    "qo|100|120|04|1": {
+      "status": "done",
+      "ok": true,
+      "run_dir": "/workspace/results/data/solo_v2_seed1/logs/N100_PPM120/topo04/seed1/qo",
+      "updated_at": "2026-08-05 05:14:24"
+    },
+    "qo|100|120|05|1": {
+      "status": "done",
+      "ok": true,
+      "run_dir": "/workspace/results/data/solo_v2_seed1/logs/N100_PPM120/topo05/seed1/qo",
+      "updated_at": "2026-08-05 05:10:31"
+    },
+    "qo|100|120|06|1": {
+      "status": "done",
+      "ok": true,
+      "run_dir": "/workspace/results/data/solo_v2_seed1/logs/N100_PPM120/topo06/seed1/qo",
+      "updated_at": "2026-08-05 04:45:47"
+    },
+    "qo|100|120|07|1": {
+      "status": "done",
+      "ok": true,
+      "run_dir": "/workspace/results/data/solo_v2_seed1/logs/N100_PPM120/topo07/seed1/qo",
+      "updated_at": "2026-08-05 05:29:24"
+    },
+    "qo|100|120|08|1": {
+      "status": "done",
+      "ok": true,
+      "run_dir": "/workspace/results/data/solo_v2_seed1/logs/N100_PPM120/topo08/seed1/qo",
+      "updated_at": "2026-08-05 05:24:43"
+    },
+    "qo|100|120|09|1": {
+      "status": "done",
+      "ok": true,
+      "run_dir": "/workspace/results/data/solo_v2_seed1/logs/N100_PPM120/topo09/seed1/qo",
+      "updated_at": "2026-08-05 06:01:38"
+    },
+    "qo|100|120|10|1": {
+      "status": "done",
+      "ok": true,
+      "run_dir": "/workspace/results/data/solo_v2_seed1/logs/N100_PPM120/topo10/seed1/qo",
+      "updated_at": "2026-08-05 05:58:49"
+    },
+    "re|100|120|01|1": {
+      "status": "done",
+      "ok": true,
+      "run_dir": "/workspace/results/data/solo_v2_seed1/logs/N100_PPM120/topo01/seed1/re",
+      "updated_at": "2026-08-05 06:05:43"
+    },
+    "re|100|120|02|1": {
+      "status": "done",
+      "ok": true,
+      "run_dir": "/workspace/results/data/solo_v2_seed1/logs/N100_PPM120/topo02/seed1/re",
+      "updated_at": "2026-08-05 05:59:10"
+    },
+    "re|100|120|03|1": {
+      "status": "done",
+      "ok": true,
+      "run_dir": "/workspace/results/data/solo_v2_seed1/logs/N100_PPM120/topo03/seed1/re",
+      "updated_at": "2026-08-05 06:12:58"
+    },
+    "re|100|120|04|1": {
+      "status": "done",
+      "ok": true,
+      "run_dir": "/workspace/results/data/solo_v2_seed1/logs/N100_PPM120/topo04/seed1/re",
+      "updated_at": "2026-08-05 06:53:56"
+    },
+    "re|100|120|05|1": {
+      "status": "done",
+      "ok": true,
+      "run_dir": "/workspace/results/data/solo_v2_seed1/logs/N100_PPM120/topo05/seed1/re",
+      "updated_at": "2026-08-05 06:45:18"
+    },
+    "re|100|120|06|1": {
+      "status": "done",
+      "ok": true,
+      "run_dir": "/workspace/results/data/solo_v2_seed1/logs/N100_PPM120/topo06/seed1/re",
+      "updated_at": "2026-08-05 06:26:27"
+    },
+    "re|100|120|07|1": {
+      "status": "done",
+      "ok": true,
+      "run_dir": "/workspace/results/data/solo_v2_seed1/logs/N100_PPM120/topo07/seed1/re",
+      "updated_at": "2026-08-05 07:17:21"
+    },
+    "re|100|120|08|1": {
+      "status": "done",
+      "ok": true,
+      "run_dir": "/workspace/results/data/solo_v2_seed1/logs/N100_PPM120/topo08/seed1/re",
+      "updated_at": "2026-08-05 07:15:42"
+    },
+    "re|100|120|09|1": {
+      "status": "done",
+      "ok": true,
+      "run_dir": "/workspace/results/data/solo_v2_seed1/logs/N100_PPM120/topo09/seed1/re",
+      "updated_at": "2026-08-05 07:46:48"
+    },
+    "re|100|120|10|1": {
+      "status": "done",
+      "ok": true,
+      "run_dir": "/workspace/results/data/solo_v2_seed1/logs/N100_PPM120/topo10/seed1/re",
+      "updated_at": "2026-08-05 07:24:06"
+    },
+    "rssi|100|120|01|1": {
+      "status": "done",
+      "ok": true,
+      "run_dir": "/workspace/results/data/solo_v2_seed1/logs/N100_PPM120/topo01/seed1/rssi",
+      "updated_at": "2026-08-05 08:01:26"
+    },
+    "rssi|100|120|02|1": {
+      "status": "done",
+      "ok": true,
+      "run_dir": "/workspace/results/data/solo_v2_seed1/logs/N100_PPM120/topo02/seed1/rssi",
+      "updated_at": "2026-08-05 07:56:06"
+    },
+    "rssi|100|120|03|1": {
+      "status": "done",
+      "ok": true,
+      "run_dir": "/workspace/results/data/solo_v2_seed1/logs/N100_PPM120/topo03/seed1/rssi",
+      "updated_at": "2026-08-05 07:50:20"
+    },
+    "rssi|100|120|04|1": {
+      "status": "done",
+      "ok": true,
+      "run_dir": "/workspace/results/data/solo_v2_seed1/logs/N100_PPM120/topo04/seed1/rssi",
+      "updated_at": "2026-08-05 08:04:23"
+    },
+    "rssi|100|120|05|1": {
+      "status": "done",
+      "ok": true,
+      "run_dir": "/workspace/results/data/solo_v2_seed1/logs/N100_PPM120/topo05/seed1/rssi",
+      "updated_at": "2026-08-05 08:30:26"
+    },
+    "rssi|100|120|06|1": {
+      "status": "done",
+      "ok": true,
+      "run_dir": "/workspace/results/data/solo_v2_seed1/logs/N100_PPM120/topo06/seed1/rssi",
+      "updated_at": "2026-08-05 07:46:46"
+    },
+    "rssi|100|120|07|1": {
+      "status": "done",
+      "ok": true,
+      "run_dir": "/workspace/results/data/solo_v2_seed1/logs/N100_PPM120/topo07/seed1/rssi",
+      "updated_at": "2026-08-05 08:59:01"
+    },
+    "rssi|100|120|08|1": {
+      "status": "done",
+      "ok": true,
+      "run_dir": "/workspace/results/data/solo_v2_seed1/logs/N100_PPM120/topo08/seed1/rssi",
+      "updated_at": "2026-08-05 08:29:48"
+    },
+    "rssi|100|120|09|1": {
+      "status": "done",
+      "ok": true,
+      "run_dir": "/workspace/results/data/solo_v2_seed1/logs/N100_PPM120/topo09/seed1/rssi",
+      "updated_at": "2026-08-05 09:32:32"
+    },
+    "rssi|100|120|10|1": {
+      "status": "done",
+      "ok": true,
+      "run_dir": "/workspace/results/data/solo_v2_seed1/logs/N100_PPM120/topo10/seed1/rssi",
+      "updated_at": "2026-08-05 09:20:34"
+    },
+    "si|100|120|01|1": {
+      "status": "done",
+      "ok": true,
+      "run_dir": "/workspace/results/data/solo_v2_seed1/logs/N100_PPM120/topo01/seed1/si",
+      "updated_at": "2026-08-05 09:31:59"
+    },
+    "si|100|120|02|1": {
+      "status": "done",
+      "ok": true,
+      "run_dir": "/workspace/results/data/solo_v2_seed1/logs/N100_PPM120/topo02/seed1/si",
+      "updated_at": "2026-08-05 09:42:47"
+    },
+    "si|100|120|03|1": {
+      "status": "done",
+      "ok": true,
+      "run_dir": "/workspace/results/data/solo_v2_seed1/logs/N100_PPM120/topo03/seed1/si",
+      "updated_at": "2026-08-05 09:15:31"
+    },
+    "si|100|120|04|1": {
+      "status": "done",
+      "ok": true,
+      "run_dir": "/workspace/results/data/solo_v2_seed1/logs/N100_PPM120/topo04/seed1/si",
+      "updated_at": "2026-08-05 09:59:46"
+    },
+    "si|100|120|05|1": {
+      "status": "done",
+      "ok": true,
+      "run_dir": "/workspace/results/data/solo_v2_seed1/logs/N100_PPM120/topo05/seed1/si",
+      "updated_at": "2026-08-05 10:07:49"
+    },
+    "si|100|120|06|1": {
+      "status": "done",
+      "ok": true,
+      "run_dir": "/workspace/results/data/solo_v2_seed1/logs/N100_PPM120/topo06/seed1/si",
+      "updated_at": "2026-08-05 09:27:38"
+    },
+    "si|100|120|07|1": {
+      "status": "done",
+      "ok": true,
+      "run_dir": "/workspace/results/data/solo_v2_seed1/logs/N100_PPM120/topo07/seed1/si",
+      "updated_at": "2026-08-05 10:00:44"
+    },
+    "si|100|120|08|1": {
+      "status": "done",
+      "ok": true,
+      "run_dir": "/workspace/results/data/solo_v2_seed1/logs/N100_PPM120/topo08/seed1/si",
+      "updated_at": "2026-08-05 10:21:38"
+    },
+    "si|100|120|09|1": {
+      "status": "done",
+      "ok": true,
+      "run_dir": "/workspace/results/data/solo_v2_seed1/logs/N100_PPM120/topo09/seed1/si",
+      "updated_at": "2026-08-05 10:35:37"
+    },
+    "si|100|120|10|1": {
+      "status": "done",
+      "ok": true,
+      "run_dir": "/workspace/results/data/solo_v2_seed1/logs/N100_PPM120/topo10/seed1/si",
+      "updated_at": "2026-08-05 11:01:13"
+    },
+    "sr|100|120|01|1": {
+      "status": "done",
+      "ok": true,
+      "run_dir": "/workspace/results/data/solo_v2_seed1/logs/N100_PPM120/topo01/seed1/sr",
+      "updated_at": "2026-08-05 11:24:59"
+    },
+    "sr|100|120|02|1": {
+      "status": "done",
+      "ok": true,
+      "run_dir": "/workspace/results/data/solo_v2_seed1/logs/N100_PPM120/topo02/seed1/sr",
+      "updated_at": "2026-08-05 11:12:25"
+    },
+    "sr|100|120|03|1": {
+      "status": "done",
+      "ok": true,
+      "run_dir": "/workspace/results/data/solo_v2_seed1/logs/N100_PPM120/topo03/seed1/sr",
+      "updated_at": "2026-08-05 11:10:27"
+    },
+    "sr|100|120|04|1": {
+      "status": "done",
+      "ok": true,
+      "run_dir": "/workspace/results/data/solo_v2_seed1/logs/N100_PPM120/topo04/seed1/sr",
+      "updated_at": "2026-08-05 11:39:31"
+    },
+    "sr|100|120|05|1": {
+      "status": "done",
+      "ok": true,
+      "run_dir": "/workspace/results/data/solo_v2_seed1/logs/N100_PPM120/topo05/seed1/sr",
+      "updated_at": "2026-08-05 11:45:06"
+    },
+    "sr|100|120|06|1": {
+      "status": "done",
+      "ok": true,
+      "run_dir": "/workspace/results/data/solo_v2_seed1/logs/N100_PPM120/topo06/seed1/sr",
+      "updated_at": "2026-08-05 11:14:31"
+    },
+    "sr|100|120|07|1": {
+      "status": "done",
+      "ok": true,
+      "run_dir": "/workspace/results/data/solo_v2_seed1/logs/N100_PPM120/topo07/seed1/sr",
+      "updated_at": "2026-08-05 11:52:38"
+    },
+    "sr|100|120|08|1": {
+      "status": "done",
+      "ok": true,
+      "run_dir": "/workspace/results/data/solo_v2_seed1/logs/N100_PPM120/topo08/seed1/sr",
+      "updated_at": "2026-08-05 11:38:23"
+    },
+    "sr|100|120|09|1": {
+      "status": "done",
+      "ok": true,
+      "run_dir": "/workspace/results/data/solo_v2_seed1/logs/N100_PPM120/topo09/seed1/sr",
+      "updated_at": "2026-08-05 12:02:34"
+    },
+    "sr|100|120|10|1": {
+      "status": "done",
+      "ok": true,
+      "run_dir": "/workspace/results/data/solo_v2_seed1/logs/N100_PPM120/topo10/seed1/sr",
+      "updated_at": "2026-08-05 12:18:59"
+    },
+    "str|100|120|01|1": {
+      "status": "done",
+      "ok": true,
+      "run_dir": "/workspace/results/data/solo_v2_seed1/logs/N100_PPM120/topo01/seed1/str",
+      "updated_at": "2026-08-05 12:29:03"
+    },
+    "str|100|120|02|1": {
+      "status": "done",
+      "ok": true,
+      "run_dir": "/workspace/results/data/solo_v2_seed1/logs/N100_PPM120/topo02/seed1/str",
+      "updated_at": "2026-08-05 12:30:24"
+    },
+    "str|100|120|03|1": {
+      "status": "done",
+      "ok": true,
+      "run_dir": "/workspace/results/data/solo_v2_seed1/logs/N100_PPM120/topo03/seed1/str",
+      "updated_at": "2026-08-05 12:40:48"
+    },
+    "str|100|120|04|1": {
+      "status": "done",
+      "ok": true,
+      "run_dir": "/workspace/results/data/solo_v2_seed1/logs/N100_PPM120/topo04/seed1/str",
+      "updated_at": "2026-08-05 12:44:55"
+    },
+    "str|100|120|05|1": {
+      "status": "done",
+      "ok": true,
+      "run_dir": "/workspace/results/data/solo_v2_seed1/logs/N100_PPM120/topo05/seed1/str",
+      "updated_at": "2026-08-05 12:48:25"
+    },
+    "str|100|120|06|1": {
+      "status": "done",
+      "ok": true,
+      "run_dir": "/workspace/results/data/solo_v2_seed1/logs/N100_PPM120/topo06/seed1/str",
+      "updated_at": "2026-08-05 12:29:55"
+    },
+    "str|100|120|07|1": {
+      "status": "done",
+      "ok": true,
+      "run_dir": "/workspace/results/data/solo_v2_seed1/logs/N100_PPM120/topo07/seed1/str",
+      "updated_at": "2026-08-05 12:52:02"
+    },
+    "str|100|120|08|1": {
+      "status": "done",
+      "ok": true,
+      "run_dir": "/workspace/results/data/solo_v2_seed1/logs/N100_PPM120/topo08/seed1/str",
+      "updated_at": "2026-08-05 12:48:14"
+    },
+    "str|100|120|09|1": {
+      "status": "done",
+      "ok": true,
+      "run_dir": "/workspace/results/data/solo_v2_seed1/logs/N100_PPM120/topo09/seed1/str",
+      "updated_at": "2026-08-05 12:52:38"
+    },
+    "str|100|120|10|1": {
+      "status": "done",
+      "ok": true,
+      "run_dir": "/workspace/results/data/solo_v2_seed1/logs/N100_PPM120/topo10/seed1/str",
+      "updated_at": "2026-08-05 12:54:40"
+    }
+  }
+}

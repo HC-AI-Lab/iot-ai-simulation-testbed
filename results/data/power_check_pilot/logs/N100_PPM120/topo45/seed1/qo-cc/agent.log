@@ -1,0 +1,1449 @@
+=== Agent started === logPath=/workspace/_work_power_check_pilot/N100_PPM120/topo45/seed1/qo-cc/agent.log
+AGENT_SEED=12345
+1786347715196 INIT Agent: K=4 Factive=2
+1786347715202 EPS sched: start=0.3 end=0.01 anneal=500
+1786347719097 POLICY_EVAL phase=0 states=7 choiceStates=0 invalidPicks=0 invalidPickRate=0.000
+1786347729719 DECISION phase=1 mote=5 eps=0.299 cand=[99] valid=[true, false, false, false]
+  cand[0] id=99 features=[6.0, 0.0] hc=0.19 re=1967.6 qo=6.000
+  qValues=[-0.00106572057120502, -0.002846288261935115, 0.004989526467397809, -0.019566248869523406]  action=2
+1786347731104 POLICY_EVAL phase=1 states=65 choiceStates=0 invalidPicks=23 invalidPickRate=0.354
+1786347757519 POLICY_EVAL phase=2 states=82 choiceStates=4 invalidPicks=13 invalidPickRate=0.159 greedyTop1=0.500 meanGreedyReward=0.8034 meanBestReward=1.0099 meanRegret=0.2065 rewardRatio=0.796
+1786347781845 DECISION phase=3 mote=5 eps=0.298 cand=[53] valid=[true, false, false, false]
+  cand[0] id=53 features=[7.0, 0.0] hc=1.21 re=1924.7 qo=7.000
+  qValues=[-0.09790401603095233, -0.1329388755839318, -0.19714978034608066, -0.15272983885370195]  action=0  chosenParent=53
+1786347782827 POLICY_EVAL phase=3 states=78 choiceStates=20 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.600 meanGreedyReward=0.6744 meanBestReward=1.0344 meanRegret=0.3599 rewardRatio=0.652
+1786347808939 DECISION phase=4 mote=5 eps=0.298 cand=[14] valid=[true, false, false, false]
+  cand[0] id=14 features=[3.0, 0.0] hc=0.93 re=1853.4 qo=3.000
+  qValues=[0.010066378396004438, -0.0740958102978766, -0.1906066951341927, -0.12739734025672078]  action=0  chosenParent=14
+1786347809807 POLICY_EVAL phase=4 states=73 choiceStates=27 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.630 meanGreedyReward=0.6664 meanBestReward=0.7975 meanRegret=0.1311 rewardRatio=0.836
+1786347840437 DECISION phase=5 mote=5 eps=0.297 cand=[81] valid=[true, false, false, false]
+  cand[0] id=81 features=[8.0, 0.0] hc=1.12 re=1937.9 qo=8.000
+  qValues=[0.06443394534289837, -0.11425084806978703, -0.36646819300949574, -0.23649591393768787]  action=0  chosenParent=81
+1786347841187 POLICY_EVAL phase=5 states=73 choiceStates=29 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.517 meanGreedyReward=0.5249 meanBestReward=0.6771 meanRegret=0.1522 rewardRatio=0.775
+1786347869005 DECISION phase=6 mote=5 eps=0.297 cand=[70, 81] valid=[true, true, false, false]
+  cand[0] id=70 features=[7.0, 0.0] hc=2.22 re=1983.4 qo=7.000
+  cand[1] id=81 features=[8.0, 0.0] hc=1.12 re=1917.6 qo=8.000
+  qValues=[0.2908327020704746, -0.03229343518614769, -0.4665822945535183, -0.2582479231059551]  action=0  chosenParent=70
+1786347869743 POLICY_EVAL phase=6 states=70 choiceStates=32 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.469 meanGreedyReward=0.4939 meanBestReward=0.6098 meanRegret=0.1159 rewardRatio=0.810
+1786347898783 POLICY_EVAL phase=7 states=69 choiceStates=33 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.364 meanGreedyReward=0.4601 meanBestReward=0.6143 meanRegret=0.1542 rewardRatio=0.749
+1786347927654 POLICY_EVAL phase=8 states=73 choiceStates=30 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.300 meanGreedyReward=0.3980 meanBestReward=0.5498 meanRegret=0.1518 rewardRatio=0.724
+1786347955350 DECISION phase=9 mote=5 eps=0.295 cand=[85, 70] valid=[true, true, false, false]
+  cand[0] id=85 features=[8.0, 0.0] hc=3.11 re=1796.9 qo=8.000
+  cand[1] id=70 features=[8.0, 0.0] hc=3.12 re=1967.4 qo=8.000
+  qValues=[1.2118303384631872, 0.2111410479992628, -0.6947009358555079, -0.2788713965564966]  action=0  chosenParent=85
+1786347955940 POLICY_EVAL phase=9 states=72 choiceStates=30 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.433 meanGreedyReward=0.4021 meanBestReward=0.5430 meanRegret=0.1408 rewardRatio=0.741
+1786347982930 DECISION phase=10 mote=5 eps=0.294 cand=[85, 70] valid=[true, true, false, false]
+  cand[0] id=85 features=[8.0, 0.0] hc=2.22 re=1760.2 qo=8.000
+  cand[1] id=70 features=[6.0, 0.0] hc=3.43 re=1967.1 qo=6.000
+  qValues=[1.2781026661396027, 0.1744808852672577, -0.7600657641887665, -0.3478982746601105]  action=0  chosenParent=85
+1786347983651 POLICY_EVAL phase=10 states=75 choiceStates=31 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.484 meanGreedyReward=0.4053 meanBestReward=0.4952 meanRegret=0.0898 rewardRatio=0.819
+1786348014959 DECISION phase=11 mote=5 eps=0.294 cand=[70] valid=[true, false, false, false]
+  cand[0] id=70 features=[8.0, 0.0] hc=3.34 re=1966.7 qo=8.000
+  qValues=[1.0839565992355347, 0.08041492104530334, -0.7109442353248596, -0.3623601198196411]  action=0  chosenParent=70
+1786348015669 POLICY_EVAL phase=11 states=71 choiceStates=27 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.481 meanGreedyReward=0.4199 meanBestReward=0.4864 meanRegret=0.0666 rewardRatio=0.863
+1786348046512 DECISION phase=12 mote=5 eps=0.293 cand=[70] valid=[true, false, false, false]
+  cand[0] id=70 features=[8.0, 0.0] hc=3.21 re=1966.4 qo=8.000
+  qValues=[1.0535497013479471, 0.03522668220102787, -0.6756947692483664, -0.38422668538987637]  action=0  chosenParent=70
+1786348047173 POLICY_EVAL phase=12 states=74 choiceStates=35 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.429 meanGreedyReward=0.3659 meanBestReward=0.4260 meanRegret=0.0601 rewardRatio=0.859
+1786348075171 DECISION phase=13 mote=5 eps=0.292 cand=[89, 70, 62] valid=[true, true, true, false]
+  cand[0] id=89 features=[8.0, 0.0] hc=3.15 re=1713.2 qo=8.000
+  cand[1] id=70 features=[8.0, 0.0] hc=3.34 re=1966.1 qo=8.000
+  cand[2] id=62 features=[7.0, 0.0] hc=2.19 re=1758.9 qo=7.000
+  qValues=[1.134753255173564, 0.021444467827677727, -0.6584939081221819, -0.4164027292281389]  action=0  chosenParent=89
+1786348075602 POLICY_EVAL phase=13 states=72 choiceStates=37 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.541 meanGreedyReward=0.3351 meanBestReward=0.3888 meanRegret=0.0538 rewardRatio=0.862
+1786348107000 DECISION phase=14 mote=5 eps=0.292 cand=[70, 8, 62] valid=[true, true, true, false]
+  cand[0] id=70 features=[8.0, 0.0] hc=3.17 re=1965.6 qo=8.000
+  cand[1] id=8 features=[7.0, 0.0] hc=3.26 re=1824.4 qo=7.000
+  cand[2] id=62 features=[6.0, 0.0] hc=1.57 re=1743.7 qo=6.000
+  qValues=[1.1626536883413792, 0.017082292586565018, -0.5751931630074978, -0.39589494094252586]  action=0  chosenParent=70
+1786348107606 POLICY_EVAL phase=14 states=72 choiceStates=37 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.486 meanGreedyReward=0.3503 meanBestReward=0.4131 meanRegret=0.0628 rewardRatio=0.848
+1786348138718 DECISION phase=15 mote=5 eps=0.291 cand=[70, 8, 62] valid=[true, true, true, false]
+  cand[0] id=70 features=[7.0, 0.0] hc=3.46 re=1960.0 qo=7.000
+  cand[1] id=8 features=[7.0, 0.0] hc=3.05 re=1824.4 qo=7.000
+  cand[2] id=62 features=[8.0, 0.0] hc=1.70 re=1722.3 qo=8.000
+  qValues=[1.257675640285015, 0.020324401557445526, -0.5269185975193977, -0.3957963064312935]  action=0  chosenParent=70
+1786348139317 POLICY_EVAL phase=15 states=74 choiceStates=32 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.375 meanGreedyReward=0.3122 meanBestReward=0.4095 meanRegret=0.0973 rewardRatio=0.762
+1786348169236 DECISION phase=16 mote=5 eps=0.291 cand=[70, 8, 62] valid=[true, true, true, false]
+  cand[0] id=70 features=[7.0, 0.0] hc=3.62 re=1954.3 qo=7.000
+  cand[1] id=8 features=[6.0, 0.0] hc=3.95 re=1824.3 qo=6.000
+  cand[2] id=62 features=[8.0, 0.0] hc=1.70 re=1706.4 qo=8.000
+  qValues=[1.3779999017715454, 0.015772968530654907, -0.49230605363845825, -0.40370768308639526]  action=0  chosenParent=70
+1786348169828 POLICY_EVAL phase=16 states=77 choiceStates=36 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.611 meanGreedyReward=0.3286 meanBestReward=0.3739 meanRegret=0.0452 rewardRatio=0.879
+1786348198318 DECISION phase=17 mote=5 eps=0.290 cand=[8, 62, 70] valid=[true, true, true, false]
+  cand[0] id=8 features=[8.0, 0.0] hc=4.25 re=1824.3 qo=8.000
+  cand[1] id=62 features=[8.0, 0.0] hc=1.78 re=1692.6 qo=8.000
+  cand[2] id=70 features=[8.0, 0.0] hc=3.96 re=1950.4 qo=8.000
+  qValues=[1.5636418163776398, 0.043929487466812134, -0.4787999093532562, -0.4271318018436432]  action=0  chosenParent=8
+1786348198978 POLICY_EVAL phase=17 states=77 choiceStates=42 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.548 meanGreedyReward=0.3824 meanBestReward=0.4396 meanRegret=0.0572 rewardRatio=0.870
+1786348232707 DECISION phase=18 mote=5 eps=0.290 cand=[62, 8, 70] valid=[true, true, true, false]
+  cand[0] id=62 features=[6.0, 0.0] hc=2.17 re=1685.7 qo=6.000
+  cand[1] id=8 features=[8.0, 0.0] hc=3.12 re=1824.3 qo=8.000
+  cand[2] id=70 features=[7.0, 0.0] hc=3.95 re=1941.8 qo=7.000
+  qValues=[1.7139244079589844, 0.09398877620697021, -0.4446333646774292, -0.42789405584335327]  action=0  chosenParent=62
+1786348233333 POLICY_EVAL phase=18 states=76 choiceStates=43 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.581 meanGreedyReward=0.3361 meanBestReward=0.3966 meanRegret=0.0605 rewardRatio=0.847
+1786348264345 DECISION phase=19 mote=5 eps=0.289 cand=[36, 70] valid=[true, true, false, false]
+  cand[0] id=36 features=[6.0, 0.0] hc=3.35 re=1901.6 qo=6.000
+  cand[1] id=70 features=[8.0, 0.0] hc=3.98 re=1931.0 qo=8.000
+  qValues=[1.8567808046936989, 0.15436656028032303, -0.41103240102529526, -0.40837397426366806]  action=0  chosenParent=36
+1786348264889 POLICY_EVAL phase=19 states=78 choiceStates=49 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.633 meanGreedyReward=0.3469 meanBestReward=0.4133 meanRegret=0.0663 rewardRatio=0.840
+1786348297207 DECISION phase=20 mote=5 eps=0.288 cand=[36, 70] valid=[true, true, false, false]
+  cand[0] id=36 features=[8.0, 0.0] hc=3.35 re=1894.6 qo=8.000
+  cand[1] id=70 features=[8.0, 0.0] hc=4.16 re=1916.2 qo=8.000
+  qValues=[1.9690562970936298, 0.24625829234719276, -0.35581542178988457, -0.362177561968565]  action=0  chosenParent=36
+1786348297881 POLICY_EVAL phase=20 states=82 choiceStates=54 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.537 meanGreedyReward=0.3670 meanBestReward=0.4440 meanRegret=0.0771 rewardRatio=0.826
+1786348328008 DECISION phase=21 mote=5 eps=0.288 cand=[70] valid=[true, false, false, false]
+  cand[0] id=70 features=[8.0, 0.0] hc=3.99 re=1906.7 qo=8.000
+  qValues=[1.8393629416823387, 0.3145863935351372, -0.25083843618631363, -0.2637699022889137]  action=1
+1786348328610 POLICY_EVAL phase=21 states=85 choiceStates=53 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.226 meanGreedyReward=0.2936 meanBestReward=0.3663 meanRegret=0.0727 rewardRatio=0.801
+1786348360828 DECISION phase=22 mote=5 eps=0.287 cand=[67, 70] valid=[true, true, false, false]
+  cand[0] id=67 features=[8.0, 0.0] hc=4.16 re=1771.1 qo=8.000
+  cand[1] id=70 features=[7.0, 0.0] hc=3.78 re=1881.4 qo=7.000
+  qValues=[1.987860132008791, 0.4696753956377506, -0.15310795232653618, -0.1684092991054058]  action=0  chosenParent=67
+1786348361355 POLICY_EVAL phase=22 states=76 choiceStates=54 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.593 meanGreedyReward=0.2947 meanBestReward=0.3411 meanRegret=0.0465 rewardRatio=0.864
+1786348391253 DECISION phase=23 mote=5 eps=0.287 cand=[64, 67, 70] valid=[true, true, true, false]
+  cand[0] id=64 features=[7.0, 0.0] hc=3.50 re=1863.8 qo=7.000
+  cand[1] id=67 features=[8.0, 0.0] hc=4.47 re=1759.6 qo=8.000
+  cand[2] id=70 features=[7.0, 0.0] hc=3.80 re=1861.2 qo=7.000
+  qValues=[2.243489235639572, 0.6978813111782074, -0.0018488764762878418, -0.04305112361907959]  action=0  chosenParent=64
+1786348391830 POLICY_EVAL phase=23 states=77 choiceStates=53 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.453 meanGreedyReward=0.2456 meanBestReward=0.3429 meanRegret=0.0973 rewardRatio=0.716
+1786348423236 DECISION phase=24 mote=5 eps=0.286 cand=[2, 70] valid=[true, true, false, false]
+  cand[0] id=2 features=[6.0, 0.0] hc=4.56 re=1799.3 qo=6.000
+  cand[1] id=70 features=[5.0, 0.0] hc=4.40 re=1844.8 qo=5.000
+  qValues=[2.273944329470396, 0.8671989850699902, 0.17762326821684837, 0.14106155559420586]  action=3
+1786348423826 POLICY_EVAL phase=24 states=78 choiceStates=47 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.447 meanGreedyReward=0.2503 meanBestReward=0.3211 meanRegret=0.0708 rewardRatio=0.780
+1786348453665 DECISION phase=25 mote=5 eps=0.286 cand=[41, 2, 70] valid=[true, true, true, false]
+  cand[0] id=41 features=[8.0, 0.0] hc=5.14 re=1845.8 qo=8.000
+  cand[1] id=2 features=[6.0, 0.0] hc=5.08 re=1796.3 qo=6.000
+  cand[2] id=70 features=[8.0, 0.0] hc=4.54 re=1843.0 qo=8.000
+  qValues=[2.6171179600059986, 1.2581619210541248, 0.49175794795155525, 0.4331054128706455]  action=3
+1786348454316 POLICY_EVAL phase=25 states=85 choiceStates=59 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.593 meanGreedyReward=0.3276 meanBestReward=0.3916 meanRegret=0.0640 rewardRatio=0.837
+1786348485769 DECISION phase=26 mote=5 eps=0.285 cand=[80, 49, 2, 70] valid=[true, true, true, true]
+  cand[0] id=80 features=[8.0, 0.0] hc=2.65 re=1628.8 qo=8.000
+  cand[1] id=49 features=[8.0, 0.0] hc=4.65 re=1529.9 qo=8.000
+  cand[2] id=2 features=[8.0, 0.0] hc=6.03 re=1779.4 qo=8.000
+  cand[3] id=70 features=[8.0, 0.0] hc=3.75 re=1821.9 qo=8.000
+  qValues=[2.400285900570452, 1.3228815207257867, 0.5921611981466413, 0.5630903029814363]  action=0  chosenParent=80
+1786348486422 POLICY_EVAL phase=26 states=86 choiceStates=58 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.621 meanGreedyReward=0.3466 meanBestReward=0.4255 meanRegret=0.0789 rewardRatio=0.815
+1786348515737 DECISION phase=27 mote=5 eps=0.284 cand=[80, 49, 2, 70] valid=[true, true, true, true]
+  cand[0] id=80 features=[8.0, 0.0] hc=2.40 re=1607.6 qo=8.000
+  cand[1] id=49 features=[2.0, 0.0] hc=6.52 re=1529.0 qo=2.000
+  cand[2] id=2 features=[5.0, 0.0] hc=3.85 re=1776.1 qo=5.000
+  cand[3] id=70 features=[8.0, 0.0] hc=4.58 re=1820.7 qo=8.000
+  qValues=[2.0834045447409153, 1.2815453447401524, 0.6554259471595287, 0.6452740542590618]  action=2  chosenParent=2
+1786348516334 POLICY_EVAL phase=27 states=90 choiceStates=67 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.582 meanGreedyReward=0.3442 meanBestReward=0.4281 meanRegret=0.0839 rewardRatio=0.804
+1786348545612 DECISION phase=28 mote=5 eps=0.284 cand=[2, 49, 70, 41] valid=[true, true, true, true]
+  cand[0] id=2 features=[8.0, 0.0] hc=6.44 re=1774.7 qo=8.000
+  cand[1] id=49 features=[2.0, 0.0] hc=5.11 re=1487.7 qo=2.000
+  cand[2] id=70 features=[8.0, 0.0] hc=4.42 re=1816.4 qo=8.000
+  cand[3] id=41 features=[8.0, 0.0] hc=6.22 re=1769.1 qo=8.000
+  qValues=[2.372333038598299, 1.637746799737215, 0.9315489120781422, 0.9586316980421543]  action=0  chosenParent=2
+1786348546308 POLICY_EVAL phase=28 states=88 choiceStates=64 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.500 meanGreedyReward=0.3807 meanBestReward=0.4689 meanRegret=0.0882 rewardRatio=0.812
+1786348572584 DECISION phase=29 mote=5 eps=0.283 cand=[2, 49, 70, 41] valid=[true, true, true, true]
+  cand[0] id=2 features=[7.0, 0.0] hc=3.34 re=1772.0 qo=7.000
+  cand[1] id=49 features=[2.0, 0.0] hc=5.14 re=1415.6 qo=2.000
+  cand[2] id=70 features=[5.0, 0.0] hc=4.17 re=1806.8 qo=5.000
+  cand[3] id=41 features=[0.0, 0.0] hc=6.20 re=1767.4 qo=0.000
+  qValues=[2.3119543567299843, 1.6981215253472328, 1.04463080316782, 1.093303568661213]  action=0  chosenParent=2
+1786348573170 POLICY_EVAL phase=29 states=86 choiceStates=61 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.557 meanGreedyReward=0.3706 meanBestReward=0.4551 meanRegret=0.0845 rewardRatio=0.814
+1786348596979 POLICY_EVAL phase=30 states=79 choiceStates=61 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.508 meanGreedyReward=0.3326 meanBestReward=0.4453 meanRegret=0.1127 rewardRatio=0.747
+1786348624878 POLICY_EVAL phase=31 states=76 choiceStates=59 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.407 meanGreedyReward=0.2965 meanBestReward=0.4096 meanRegret=0.1131 rewardRatio=0.724
+1786348655833 DECISION phase=32 mote=5 eps=0.281 cand=[70] valid=[true, false, false, false]
+  cand[0] id=70 features=[0.0, 0.0] hc=2.07 re=1763.2 qo=0.000
+  qValues=[2.2568636685609818, 1.951818659901619, 1.4862826019525528, 1.5329746752977371]  action=0  chosenParent=70
+1786348656447 POLICY_EVAL phase=32 states=70 choiceStates=52 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.481 meanGreedyReward=0.2508 meanBestReward=0.3972 meanRegret=0.1463 rewardRatio=0.632
+1786348684965 DECISION phase=33 mote=5 eps=0.281 cand=[70] valid=[true, false, false, false]
+  cand[0] id=70 features=[4.0, 0.0] hc=2.17 re=1752.5 qo=4.000
+  qValues=[2.35487824678421, 2.1046436429023743, 1.7183454036712646, 1.716450810432434]  action=0  chosenParent=70
+1786348685593 POLICY_EVAL phase=33 states=78 choiceStates=59 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.525 meanGreedyReward=0.4933 meanBestReward=0.9003 meanRegret=0.4070 rewardRatio=0.548
+1786348715008 DECISION phase=34 mote=5 eps=0.280 cand=[88, 2, 70] valid=[true, true, true, false]
+  cand[0] id=88 features=[8.0, 0.0] hc=3.95 re=1743.5 qo=8.000
+  cand[1] id=2 features=[7.0, 0.0] hc=4.24 re=1605.0 qo=7.000
+  cand[2] id=70 features=[7.0, 0.0] hc=3.92 re=1700.9 qo=7.000
+  qValues=[3.1189864426851273, 2.883205011487007, 2.4949165731668472, 2.4230436831712723]  action=0  chosenParent=88
+1786348715372 POLICY_EVAL phase=34 states=76 choiceStates=61 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.443 meanGreedyReward=1.1323 meanBestReward=1.8265 meanRegret=0.6943 rewardRatio=0.620
+1786348742287 DECISION phase=35 mote=5 eps=0.280 cand=[88, 2, 70] valid=[true, true, true, false]
+  cand[0] id=88 features=[5.0, 0.0] hc=4.41 re=1740.6 qo=5.000
+  cand[1] id=2 features=[8.0, 0.0] hc=4.18 re=1603.8 qo=8.000
+  cand[2] id=70 features=[8.0, 0.0] hc=4.33 re=1700.7 qo=8.000
+  qValues=[2.9754146933555603, 2.746081292629242, 2.5407944321632385, 2.3360143303871155]  action=2  chosenParent=70
+1786348742655 POLICY_EVAL phase=35 states=85 choiceStates=63 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.524 meanGreedyReward=0.5953 meanBestReward=0.7832 meanRegret=0.1878 rewardRatio=0.760
+1786348768274 DECISION phase=36 mote=5 eps=0.279 cand=[88, 70, 2] valid=[true, true, true, false]
+  cand[0] id=88 features=[3.0, 0.0] hc=4.55 re=1740.6 qo=3.000
+  cand[1] id=70 features=[7.0, 0.0] hc=3.29 re=1700.6 qo=7.000
+  cand[2] id=2 features=[0.0, 0.0] hc=3.34 re=1603.1 qo=0.000
+  qValues=[2.4614479541778564, 2.2270272970199585, 2.18474018573761, 1.8969395160675049]  action=0  chosenParent=88
+1786348768776 POLICY_EVAL phase=36 states=75 choiceStates=58 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.517 meanGreedyReward=0.4965 meanBestReward=0.6483 meanRegret=0.1518 rewardRatio=0.766
+1786348795691 DECISION phase=37 mote=5 eps=0.279 cand=[88, 70, 2] valid=[true, true, true, false]
+  cand[0] id=88 features=[5.0, 0.0] hc=4.28 re=1740.6 qo=5.000
+  cand[1] id=70 features=[5.0, 0.0] hc=3.53 re=1678.7 qo=5.000
+  cand[2] id=2 features=[0.0, 0.0] hc=3.10 re=1603.0 qo=0.000
+  qValues=[2.594010502099991, 2.3071759045124054, 2.3656472265720367, 1.942852646112442]  action=0  chosenParent=88
+1786348796167 POLICY_EVAL phase=37 states=77 choiceStates=62 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.516 meanGreedyReward=0.4469 meanBestReward=0.6319 meanRegret=0.1851 rewardRatio=0.707
+1786348822412 DECISION phase=38 mote=5 eps=0.278 cand=[69, 88, 70, 2] valid=[true, true, true, true]
+  cand[0] id=69 features=[5.0, 0.0] hc=4.80 re=1889.6 qo=5.000
+  cand[1] id=88 features=[5.0, 0.0] hc=3.01 re=1728.0 qo=5.000
+  cand[2] id=70 features=[8.0, 0.0] hc=3.51 re=1678.6 qo=8.000
+  cand[3] id=2 features=[0.0, 0.0] hc=3.17 re=1603.0 qo=0.000
+  qValues=[2.9889105558395386, 2.6631654500961304, 2.8091683387756348, 2.2332231998443604]  action=0  chosenParent=69
+1786348822910 POLICY_EVAL phase=38 states=79 choiceStates=60 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.500 meanGreedyReward=0.4533 meanBestReward=0.6340 meanRegret=0.1807 rewardRatio=0.715
+1786348850533 DECISION phase=39 mote=5 eps=0.277 cand=[88, 70, 2] valid=[true, true, true, false]
+  cand[0] id=88 features=[7.0, 0.0] hc=2.79 re=1726.9 qo=7.000
+  cand[1] id=70 features=[3.0, 0.0] hc=2.88 re=1678.6 qo=3.000
+  cand[2] id=2 features=[0.0, 0.0] hc=16.00 re=1603.0 qo=0.000
+  qValues=[2.6399394869804382, 2.2788376808166504, 2.4921777844429016, 1.9079689979553223]  action=0  chosenParent=88
+1786348851040 POLICY_EVAL phase=39 states=72 choiceStates=61 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.541 meanGreedyReward=0.6239 meanBestReward=0.8428 meanRegret=0.2189 rewardRatio=0.740
+1786348878517 DECISION phase=40 mote=5 eps=0.277 cand=[88, 70, 2] valid=[true, true, true, false]
+  cand[0] id=88 features=[5.0, 0.0] hc=3.02 re=1726.8 qo=5.000
+  cand[1] id=70 features=[1.0, 0.0] hc=16.00 re=1678.5 qo=1.000
+  cand[2] id=2 features=[0.0, 0.0] hc=3.29 re=1602.9 qo=0.000
+  qValues=[2.4818583503365517, 2.0981582179665565, 2.366242028772831, 1.754345841705799]  action=3
+1786348879016 POLICY_EVAL phase=40 states=75 choiceStates=60 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.500 meanGreedyReward=0.6320 meanBestReward=0.9408 meanRegret=0.3087 rewardRatio=0.672
+1786348905005 DECISION phase=41 mote=5 eps=0.276 cand=[88, 70, 2] valid=[true, true, true, false]
+  cand[0] id=88 features=[3.0, 0.0] hc=16.00 re=1726.7 qo=3.000
+  cand[1] id=70 features=[0.0, 0.0] hc=4.10 re=1678.5 qo=0.000
+  cand[2] id=2 features=[0.0, 0.0] hc=2.84 re=1602.8 qo=0.000
+  qValues=[2.3071685805916786, 1.9271181598305702, 2.199060060083866, 1.6035775616765022]  action=0  chosenParent=88
+1786348905516 POLICY_EVAL phase=41 states=75 choiceStates=56 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.554 meanGreedyReward=0.6167 meanBestReward=0.9041 meanRegret=0.2874 rewardRatio=0.682
+1786348935267 DECISION phase=42 mote=5 eps=0.276 cand=[88, 70, 2] valid=[true, true, true, false]
+  cand[0] id=88 features=[0.0, 0.0] hc=4.99 re=1726.6 qo=0.000
+  cand[1] id=70 features=[0.0, 0.0] hc=4.24 re=1678.5 qo=0.000
+  cand[2] id=2 features=[0.0, 0.0] hc=2.81 re=1602.5 qo=0.000
+  qValues=[2.264496900141239, 1.8624974265694618, 2.148254729807377, 1.5438913777470589]  action=0  chosenParent=88
+1786348935729 POLICY_EVAL phase=42 states=67 choiceStates=56 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.429 meanGreedyReward=0.6289 meanBestReward=0.8339 meanRegret=0.2051 rewardRatio=0.754
+1786348963624 POLICY_EVAL phase=43 states=65 choiceStates=50 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.440 meanGreedyReward=0.6776 meanBestReward=0.9961 meanRegret=0.3185 rewardRatio=0.680
+1786348988190 POLICY_EVAL phase=44 states=67 choiceStates=49 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.469 meanGreedyReward=0.5712 meanBestReward=1.0637 meanRegret=0.4925 rewardRatio=0.537
+1786349014246 DECISION phase=45 mote=5 eps=0.274 cand=[27] valid=[true, false, false, false]
+  cand[0] id=27 features=[8.0, 0.0] hc=5.34 re=1864.0 qo=8.000
+  qValues=[2.848731815814972, 2.3148714900016785, 2.6106006503105164, 1.8182671666145325]  action=0  chosenParent=27
+1786349014625 POLICY_EVAL phase=45 states=70 choiceStates=53 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.472 meanGreedyReward=0.7772 meanBestReward=1.0617 meanRegret=0.2846 rewardRatio=0.732
+1786349044869 DECISION phase=46 mote=5 eps=0.273 cand=[27] valid=[true, false, false, false]
+  cand[0] id=27 features=[7.0, 0.0] hc=4.31 re=1825.0 qo=7.000
+  qValues=[2.9997994005680084, 2.415021985769272, 2.6920982897281647, 1.854297250509262]  action=0  chosenParent=27
+1786349045318 POLICY_EVAL phase=46 states=64 choiceStates=54 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.537 meanGreedyReward=0.6869 meanBestReward=0.9403 meanRegret=0.2534 rewardRatio=0.731
+1786349073583 POLICY_EVAL phase=47 states=61 choiceStates=49 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.531 meanGreedyReward=0.5636 meanBestReward=0.8761 meanRegret=0.3126 rewardRatio=0.643
+1786349099800 DECISION phase=48 mote=5 eps=0.272 cand=[50] valid=[true, false, false, false]
+  cand[0] id=50 features=[6.0, 0.0] hc=4.40 re=1857.0 qo=6.000
+  qValues=[3.576863445341587, 2.8423726931214333, 3.0784367695450783, 2.145378239452839]  action=1
+1786349100308 POLICY_EVAL phase=48 states=78 choiceStates=52 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.442 meanGreedyReward=0.6939 meanBestReward=1.1912 meanRegret=0.4973 rewardRatio=0.583
+1786349127298 DECISION phase=49 mote=5 eps=0.272 cand=[50] valid=[true, false, false, false]
+  cand[0] id=50 features=[4.0, 0.0] hc=4.59 re=1844.1 qo=4.000
+  qValues=[3.2781488448381424, 2.6036612540483475, 2.8165421038866043, 1.9681421667337418]  action=0  chosenParent=50
+1786349127648 POLICY_EVAL phase=49 states=81 choiceStates=58 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.569 meanGreedyReward=0.5897 meanBestReward=1.0694 meanRegret=0.4797 rewardRatio=0.551
+1786349154162 DECISION phase=50 mote=5 eps=0.271 cand=[50] valid=[true, false, false, false]
+  cand[0] id=50 features=[7.0, 0.0] hc=5.53 re=1843.9 qo=7.000
+  qValues=[3.0890417098999023, 2.4768094420433044, 2.656311273574829, 1.891571819782257]  action=0  chosenParent=50
+1786349154705 POLICY_EVAL phase=50 states=72 choiceStates=56 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.446 meanGreedyReward=0.5675 meanBestReward=0.9333 meanRegret=0.3658 rewardRatio=0.608
+1786349182197 DECISION phase=51 mote=5 eps=0.270 cand=[50] valid=[true, false, false, false]
+  cand[0] id=50 features=[4.0, 0.0] hc=2.33 re=1746.8 qo=4.000
+  qValues=[2.710145354270935, 2.1635335087776184, 2.3155583143234253, 1.6708292365074158]  action=0  chosenParent=50
+1786349182666 POLICY_EVAL phase=51 states=71 choiceStates=59 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.661 meanGreedyReward=0.7456 meanBestReward=1.0893 meanRegret=0.3437 rewardRatio=0.684
+1786349211508 DECISION phase=52 mote=5 eps=0.270 cand=[50] valid=[true, false, false, false]
+  cand[0] id=50 features=[8.0, 0.0] hc=2.54 re=1742.8 qo=8.000
+  qValues=[2.6581402644515038, 2.1443585380911827, 2.2608028277754784, 1.6712297722697258]  action=0  chosenParent=50
+1786349211860 POLICY_EVAL phase=52 states=71 choiceStates=52 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.558 meanGreedyReward=0.6397 meanBestReward=0.8661 meanRegret=0.2265 rewardRatio=0.739
+1786349235234 DECISION phase=53 mote=5 eps=0.269 cand=[50] valid=[true, false, false, false]
+  cand[0] id=50 features=[8.0, 0.0] hc=2.50 re=1740.7 qo=8.000
+  qValues=[2.603245973587036, 2.119517683982849, 2.1927635073661804, 1.6532546877861023]  action=0  chosenParent=50
+1786349235743 POLICY_EVAL phase=53 states=69 choiceStates=50 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.520 meanGreedyReward=0.6831 meanBestReward=1.0625 meanRegret=0.3794 rewardRatio=0.643
+1786349258361 DECISION phase=54 mote=5 eps=0.269 cand=[50] valid=[true, false, false, false]
+  cand[0] id=50 features=[8.0, 0.0] hc=2.06 re=1736.4 qo=8.000
+  qValues=[2.7276751175522804, 2.2543938532471657, 2.2722222581505775, 1.7686465457081795]  action=0  chosenParent=50
+1786349258887 POLICY_EVAL phase=54 states=66 choiceStates=49 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.612 meanGreedyReward=0.8637 meanBestReward=1.3363 meanRegret=0.4727 rewardRatio=0.646
+1786349282103 DECISION phase=55 mote=5 eps=0.268 cand=[50] valid=[true, false, false, false]
+  cand[0] id=50 features=[8.0, 0.0] hc=2.73 re=1733.6 qo=8.000
+  qValues=[2.959505707025528, 2.4829767048358917, 2.4409163892269135, 1.9509250819683075]  action=0  chosenParent=50
+1786349282617 POLICY_EVAL phase=55 states=61 choiceStates=42 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.571 meanGreedyReward=0.9042 meanBestReward=1.5060 meanRegret=0.6018 rewardRatio=0.600
+1786349305313 DECISION phase=56 mote=5 eps=0.268 cand=[50] valid=[true, false, false, false]
+  cand[0] id=50 features=[8.0, 0.0] hc=3.53 re=1733.0 qo=8.000
+  qValues=[3.2743412479758263, 2.7810744270682335, 2.671372078359127, 2.188882641494274]  action=0  chosenParent=50
+1786349305791 POLICY_EVAL phase=56 states=60 choiceStates=46 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.478 meanGreedyReward=0.7682 meanBestReward=1.4760 meanRegret=0.7078 rewardRatio=0.520
+1786349333774 DECISION phase=57 mote=5 eps=0.267 cand=[50] valid=[true, false, false, false]
+  cand[0] id=50 features=[8.0, 0.0] hc=3.16 re=1732.6 qo=8.000
+  qValues=[3.6882364749908447, 3.1970795392990112, 2.9700433015823364, 2.4888112545013428]  action=0  chosenParent=50
+1786349334262 POLICY_EVAL phase=57 states=73 choiceStates=42 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.595 meanGreedyReward=0.6755 meanBestReward=1.2505 meanRegret=0.5750 rewardRatio=0.540
+1786349359503 DECISION phase=58 mote=5 eps=0.266 cand=[50] valid=[true, false, false, false]
+  cand[0] id=50 features=[3.0, 0.0] hc=2.94 re=1732.1 qo=3.000
+  qValues=[3.7350319176912308, 3.2784118205308914, 2.9807616025209427, 2.523443356156349]  action=0  chosenParent=50
+1786349359883 POLICY_EVAL phase=58 states=78 choiceStates=42 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.381 meanGreedyReward=0.6725 meanBestReward=1.0197 meanRegret=0.3472 rewardRatio=0.660
+1786349382404 DECISION phase=59 mote=5 eps=0.266 cand=[6, 50] valid=[true, true, false, false]
+  cand[0] id=6 features=[8.0, 0.0] hc=4.69 re=1851.8 qo=8.000
+  cand[1] id=50 features=[7.0, 0.0] hc=5.13 re=1730.2 qo=7.000
+  qValues=[4.705661848187447, 4.266578748822212, 3.8001111298799515, 3.2859883457422256]  action=0  chosenParent=6
+1786349382927 POLICY_EVAL phase=59 states=69 choiceStates=44 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.386 meanGreedyReward=0.4793 meanBestReward=0.7179 meanRegret=0.2385 rewardRatio=0.668
+1786349406656 DECISION phase=60 mote=5 eps=0.265 cand=[50, 6] valid=[true, true, false, false]
+  cand[0] id=50 features=[4.0, 0.0] hc=3.41 re=1730.1 qo=4.000
+  cand[1] id=6 features=[8.0, 0.0] hc=4.77 re=1851.4 qo=8.000
+  qValues=[4.227990597486496, 3.8928026854991913, 3.431489199399948, 3.0004471242427826]  action=0  chosenParent=50
+1786349407022 POLICY_EVAL phase=60 states=62 choiceStates=46 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.304 meanGreedyReward=0.3789 meanBestReward=0.6307 meanRegret=0.2518 rewardRatio=0.601
+1786349433457 DECISION phase=61 mote=5 eps=0.265 cand=[50, 6] valid=[true, true, false, false]
+  cand[0] id=50 features=[7.0, 0.0] hc=4.45 re=1729.2 qo=7.000
+  cand[1] id=6 features=[7.0, 0.0] hc=3.80 re=1845.1 qo=7.000
+  qValues=[3.8522454500198364, 3.5988768339157104, 3.154329299926758, 2.78798770904541]  action=0  chosenParent=50
+1786349433896 POLICY_EVAL phase=61 states=72 choiceStates=47 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.383 meanGreedyReward=0.5698 meanBestReward=0.9255 meanRegret=0.3558 rewardRatio=0.616
+1786349460677 DECISION phase=62 mote=5 eps=0.264 cand=[6, 50] valid=[true, true, false, false]
+  cand[0] id=6 features=[8.0, 0.0] hc=3.66 re=1838.8 qo=8.000
+  cand[1] id=50 features=[7.0, 0.0] hc=4.20 re=1729.1 qo=7.000
+  qValues=[3.6578852087259293, 3.4685758501291275, 3.0135457664728165, 2.685528948903084]  action=0  chosenParent=6
+1786349461210 POLICY_EVAL phase=62 states=77 choiceStates=48 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.396 meanGreedyReward=0.4026 meanBestReward=0.6161 meanRegret=0.2134 rewardRatio=0.654
+1786349484850 DECISION phase=63 mote=5 eps=0.263 cand=[6, 50] valid=[true, true, false, false]
+  cand[0] id=6 features=[8.0, 0.0] hc=3.61 re=1832.0 qo=8.000
+  cand[1] id=50 features=[3.0, 0.0] hc=5.75 re=1716.0 qo=3.000
+  qValues=[3.321682259440422, 3.1733043640851974, 2.7267740219831467, 2.4340525716543198]  action=3
+1786349485213 POLICY_EVAL phase=63 states=71 choiceStates=53 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.660 meanGreedyReward=0.4250 meanBestReward=0.5715 meanRegret=0.1465 rewardRatio=0.744
+1786349510928 DECISION phase=64 mote=5 eps=0.263 cand=[6, 50] valid=[true, true, false, false]
+  cand[0] id=6 features=[7.0, 0.0] hc=3.36 re=1831.7 qo=7.000
+  cand[1] id=50 features=[2.0, 0.0] hc=5.53 re=1715.2 qo=2.000
+  qValues=[3.2957168519496918, 3.1781167685985565, 2.6964310109615326, 2.4262796342372894]  action=0  chosenParent=6
+1786349511270 POLICY_EVAL phase=64 states=65 choiceStates=50 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.500 meanGreedyReward=0.4534 meanBestReward=0.9060 meanRegret=0.4526 rewardRatio=0.500
+1786349535855 POLICY_EVAL phase=65 states=74 choiceStates=52 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.558 meanGreedyReward=0.4274 meanBestReward=0.6467 meanRegret=0.2193 rewardRatio=0.661
+1786349560946 DECISION phase=66 mote=5 eps=0.262 cand=[50] valid=[true, false, false, false]
+  cand[0] id=50 features=[6.0, 0.0] hc=4.86 re=1708.2 qo=6.000
+  qValues=[3.3817115873098373, 3.2905313819646835, 2.7689307779073715, 2.5135963410139084]  action=0  chosenParent=50
+1786349561498 POLICY_EVAL phase=66 states=77 choiceStates=57 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.526 meanGreedyReward=0.4352 meanBestReward=0.7383 meanRegret=0.3030 rewardRatio=0.590
+1786349586172 DECISION phase=67 mote=5 eps=0.261 cand=[6, 50] valid=[true, true, false, false]
+  cand[0] id=6 features=[8.0, 0.0] hc=4.39 re=1816.5 qo=8.000
+  cand[1] id=50 features=[0.0, 0.0] hc=16.00 re=1706.5 qo=0.000
+  qValues=[3.690910369157791, 3.5948977768421173, 3.0523991882801056, 2.7708033621311188]  action=0  chosenParent=6
+1786349586542 POLICY_EVAL phase=67 states=79 choiceStates=65 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.523 meanGreedyReward=0.3274 meanBestReward=0.7183 meanRegret=0.3909 rewardRatio=0.456
+1786349612207 DECISION phase=68 mote=5 eps=0.261 cand=[50, 6] valid=[true, true, false, false]
+  cand[0] id=50 features=[1.0, 0.0] hc=16.00 re=1706.5 qo=1.000
+  cand[1] id=6 features=[8.0, 0.0] hc=4.28 re=1807.1 qo=8.000
+  qValues=[4.2370346039533615, 4.144132182002068, 3.5607820004224777, 3.228909596800804]  action=0  chosenParent=50
+1786349612805 POLICY_EVAL phase=68 states=83 choiceStates=56 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.446 meanGreedyReward=0.3661 meanBestReward=0.6450 meanRegret=0.2790 rewardRatio=0.568
+1786349638782 POLICY_EVAL phase=69 states=68 choiceStates=54 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.389 meanGreedyReward=0.3008 meanBestReward=0.4766 meanRegret=0.1758 rewardRatio=0.631
+1786349663641 POLICY_EVAL phase=70 states=68 choiceStates=51 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.471 meanGreedyReward=0.3052 meanBestReward=0.4544 meanRegret=0.1491 rewardRatio=0.672
+1786349687366 DECISION phase=71 mote=5 eps=0.259 cand=[6] valid=[true, false, false, false]
+  cand[0] id=6 features=[8.0, 0.0] hc=5.55 re=1744.9 qo=8.000
+  qValues=[3.336093246936798, 3.2630935311317444, 2.9007481932640076, 2.6468068957328796]  action=0  chosenParent=6
+1786349687896 POLICY_EVAL phase=71 states=71 choiceStates=45 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.489 meanGreedyReward=0.3573 meanBestReward=0.5480 meanRegret=0.1907 rewardRatio=0.652
+1786349709802 DECISION phase=72 mote=5 eps=0.258 cand=[6] valid=[true, false, false, false]
+  cand[0] id=6 features=[6.0, 0.0] hc=6.42 re=1739.2 qo=6.000
+  qValues=[3.0149032175540924, 2.951652556657791, 2.6291577517986298, 2.430977910757065]  action=0  chosenParent=6
+1786349710118 POLICY_EVAL phase=72 states=74 choiceStates=42 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.524 meanGreedyReward=0.3544 meanBestReward=0.6141 meanRegret=0.2597 rewardRatio=0.577
+1786349735298 POLICY_EVAL phase=73 states=59 choiceStates=41 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.463 meanGreedyReward=0.3689 meanBestReward=0.6305 meanRegret=0.2615 rewardRatio=0.585
+1786349759392 POLICY_EVAL phase=74 states=51 choiceStates=40 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.300 meanGreedyReward=0.3162 meanBestReward=0.8639 meanRegret=0.5477 rewardRatio=0.366
+1786349780474 POLICY_EVAL phase=75 states=48 choiceStates=42 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.357 meanGreedyReward=0.5215 meanBestReward=1.1552 meanRegret=0.6337 rewardRatio=0.451
+1786349797103 POLICY_EVAL phase=76 states=45 choiceStates=40 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.550 meanGreedyReward=0.6805 meanBestReward=1.3828 meanRegret=0.7023 rewardRatio=0.492
+1786349815301 DECISION phase=77 mote=5 eps=0.255 cand=[72] valid=[true, false, false, false]
+  cand[0] id=72 features=[6.0, 0.0] hc=21.90 re=1539.2 qo=6.000
+  qValues=[3.3788671046495438, 3.1941467076539993, 2.984196498990059, 2.710181847214699]  action=0  chosenParent=72
+1786349815709 POLICY_EVAL phase=77 states=48 choiceStates=38 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.526 meanGreedyReward=0.5806 meanBestReward=0.8728 meanRegret=0.2922 rewardRatio=0.665
+1786349836195 DECISION phase=78 mote=5 eps=0.255 cand=[72] valid=[true, false, false, false]
+  cand[0] id=72 features=[2.0, 0.0] hc=3.85 re=1525.5 qo=2.000
+  qValues=[3.30793297290802, 3.0758516788482666, 2.90768563747406, 2.5859062671661377]  action=0  chosenParent=72
+1786349836622 POLICY_EVAL phase=78 states=52 choiceStates=36 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.417 meanGreedyReward=0.5022 meanBestReward=0.7637 meanRegret=0.2616 rewardRatio=0.658
+1786349858329 DECISION phase=79 mote=5 eps=0.254 cand=[72, 7] valid=[true, true, false, false]
+  cand[0] id=72 features=[3.0, 0.0] hc=3.88 re=1508.1 qo=3.000
+  cand[1] id=7 features=[6.0, 0.0] hc=4.76 re=1691.8 qo=6.000
+  qValues=[3.747163951396942, 3.465851128101349, 3.3189873099327087, 2.9222593903541565]  action=0  chosenParent=72
+1786349858790 POLICY_EVAL phase=79 states=82 choiceStates=40 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.425 meanGreedyReward=0.5713 meanBestReward=1.0944 meanRegret=0.5231 rewardRatio=0.522
+1786349880948 DECISION phase=80 mote=5 eps=0.254 cand=[7] valid=[true, false, false, false]
+  cand[0] id=7 features=[6.0, 0.0] hc=5.04 re=1541.2 qo=6.000
+  qValues=[3.377728059887886, 3.0674708634614944, 2.982500746846199, 2.570226088166237]  action=0  chosenParent=7
+1786349881460 POLICY_EVAL phase=80 states=81 choiceStates=51 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.549 meanGreedyReward=0.5853 meanBestReward=1.2904 meanRegret=0.7051 rewardRatio=0.454
+1786349905124 DECISION phase=81 mote=5 eps=0.253 cand=[45, 7] valid=[true, true, false, false]
+  cand[0] id=45 features=[6.0, 0.0] hc=4.80 re=1795.2 qo=6.000
+  cand[1] id=7 features=[3.0, 0.0] hc=4.95 re=1426.5 qo=3.000
+  qValues=[3.4966152906417847, 3.1502448320388794, 3.10540235042572, 2.642774224281311]  action=0  chosenParent=45
+1786349905572 POLICY_EVAL phase=81 states=67 choiceStates=54 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.593 meanGreedyReward=0.3820 meanBestReward=0.6677 meanRegret=0.2857 rewardRatio=0.572
+1786349927045 DECISION phase=82 mote=5 eps=0.252 cand=[45, 7] valid=[true, true, false, false]
+  cand[0] id=45 features=[8.0, 0.0] hc=5.29 re=1727.1 qo=8.000
+  cand[1] id=7 features=[0.0, 0.0] hc=5.02 re=1380.7 qo=0.000
+  qValues=[3.3148984611034393, 2.940627545118332, 2.9498282372951508, 2.464225262403488]  action=0  chosenParent=45
+1786349927496 POLICY_EVAL phase=82 states=68 choiceStates=54 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.315 meanGreedyReward=0.7394 meanBestReward=1.7179 meanRegret=0.9785 rewardRatio=0.430
+1786349947930 DECISION phase=83 mote=5 eps=0.252 cand=[45, 7] valid=[true, true, false, false]
+  cand[0] id=45 features=[0.0, 0.0] hc=16.00 re=1656.2 qo=0.000
+  cand[1] id=7 features=[0.0, 0.0] hc=6.39 re=1371.6 qo=0.000
+  qValues=[3.013415038585663, 2.6000086665153503, 2.6652256846427917, 2.1684617400169373]  action=2
+1786349948482 POLICY_EVAL phase=83 states=73 choiceStates=48 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.375 meanGreedyReward=0.3637 meanBestReward=0.5770 meanRegret=0.2133 rewardRatio=0.630
+1786349974222 POLICY_EVAL phase=84 states=73 choiceStates=45 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.489 meanGreedyReward=0.7120 meanBestReward=1.3551 meanRegret=0.6431 rewardRatio=0.525
+1786349993486 POLICY_EVAL phase=85 states=53 choiceStates=39 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.487 meanGreedyReward=0.6631 meanBestReward=1.0781 meanRegret=0.4150 rewardRatio=0.615
+1786350013725 POLICY_EVAL phase=86 states=37 choiceStates=31 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.548 meanGreedyReward=0.7984 meanBestReward=1.2756 meanRegret=0.4772 rewardRatio=0.626
+1786350027763 POLICY_EVAL phase=87 states=40 choiceStates=34 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.382 meanGreedyReward=1.7616 meanBestReward=5.6341 meanRegret=3.8725 rewardRatio=0.313
+1786350043251 DECISION phase=88 mote=5 eps=0.249 cand=[50] valid=[true, false, false, false]
+  cand[0] id=50 features=[0.0, 0.0] hc=1.65 re=1667.4 qo=0.000
+  qValues=[3.275653012096882, 2.6257507279515266, 2.8892796114087105, 2.166166700422764]  action=3
+1786350043549 POLICY_EVAL phase=88 states=58 choiceStates=35 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.371 meanGreedyReward=1.1519 meanBestReward=2.5728 meanRegret=1.4209 rewardRatio=0.448
+1786350065719 DECISION phase=89 mote=5 eps=0.248 cand=[50] valid=[true, false, false, false]
+  cand[0] id=50 features=[4.0, 0.0] hc=8.27 re=1666.5 qo=4.000
+  qValues=[3.5089584439992905, 2.859202489256859, 3.0963984578847885, 2.3023692816495895]  action=0  chosenParent=50
+1786350066165 POLICY_EVAL phase=89 states=63 choiceStates=35 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.400 meanGreedyReward=1.0820 meanBestReward=1.9789 meanRegret=0.8969 rewardRatio=0.547
+1786350088155 DECISION phase=90 mote=5 eps=0.248 cand=[50, 70] valid=[true, true, false, false]
+  cand[0] id=50 features=[8.0, 0.0] hc=8.36 re=1665.7 qo=8.000
+  cand[1] id=70 features=[0.0, 0.0] hc=8.79 re=1652.2 qo=0.000
+  qValues=[3.776170291006565, 3.1366758719086647, 3.3297614231705666, 2.462463863193989]  action=0  chosenParent=50
+1786350088643 POLICY_EVAL phase=90 states=65 choiceStates=40 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.425 meanGreedyReward=0.7798 meanBestReward=1.3492 meanRegret=0.5693 rewardRatio=0.578
+1786350113222 POLICY_EVAL phase=91 states=52 choiceStates=37 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.432 meanGreedyReward=0.6107 meanBestReward=1.0184 meanRegret=0.4077 rewardRatio=0.600
+1786350133926 POLICY_EVAL phase=92 states=47 choiceStates=37 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.432 meanGreedyReward=0.6412 meanBestReward=1.0186 meanRegret=0.3774 rewardRatio=0.630
+1786350154998 POLICY_EVAL phase=93 states=50 choiceStates=33 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.394 meanGreedyReward=0.7102 meanBestReward=1.2515 meanRegret=0.5412 rewardRatio=0.568
+1786350176704 POLICY_EVAL phase=94 states=43 choiceStates=33 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.515 meanGreedyReward=0.5575 meanBestReward=0.7884 meanRegret=0.2309 rewardRatio=0.707
+1786350196776 POLICY_EVAL phase=95 states=35 choiceStates=30 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.467 meanGreedyReward=0.6398 meanBestReward=1.1679 meanRegret=0.5282 rewardRatio=0.548
+1786350213158 POLICY_EVAL phase=96 states=31 choiceStates=27 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.519 meanGreedyReward=1.0047 meanBestReward=1.7131 meanRegret=0.7084 rewardRatio=0.586
+1786350228760 POLICY_EVAL phase=97 states=31 choiceStates=27 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.407 meanGreedyReward=1.2624 meanBestReward=2.8774 meanRegret=1.6150 rewardRatio=0.439
+1786350243590 POLICY_EVAL phase=98 states=43 choiceStates=29 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.517 meanGreedyReward=1.5537 meanBestReward=2.8609 meanRegret=1.3072 rewardRatio=0.543
+1786350260849 DECISION phase=99 mote=5 eps=0.243 cand=[2] valid=[true, false, false, false]
+  cand[0] id=2 features=[0.0, 0.0] hc=3.27 re=1575.4 qo=0.000
+  qValues=[4.5436467081308365, 4.166105285286903, 3.8562975078821182, 3.069721296429634]  action=2
+1786350261297 POLICY_EVAL phase=99 states=56 choiceStates=32 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.406 meanGreedyReward=0.9739 meanBestReward=1.7273 meanRegret=0.7534 rewardRatio=0.564
+1786350278456 DECISION phase=100 mote=5 eps=0.242 cand=[2] valid=[true, false, false, false]
+  cand[0] id=2 features=[4.0, 0.0] hc=16.00 re=1574.5 qo=4.000
+  qValues=[4.992131561040878, 4.563357204198837, 4.175898045301437, 3.41870054602623]  action=0  chosenParent=2
+1786350278812 POLICY_EVAL phase=100 states=57 choiceStates=31 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.452 meanGreedyReward=1.0304 meanBestReward=1.7450 meanRegret=0.7146 rewardRatio=0.591
+1786350298499 POLICY_EVAL phase=101 states=45 choiceStates=31 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.516 meanGreedyReward=1.3534 meanBestReward=2.4472 meanRegret=1.0938 rewardRatio=0.553
+1786350316231 POLICY_EVAL phase=102 states=44 choiceStates=28 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.571 meanGreedyReward=0.9448 meanBestReward=1.3845 meanRegret=0.4397 rewardRatio=0.682
+1786350335517 DECISION phase=103 mote=5 eps=0.240 cand=[21] valid=[true, false, false, false]
+  cand[0] id=21 features=[0.0, 0.0] hc=3.70 re=1190.2 qo=0.000
+  qValues=[6.490284085273743, 5.965867877006531, 5.262556314468384, 4.620952367782593]  action=0  chosenParent=21
+1786350335961 POLICY_EVAL phase=103 states=55 choiceStates=28 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.500 meanGreedyReward=1.1225 meanBestReward=1.9158 meanRegret=0.7933 rewardRatio=0.586
+1786350354952 DECISION phase=104 mote=5 eps=0.240 cand=[21] valid=[true, false, false, false]
+  cand[0] id=21 features=[0.0, 0.0] hc=7.90 re=1159.9 qo=0.000
+  qValues=[5.982923865318298, 5.575242877006531, 4.84118378162384, 4.4319998025894165]  action=0  chosenParent=21
+1786350355376 POLICY_EVAL phase=104 states=60 choiceStates=30 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.600 meanGreedyReward=1.7281 meanBestReward=3.8599 meanRegret=2.1318 rewardRatio=0.448
+1786350374150 DECISION phase=105 mote=5 eps=0.239 cand=[21] valid=[true, false, false, false]
+  cand[0] id=21 features=[0.0, 0.0] hc=2.76 re=1135.7 qo=0.000
+  qValues=[5.455697596073151, 5.130960047245026, 4.450232565402985, 4.182853519916534]  action=0  chosenParent=21
+1786350374662 POLICY_EVAL phase=105 states=64 choiceStates=31 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.452 meanGreedyReward=0.8740 meanBestReward=1.4376 meanRegret=0.5635 rewardRatio=0.608
+1786350394955 POLICY_EVAL phase=106 states=59 choiceStates=33 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.606 meanGreedyReward=1.1382 meanBestReward=1.9182 meanRegret=0.7800 rewardRatio=0.593
+1786350413010 POLICY_EVAL phase=107 states=56 choiceStates=35 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.600 meanGreedyReward=1.4840 meanBestReward=2.3749 meanRegret=0.8909 rewardRatio=0.625
+1786350430065 POLICY_EVAL phase=108 states=54 choiceStates=34 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.529 meanGreedyReward=0.7958 meanBestReward=1.1502 meanRegret=0.3544 rewardRatio=0.692
+1786350449829 POLICY_EVAL phase=109 states=57 choiceStates=40 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.525 meanGreedyReward=1.0555 meanBestReward=1.9392 meanRegret=0.8837 rewardRatio=0.544
+1786350471465 POLICY_EVAL phase=110 states=61 choiceStates=35 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.543 meanGreedyReward=0.9898 meanBestReward=2.1582 meanRegret=1.1684 rewardRatio=0.459
+1786350491695 POLICY_EVAL phase=111 states=65 choiceStates=34 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.529 meanGreedyReward=0.9585 meanBestReward=2.0495 meanRegret=1.0910 rewardRatio=0.468
+1786350512654 POLICY_EVAL phase=112 states=62 choiceStates=39 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.590 meanGreedyReward=1.0725 meanBestReward=2.1736 meanRegret=1.1011 rewardRatio=0.493
+1786350534670 DECISION phase=113 mote=5 eps=0.234 cand=[75] valid=[true, false, false, false]
+  cand[0] id=75 features=[2.0, 0.0] hc=2.73 re=1825.1 qo=2.000
+  qValues=[6.796077340841293, 6.226633638143539, 5.7370286881923676, 5.702426165342331]  action=0  chosenParent=75
+1786350535181 POLICY_EVAL phase=113 states=62 choiceStates=38 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.526 meanGreedyReward=0.7744 meanBestReward=1.2479 meanRegret=0.4734 rewardRatio=0.621
+1786350556445 DECISION phase=114 mote=5 eps=0.234 cand=[75] valid=[true, false, false, false]
+  cand[0] id=75 features=[6.0, 0.0] hc=2.79 re=1757.6 qo=6.000
+  qValues=[7.013925492763519, 6.340668857097626, 5.928770482540131, 5.870701253414154]  action=0  chosenParent=75
+1786350556887 POLICY_EVAL phase=114 states=73 choiceStates=43 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.605 meanGreedyReward=0.7328 meanBestReward=1.3807 meanRegret=0.6479 rewardRatio=0.531
+1786350577826 POLICY_EVAL phase=115 states=70 choiceStates=45 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.578 meanGreedyReward=0.8030 meanBestReward=1.3421 meanRegret=0.5391 rewardRatio=0.598
+1786350602174 DECISION phase=116 mote=5 eps=0.233 cand=[75] valid=[true, false, false, false]
+  cand[0] id=75 features=[6.0, 0.0] hc=2.18 re=1741.5 qo=6.000
+  qValues=[5.542405903339386, 4.906203925609589, 4.698294460773468, 4.640363395214081]  action=0  chosenParent=75
+1786350602724 POLICY_EVAL phase=116 states=67 choiceStates=46 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.630 meanGreedyReward=0.8546 meanBestReward=1.5377 meanRegret=0.6830 rewardRatio=0.556
+1786350626566 DECISION phase=117 mote=5 eps=0.232 cand=[75] valid=[true, false, false, false]
+  cand[0] id=75 features=[0.0, 0.0] hc=16.00 re=1736.9 qo=0.000
+  qValues=[4.838001906871796, 4.220793068408966, 4.075112283229828, 4.010126173496246]  action=0  chosenParent=75
+1786350627092 POLICY_EVAL phase=117 states=72 choiceStates=42 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.667 meanGreedyReward=0.6442 meanBestReward=0.8979 meanRegret=0.2537 rewardRatio=0.717
+1786350646691 DECISION phase=118 mote=5 eps=0.232 cand=[75] valid=[true, false, false, false]
+  cand[0] id=75 features=[4.0, 0.0] hc=1.88 re=1731.1 qo=4.000
+  qValues=[4.542982757091522, 3.9223832488059998, 3.805757224559784, 3.7331263422966003]  action=0  chosenParent=75
+1786350647287 POLICY_EVAL phase=118 states=78 choiceStates=44 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.523 meanGreedyReward=0.8206 meanBestReward=1.6086 meanRegret=0.7880 rewardRatio=0.510
+1786350672148 POLICY_EVAL phase=119 states=68 choiceStates=42 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.595 meanGreedyReward=0.6817 meanBestReward=1.1309 meanRegret=0.4492 rewardRatio=0.603
+1786350694248 POLICY_EVAL phase=120 states=64 choiceStates=40 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.450 meanGreedyReward=0.7786 meanBestReward=1.5060 meanRegret=0.7274 rewardRatio=0.517
+1786350718949 DECISION phase=121 mote=5 eps=0.230 cand=[27] valid=[true, false, false, false]
+  cand[0] id=27 features=[7.0, 0.0] hc=5.74 re=1761.1 qo=7.000
+  qValues=[4.678086489439011, 3.999546378850937, 3.822390526533127, 3.699132412672043]  action=0  chosenParent=27
+1786350719396 POLICY_EVAL phase=121 states=75 choiceStates=43 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.395 meanGreedyReward=0.7784 meanBestReward=1.6627 meanRegret=0.8843 rewardRatio=0.468
+1786350740063 DECISION phase=122 mote=5 eps=0.229 cand=[27] valid=[true, false, false, false]
+  cand[0] id=27 features=[8.0, 0.0] hc=3.38 re=1751.0 qo=8.000
+  qValues=[4.96921044588089, 4.258046090602875, 4.022548854351044, 3.870472013950348]  action=0  chosenParent=27
+1786350740572 POLICY_EVAL phase=122 states=77 choiceStates=43 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.488 meanGreedyReward=0.7250 meanBestReward=1.2122 meanRegret=0.4872 rewardRatio=0.598
+1786350759922 DECISION phase=123 mote=5 eps=0.229 cand=[27] valid=[true, false, false, false]
+  cand[0] id=27 features=[3.0, 0.0] hc=2.72 re=1734.6 qo=3.000
+  qValues=[4.958061456680298, 4.232810974121094, 3.970589518547058, 3.7931488752365112]  action=1
+1786350760247 POLICY_EVAL phase=123 states=64 choiceStates=41 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.390 meanGreedyReward=0.6855 meanBestReward=1.3573 meanRegret=0.6719 rewardRatio=0.505
+1786350781234 POLICY_EVAL phase=124 states=68 choiceStates=44 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.386 meanGreedyReward=0.6903 meanBestReward=1.1823 meanRegret=0.4919 rewardRatio=0.584
+1786350803317 POLICY_EVAL phase=125 states=63 choiceStates=41 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.366 meanGreedyReward=0.6596 meanBestReward=1.0796 meanRegret=0.4200 rewardRatio=0.611
+1786350823201 DECISION phase=126 mote=5 eps=0.227 cand=[27] valid=[true, false, false, false]
+  cand[0] id=27 features=[4.0, 0.0] hc=5.31 re=1532.7 qo=4.000
+  qValues=[5.061754524707794, 4.295123517513275, 4.03578382730484, 3.760225474834442]  action=0  chosenParent=27
+1786350823671 POLICY_EVAL phase=126 states=79 choiceStates=37 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.459 meanGreedyReward=0.6418 meanBestReward=1.0829 meanRegret=0.4412 rewardRatio=0.593
+1786350843857 DECISION phase=127 mote=5 eps=0.226 cand=[27] valid=[true, false, false, false]
+  cand[0] id=27 features=[7.0, 0.0] hc=5.21 re=1480.0 qo=7.000
+  qValues=[5.144068822264671, 4.363575205206871, 4.107043847441673, 3.8014078587293625]  action=0  chosenParent=27
+1786350844394 POLICY_EVAL phase=127 states=77 choiceStates=41 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.561 meanGreedyReward=0.7356 meanBestReward=1.1404 meanRegret=0.4047 rewardRatio=0.645
+1786350862375 DECISION phase=128 mote=5 eps=0.226 cand=[27] valid=[true, false, false, false]
+  cand[0] id=27 features=[7.0, 0.0] hc=3.37 re=1416.5 qo=7.000
+  qValues=[5.098235830664635, 4.3110965341329575, 4.069111213088036, 3.7439151257276535]  action=0  chosenParent=27
+1786350862872 POLICY_EVAL phase=128 states=73 choiceStates=42 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.548 meanGreedyReward=0.8758 meanBestReward=1.5989 meanRegret=0.7231 rewardRatio=0.548
+1786350877715 DECISION phase=129 mote=5 eps=0.225 cand=[27] valid=[true, false, false, false]
+  cand[0] id=27 features=[5.0, 0.0] hc=3.20 re=1409.2 qo=5.000
+  qValues=[4.952294662594795, 4.177555873990059, 3.944304659962654, 3.6116186529397964]  action=0  chosenParent=27
+1786350878260 POLICY_EVAL phase=129 states=77 choiceStates=41 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.463 meanGreedyReward=1.4255 meanBestReward=2.8057 meanRegret=1.3802 rewardRatio=0.508
+1786350894303 DECISION phase=130 mote=5 eps=0.225 cand=[27] valid=[true, false, false, false]
+  cand[0] id=27 features=[0.0, 0.0] hc=16.00 re=1403.6 qo=0.000
+  qValues=[4.737456753849983, 3.982683375477791, 3.7685323506593704, 3.4234721809625626]  action=0  chosenParent=27
+1786350894692 POLICY_EVAL phase=130 states=77 choiceStates=40 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.375 meanGreedyReward=1.2083 meanBestReward=2.5386 meanRegret=1.3303 rewardRatio=0.476
+1786350909739 POLICY_EVAL phase=131 states=52 choiceStates=35 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.400 meanGreedyReward=0.9821 meanBestReward=1.8900 meanRegret=0.9079 rewardRatio=0.520
+1786350923805 POLICY_EVAL phase=132 states=42 choiceStates=34 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.353 meanGreedyReward=0.8397 meanBestReward=1.7538 meanRegret=0.9141 rewardRatio=0.479
+1786350936710 POLICY_EVAL phase=133 states=38 choiceStates=32 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.406 meanGreedyReward=1.7878 meanBestReward=4.6691 meanRegret=2.8813 rewardRatio=0.383
+1786350949230 POLICY_EVAL phase=134 states=38 choiceStates=32 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.281 meanGreedyReward=1.4487 meanBestReward=4.5679 meanRegret=3.1192 rewardRatio=0.317
+1786350962914 POLICY_EVAL phase=135 states=37 choiceStates=31 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.290 meanGreedyReward=2.0728 meanBestReward=5.1820 meanRegret=3.1092 rewardRatio=0.400
+1786350975660 POLICY_EVAL phase=136 states=38 choiceStates=33 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.303 meanGreedyReward=2.2769 meanBestReward=4.8320 meanRegret=2.5551 rewardRatio=0.471
+1786350986850 POLICY_EVAL phase=137 states=43 choiceStates=34 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.294 meanGreedyReward=1.5360 meanBestReward=4.8472 meanRegret=3.3113 rewardRatio=0.317
+1786350999983 POLICY_EVAL phase=138 states=54 choiceStates=34 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.382 meanGreedyReward=1.3595 meanBestReward=3.1423 meanRegret=1.7828 rewardRatio=0.433
+1786351015420 POLICY_EVAL phase=139 states=60 choiceStates=39 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.462 meanGreedyReward=1.4422 meanBestReward=3.5371 meanRegret=2.0949 rewardRatio=0.408
+1786351035424 DECISION phase=140 mote=5 eps=0.219 cand=[61] valid=[true, false, false, false]
+  cand[0] id=61 features=[5.0, 0.0] hc=3.22 re=1592.9 qo=5.000
+  qValues=[5.207881778478622, 4.37886306643486, 4.367357462644577, 3.750968188047409]  action=0  chosenParent=61
+1786351036021 POLICY_EVAL phase=140 states=75 choiceStates=39 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.436 meanGreedyReward=1.0658 meanBestReward=2.7276 meanRegret=1.6618 rewardRatio=0.391
+1786351054690 DECISION phase=141 mote=5 eps=0.218 cand=[75, 61] valid=[true, true, false, false]
+  cand[0] id=75 features=[8.0, 0.0] hc=6.30 re=1645.1 qo=8.000
+  cand[1] id=61 features=[0.0, 0.0] hc=3.27 re=1390.2 qo=0.000
+  qValues=[5.3373459577560425, 4.507828235626221, 4.508040189743042, 3.863792300224304]  action=0  chosenParent=75
+1786351055186 POLICY_EVAL phase=141 states=86 choiceStates=56 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.411 meanGreedyReward=0.9986 meanBestReward=2.2546 meanRegret=1.2560 rewardRatio=0.443
+1786351078105 DECISION phase=142 mote=5 eps=0.218 cand=[75, 61] valid=[true, true, false, false]
+  cand[0] id=75 features=[8.0, 0.0] hc=4.94 re=1416.0 qo=8.000
+  cand[1] id=61 features=[8.0, 0.0] hc=4.03 re=1248.3 qo=8.000
+  qValues=[6.524627268314362, 5.620345056056976, 5.578079521656036, 4.808211505413055]  action=3
+1786351078649 POLICY_EVAL phase=142 states=83 choiceStates=64 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.469 meanGreedyReward=0.5627 meanBestReward=1.0208 meanRegret=0.4581 rewardRatio=0.551
+1786351100474 DECISION phase=143 mote=5 eps=0.217 cand=[75, 61] valid=[true, true, false, false]
+  cand[0] id=75 features=[7.0, 0.0] hc=4.66 re=1412.8 qo=7.000
+  cand[1] id=61 features=[1.0, 0.0] hc=4.00 re=1134.5 qo=1.000
+  qValues=[5.764412507414818, 4.9286807626485825, 4.89023719727993, 4.18563811480999]  action=3
+1786351101001 POLICY_EVAL phase=143 states=87 choiceStates=63 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.444 meanGreedyReward=0.7063 meanBestReward=1.1938 meanRegret=0.4874 rewardRatio=0.592
+1786351120766 POLICY_EVAL phase=144 states=86 choiceStates=64 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.375 meanGreedyReward=0.5707 meanBestReward=1.4738 meanRegret=0.9031 rewardRatio=0.387
+1786351139227 DECISION phase=145 mote=5 eps=0.216 cand=[61] valid=[true, false, false, false]
+  cand[0] id=61 features=[1.0, 0.0] hc=3.43 re=858.2 qo=1.000
+  qValues=[5.556917503476143, 4.777950957417488, 4.767978742718697, 4.01555909216404]  action=2
+1786351139714 POLICY_EVAL phase=145 states=76 choiceStates=56 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.411 meanGreedyReward=0.8283 meanBestReward=1.8615 meanRegret=1.0333 rewardRatio=0.445
+1786351155217 DECISION phase=146 mote=5 eps=0.215 cand=[61] valid=[true, false, false, false]
+  cand[0] id=61 features=[5.0, 0.0] hc=2.86 re=584.2 qo=5.000
+  qValues=[5.8402999341487885, 5.116442650556564, 5.100396126508713, 4.255668371915817]  action=0  chosenParent=61
+1786351155682 POLICY_EVAL phase=146 states=70 choiceStates=47 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.340 meanGreedyReward=1.4737 meanBestReward=3.7446 meanRegret=2.2709 rewardRatio=0.394
+1786351175381 DECISION phase=147 mote=5 eps=0.215 cand=[61] valid=[true, false, false, false]
+  cand[0] id=61 features=[6.0, 0.0] hc=4.20 re=139.6 qo=6.000
+  qValues=[7.091147184371948, 6.272541522979736, 6.298115253448486, 5.122236490249634]  action=0  chosenParent=61
+1786351175864 POLICY_EVAL phase=147 states=74 choiceStates=43 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.395 meanGreedyReward=0.7883 meanBestReward=1.6834 meanRegret=0.8951 rewardRatio=0.468
+1786351197028 DECISION phase=148 mote=5 eps=0.214 cand=[61] valid=[true, false, false, false]
+  cand[0] id=61 features=[2.0, 0.0] hc=4.12 re=12.6 qo=2.000
+  qValues=[7.693836152553558, 6.848035752773285, 6.906212747097015, 5.493212878704071]  action=0  chosenParent=61
+1786351197527 POLICY_EVAL phase=148 states=80 choiceStates=41 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.390 meanGreedyReward=0.7025 meanBestReward=1.4048 meanRegret=0.7023 rewardRatio=0.500
+1786351217387 POLICY_EVAL phase=149 states=72 choiceStates=39 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.385 meanGreedyReward=0.9350 meanBestReward=2.2382 meanRegret=1.3033 rewardRatio=0.418
+1786351238356 DECISION phase=150 mote=5 eps=0.213 cand=[4] valid=[true, false, false, false]
+  cand[0] id=4 features=[0.0, 0.0] hc=7.86 re=1815.0 qo=0.000
+  qValues=[6.367433667182922, 5.725407004356384, 5.906698107719421, 4.63884699344635]  action=0  chosenParent=4
+1786351238855 POLICY_EVAL phase=150 states=80 choiceStates=40 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.275 meanGreedyReward=0.6988 meanBestReward=1.6844 meanRegret=0.9857 rewardRatio=0.415
+1786351260014 DECISION phase=151 mote=5 eps=0.212 cand=[4] valid=[true, false, false, false]
+  cand[0] id=4 features=[1.0, 0.0] hc=9.38 re=1814.9 qo=1.000
+  qValues=[5.6701540350914, 5.112567603588104, 5.349341332912445, 4.221265733242035]  action=0  chosenParent=4
+1786351260522 POLICY_EVAL phase=151 states=88 choiceStates=41 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.512 meanGreedyReward=0.9506 meanBestReward=1.7142 meanRegret=0.7635 rewardRatio=0.555
+1786351282679 DECISION phase=152 mote=5 eps=0.212 cand=[4] valid=[true, false, false, false]
+  cand[0] id=4 features=[4.0, 0.0] hc=12.73 re=1814.7 qo=4.000
+  qValues=[5.202919811010361, 4.7090698182582855, 4.991112560033798, 3.957802504301071]  action=0  chosenParent=4
+1786351283129 POLICY_EVAL phase=152 states=83 choiceStates=49 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.673 meanGreedyReward=1.3745 meanBestReward=2.5166 meanRegret=1.1422 rewardRatio=0.546
+1786351300925 POLICY_EVAL phase=153 states=72 choiceStates=48 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.458 meanGreedyReward=0.7178 meanBestReward=1.8732 meanRegret=1.1553 rewardRatio=0.383
+1786351315842 POLICY_EVAL phase=154 states=71 choiceStates=52 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.635 meanGreedyReward=0.7857 meanBestReward=1.2675 meanRegret=0.4818 rewardRatio=0.620
+1786351331127 POLICY_EVAL phase=155 states=69 choiceStates=48 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.625 meanGreedyReward=0.8977 meanBestReward=1.2328 meanRegret=0.3351 rewardRatio=0.728
+1786351347797 POLICY_EVAL phase=156 states=67 choiceStates=40 invalidPicks=8 invalidPickRate=0.119 greedyTop1=0.450 meanGreedyReward=1.1018 meanBestReward=1.8643 meanRegret=0.7625 rewardRatio=0.591
+1786351368594 DECISION phase=157 mote=5 eps=0.209 cand=[12] valid=[true, false, false, false]
+  cand[0] id=12 features=[4.0, 0.0] hc=6.95 re=547.8 qo=4.000
+  qValues=[4.532539397478104, 4.173944383859634, 4.57901206612587, 3.7266577780246735]  action=2
+1786351369108 POLICY_EVAL phase=157 states=82 choiceStates=33 invalidPicks=49 invalidPickRate=0.598 greedyTop1=0.212 meanGreedyReward=0.7190 meanBestReward=1.3252 meanRegret=0.6062 rewardRatio=0.543
+1786351389459 DECISION phase=158 mote=5 eps=0.208 cand=[12] valid=[true, false, false, false]
+  cand[0] id=12 features=[0.0, 0.0] hc=8.45 re=489.1 qo=0.000
+  qValues=[4.602042108774185, 4.245565205812454, 4.68150869011879, 3.801562935113907]  action=0  chosenParent=12
+1786351390001 POLICY_EVAL phase=158 states=90 choiceStates=35 invalidPicks=55 invalidPickRate=0.611 greedyTop1=0.257 meanGreedyReward=0.7138 meanBestReward=1.1747 meanRegret=0.4609 rewardRatio=0.608
+1786351411575 DECISION phase=159 mote=5 eps=0.208 cand=[63, 12] valid=[true, true, false, false]
+  cand[0] id=63 features=[8.0, 0.0] hc=7.40 re=1797.4 qo=8.000
+  cand[1] id=12 features=[0.0, 0.0] hc=9.10 re=469.3 qo=0.000
+  qValues=[4.897238463163376, 4.544689983129501, 4.998511999845505, 4.080227583646774]  action=2
+1786351412091 POLICY_EVAL phase=159 states=87 choiceStates=38 invalidPicks=49 invalidPickRate=0.563 greedyTop1=0.132 meanGreedyReward=0.5208 meanBestReward=0.7685 meanRegret=0.2477 rewardRatio=0.678
+1786351435121 DECISION phase=160 mote=5 eps=0.207 cand=[63, 12] valid=[true, true, false, false]
+  cand[0] id=63 features=[6.0, 0.0] hc=7.36 re=1796.8 qo=6.000
+  cand[1] id=12 features=[0.0, 0.0] hc=9.13 re=457.3 qo=0.000
+  qValues=[4.86333492398262, 4.480836898088455, 4.9060766994953156, 4.056355863809586]  action=0  chosenParent=63
+1786351435633 POLICY_EVAL phase=160 states=84 choiceStates=43 invalidPicks=41 invalidPickRate=0.488 greedyTop1=0.186 meanGreedyReward=0.7322 meanBestReward=1.0592 meanRegret=0.3270 rewardRatio=0.691
+1786351457775 DECISION phase=161 mote=5 eps=0.207 cand=[63, 12] valid=[true, true, false, false]
+  cand[0] id=63 features=[6.0, 0.0] hc=7.32 re=1796.7 qo=6.000
+  cand[1] id=12 features=[1.0, 0.0] hc=9.18 re=443.0 qo=1.000
+  qValues=[4.905922144651413, 4.494868129491806, 4.873271435499191, 4.107402294874191]  action=0  chosenParent=63
+1786351458271 POLICY_EVAL phase=161 states=75 choiceStates=64 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.438 meanGreedyReward=0.5020 meanBestReward=0.7644 meanRegret=0.2624 rewardRatio=0.657
+1786351477735 DECISION phase=162 mote=5 eps=0.206 cand=[57, 63, 12] valid=[true, true, true, false]
+  cand[0] id=57 features=[0.0, 0.0] hc=4.58 re=1596.9 qo=0.000
+  cand[1] id=63 features=[0.0, 0.0] hc=7.18 re=1779.9 qo=0.000
+  cand[2] id=12 features=[8.0, 0.0] hc=9.14 re=417.0 qo=8.000
+  qValues=[5.383942604064941, 4.946789979934692, 5.239447593688965, 4.564795255661011]  action=0  chosenParent=57
+1786351478199 POLICY_EVAL phase=162 states=74 choiceStates=62 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.355 meanGreedyReward=0.3921 meanBestReward=0.6756 meanRegret=0.2835 rewardRatio=0.580
+1786351495009 DECISION phase=163 mote=5 eps=0.205 cand=[57, 63, 12] valid=[true, true, true, false]
+  cand[0] id=57 features=[0.0, 0.0] hc=16.00 re=1539.0 qo=0.000
+  cand[1] id=63 features=[0.0, 0.0] hc=7.10 re=1761.1 qo=0.000
+  cand[2] id=12 features=[0.0, 0.0] hc=9.10 re=392.1 qo=0.000
+  qValues=[4.545698940753937, 4.083717525005341, 4.277209937572479, 3.792680084705353]  action=2  chosenParent=12
+1786351495544 POLICY_EVAL phase=163 states=67 choiceStates=55 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.455 meanGreedyReward=0.6179 meanBestReward=1.4174 meanRegret=0.7995 rewardRatio=0.436
+1786351510968 DECISION phase=164 mote=5 eps=0.205 cand=[57, 63, 12] valid=[true, true, true, false]
+  cand[0] id=57 features=[0.0, 0.0] hc=16.00 re=1539.0 qo=0.000
+  cand[1] id=63 features=[0.0, 0.0] hc=16.00 re=1758.9 qo=0.000
+  cand[2] id=12 features=[0.0, 0.0] hc=9.12 re=390.1 qo=0.000
+  qValues=[4.480138748884201, 4.006458252668381, 4.110715001821518, 3.7335252463817596]  action=0  chosenParent=57
+1786351511421 POLICY_EVAL phase=164 states=68 choiceStates=49 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.306 meanGreedyReward=0.8836 meanBestReward=2.1509 meanRegret=1.2673 rewardRatio=0.411
+1786351523788 DECISION phase=165 mote=5 eps=0.204 cand=[57, 63, 12] valid=[true, true, true, false]
+  cand[0] id=57 features=[0.0, 0.0] hc=16.00 re=1536.5 qo=0.000
+  cand[1] id=63 features=[0.0, 0.0] hc=16.00 re=1758.9 qo=0.000
+  cand[2] id=12 features=[0.0, 0.0] hc=3.35 re=389.3 qo=0.000
+  qValues=[4.484085023403168, 3.975797474384308, 4.010050475597382, 3.720424234867096]  action=0  chosenParent=57
+1786351524253 POLICY_EVAL phase=165 states=66 choiceStates=47 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.404 meanGreedyReward=0.6812 meanBestReward=1.5743 meanRegret=0.8931 rewardRatio=0.433
+1786351538885 DECISION phase=166 mote=5 eps=0.204 cand=[57, 63, 12] valid=[true, true, true, false]
+  cand[0] id=57 features=[0.0, 0.0] hc=16.00 re=1536.5 qo=0.000
+  cand[1] id=63 features=[0.0, 0.0] hc=16.00 re=1758.9 qo=0.000
+  cand[2] id=12 features=[0.0, 0.0] hc=3.58 re=371.2 qo=0.000
+  qValues=[4.56398007273674, 4.05412170290947, 4.025207966566086, 3.754797786474228]  action=0  chosenParent=57
+1786351539192 POLICY_EVAL phase=166 states=65 choiceStates=47 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.447 meanGreedyReward=0.9822 meanBestReward=2.4872 meanRegret=1.5050 rewardRatio=0.395
+1786351554010 DECISION phase=167 mote=5 eps=0.203 cand=[57, 63, 12] valid=[true, true, true, false]
+  cand[0] id=57 features=[0.0, 0.0] hc=16.00 re=1536.5 qo=0.000
+  cand[1] id=63 features=[0.0, 0.0] hc=16.00 re=1758.9 qo=0.000
+  cand[2] id=12 features=[0.0, 0.0] hc=3.62 re=366.8 qo=0.000
+  qValues=[4.618529111146927, 4.101354390382767, 4.015252977609634, 3.7722525894641876]  action=0  chosenParent=57
+1786351554424 POLICY_EVAL phase=167 states=61 choiceStates=47 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.447 meanGreedyReward=0.9562 meanBestReward=1.9134 meanRegret=0.9572 rewardRatio=0.500
+1786351570350 DECISION phase=168 mote=5 eps=0.203 cand=[6, 57, 63, 12] valid=[true, true, true, true]
+  cand[0] id=6 features=[3.0, 0.0] hc=2.68 re=1533.6 qo=3.000
+  cand[1] id=57 features=[0.0, 0.0] hc=16.00 re=1536.5 qo=0.000
+  cand[2] id=63 features=[0.0, 0.0] hc=4.71 re=1755.4 qo=0.000
+  cand[3] id=12 features=[0.0, 0.0] hc=3.54 re=366.8 qo=0.000
+  qValues=[4.727540105581284, 4.194155305624008, 4.064465254545212, 3.8351074159145355]  action=0  chosenParent=6
+1786351570851 POLICY_EVAL phase=168 states=90 choiceStates=51 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.451 meanGreedyReward=0.8248 meanBestReward=1.5883 meanRegret=0.7635 rewardRatio=0.519
+1786351590063 DECISION phase=169 mote=5 eps=0.202 cand=[57, 6, 63, 12] valid=[true, true, true, true]
+  cand[0] id=57 features=[0.0, 0.0] hc=16.00 re=1536.5 qo=0.000
+  cand[1] id=6 features=[7.0, 0.0] hc=6.13 re=1527.2 qo=7.000
+  cand[2] id=63 features=[0.0, 0.0] hc=4.46 re=1751.9 qo=0.000
+  cand[3] id=12 features=[0.0, 0.0] hc=3.66 re=365.5 qo=0.000
+  qValues=[5.451659142971039, 4.91436105966568, 4.652830183506012, 4.4857558608055115]  action=0  chosenParent=57
+1786351590586 POLICY_EVAL phase=169 states=90 choiceStates=54 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.426 meanGreedyReward=0.7307 meanBestReward=1.4084 meanRegret=0.6777 rewardRatio=0.519
+1786351609496 DECISION phase=170 mote=5 eps=0.201 cand=[57, 6, 63, 12] valid=[true, true, true, true]
+  cand[0] id=57 features=[0.0, 0.0] hc=16.00 re=1536.5 qo=0.000
+  cand[1] id=6 features=[1.0, 0.0] hc=5.49 re=1521.2 qo=1.000
+  cand[2] id=63 features=[0.0, 0.0] hc=16.00 re=1751.9 qo=0.000
+  cand[3] id=12 features=[0.0, 0.0] hc=3.68 re=363.1 qo=0.000
+  qValues=[4.8468194007873535, 4.334500551223755, 4.0468666553497314, 3.9244871139526367]  action=0  chosenParent=57
+1786351609975 POLICY_EVAL phase=170 states=66 choiceStates=51 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.392 meanGreedyReward=1.0994 meanBestReward=2.1473 meanRegret=1.0479 rewardRatio=0.512
+1786351625528 DECISION phase=171 mote=5 eps=0.201 cand=[57, 6, 63, 12] valid=[true, true, true, true]
+  cand[0] id=57 features=[0.0, 0.0] hc=16.00 re=1536.5 qo=0.000
+  cand[1] id=6 features=[0.0, 0.0] hc=3.50 re=1459.2 qo=0.000
+  cand[2] id=63 features=[0.0, 0.0] hc=16.00 re=1751.9 qo=0.000
+  cand[3] id=12 features=[1.0, 0.0] hc=16.00 re=361.9 qo=1.000
+  qValues=[4.848743587732315, 4.350426822900772, 4.000734597444534, 3.910911947488785]  action=0  chosenParent=57
+1786351625915 POLICY_EVAL phase=171 states=60 choiceStates=47 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.319 meanGreedyReward=0.5645 meanBestReward=1.0828 meanRegret=0.5182 rewardRatio=0.521
+1786351640674 POLICY_EVAL phase=172 states=55 choiceStates=45 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.400 meanGreedyReward=0.8458 meanBestReward=1.7214 meanRegret=0.8756 rewardRatio=0.491
+1786351652197 POLICY_EVAL phase=173 states=50 choiceStates=41 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.341 meanGreedyReward=1.2638 meanBestReward=2.9121 meanRegret=1.6483 rewardRatio=0.434
+1786351664672 POLICY_EVAL phase=174 states=52 choiceStates=40 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.350 meanGreedyReward=0.7041 meanBestReward=1.2377 meanRegret=0.5336 rewardRatio=0.569
+1786351678046 POLICY_EVAL phase=175 states=51 choiceStates=39 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.410 meanGreedyReward=0.9480 meanBestReward=1.8235 meanRegret=0.8755 rewardRatio=0.520
+1786351689105 POLICY_EVAL phase=176 states=49 choiceStates=36 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.361 meanGreedyReward=1.4531 meanBestReward=3.7490 meanRegret=2.2958 rewardRatio=0.388
+1786351699359 POLICY_EVAL phase=177 states=48 choiceStates=36 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.333 meanGreedyReward=1.4113 meanBestReward=3.5178 meanRegret=2.1065 rewardRatio=0.401
+1786351710892 POLICY_EVAL phase=178 states=48 choiceStates=36 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.389 meanGreedyReward=0.7337 meanBestReward=1.4518 meanRegret=0.7181 rewardRatio=0.505
+1786351719920 POLICY_EVAL phase=179 states=48 choiceStates=36 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.417 meanGreedyReward=1.1319 meanBestReward=2.5680 meanRegret=1.4361 rewardRatio=0.441
+1786351731925 POLICY_EVAL phase=180 states=49 choiceStates=35 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.371 meanGreedyReward=2.0078 meanBestReward=4.9983 meanRegret=2.9904 rewardRatio=0.402
+1786351746149 POLICY_EVAL phase=181 states=50 choiceStates=35 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.371 meanGreedyReward=0.9967 meanBestReward=2.5730 meanRegret=1.5763 rewardRatio=0.387
+1786351759786 POLICY_EVAL phase=182 states=48 choiceStates=35 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.371 meanGreedyReward=1.0688 meanBestReward=2.4341 meanRegret=1.3653 rewardRatio=0.439
+1786351769953 POLICY_EVAL phase=183 states=49 choiceStates=35 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.343 meanGreedyReward=1.4553 meanBestReward=3.8286 meanRegret=2.3734 rewardRatio=0.380
+1786351780807 POLICY_EVAL phase=184 states=51 choiceStates=33 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.242 meanGreedyReward=1.6395 meanBestReward=5.2387 meanRegret=3.5991 rewardRatio=0.313
+1786351795208 POLICY_EVAL phase=185 states=77 choiceStates=37 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.405 meanGreedyReward=0.8398 meanBestReward=1.9277 meanRegret=1.0879 rewardRatio=0.436
+1786351812559 DECISION phase=186 mote=5 eps=0.192 cand=[57] valid=[true, false, false, false]
+  cand[0] id=57 features=[1.0, 0.0] hc=3.69 re=1482.2 qo=1.000
+  qValues=[5.1954645216465, 5.03204670548439, 4.301640897989273, 4.427430897951126]  action=0  chosenParent=57
+1786351813033 POLICY_EVAL phase=186 states=81 choiceStates=46 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.239 meanGreedyReward=1.1722 meanBestReward=3.0033 meanRegret=1.8311 rewardRatio=0.390
+1786351829274 DECISION phase=187 mote=5 eps=0.192 cand=[57] valid=[true, false, false, false]
+  cand[0] id=57 features=[0.0, 0.0] hc=2.49 re=1390.2 qo=0.000
+  qValues=[5.189701348543167, 5.03821662068367, 4.311234384775162, 4.436044484376907]  action=0  chosenParent=57
+1786351829769 POLICY_EVAL phase=187 states=77 choiceStates=48 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.479 meanGreedyReward=0.8534 meanBestReward=1.5090 meanRegret=0.6556 rewardRatio=0.566
+1786351846287 POLICY_EVAL phase=188 states=87 choiceStates=52 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.308 meanGreedyReward=1.4807 meanBestReward=3.5645 meanRegret=2.0838 rewardRatio=0.415
+1786351863529 DECISION phase=189 mote=5 eps=0.190 cand=[57, 55] valid=[true, true, false, false]
+  cand[0] id=57 features=[0.0, 0.0] hc=3.88 re=1034.8 qo=0.000
+  cand[1] id=55 features=[0.0, 0.0] hc=4.75 re=1789.0 qo=0.000
+  qValues=[5.388359755277634, 5.236853808164597, 4.5269279181957245, 4.62550362944603]  action=0  chosenParent=57
+1786351864065 POLICY_EVAL phase=189 states=86 choiceStates=53 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.340 meanGreedyReward=1.1642 meanBestReward=3.0815 meanRegret=1.9173 rewardRatio=0.378
+1786351882446 DECISION phase=190 mote=5 eps=0.190 cand=[57, 55] valid=[true, true, false, false]
+  cand[0] id=57 features=[7.0, 0.0] hc=4.16 re=963.0 qo=7.000
+  cand[1] id=55 features=[0.0, 0.0] hc=5.54 re=1754.1 qo=0.000
+  qValues=[5.978277266025543, 5.844485819339752, 5.0685500502586365, 5.164566457271576]  action=0  chosenParent=57
+1786351882966 POLICY_EVAL phase=190 states=86 choiceStates=52 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.481 meanGreedyReward=0.7379 meanBestReward=1.4501 meanRegret=0.7122 rewardRatio=0.509
+1786351900087 DECISION phase=191 mote=5 eps=0.189 cand=[57, 55] valid=[true, true, false, false]
+  cand[0] id=57 features=[5.0, 0.0] hc=4.01 re=811.1 qo=5.000
+  cand[1] id=55 features=[0.0, 0.0] hc=4.86 re=1740.2 qo=0.000
+  qValues=[6.040839701890945, 5.895846635103226, 5.112391144037247, 5.195621997117996]  action=0  chosenParent=57
+1786351900607 POLICY_EVAL phase=191 states=90 choiceStates=49 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.490 meanGreedyReward=0.8168 meanBestReward=1.5711 meanRegret=0.7543 rewardRatio=0.520
+1786351920433 DECISION phase=192 mote=5 eps=0.189 cand=[57, 55] valid=[true, true, false, false]
+  cand[0] id=57 features=[7.0, 0.0] hc=4.49 re=663.3 qo=7.000
+  cand[1] id=55 features=[0.0, 0.0] hc=3.86 re=1682.9 qo=0.000
+  qValues=[6.396951198577881, 6.264129877090454, 5.420731067657471, 5.49643874168396]  action=0  chosenParent=57
+1786351920966 POLICY_EVAL phase=192 states=92 choiceStates=61 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.344 meanGreedyReward=1.2571 meanBestReward=3.6680 meanRegret=2.4109 rewardRatio=0.343
+1786351939330 DECISION phase=193 mote=5 eps=0.188 cand=[57, 55] valid=[true, true, false, false]
+  cand[0] id=57 features=[8.0, 0.0] hc=4.54 re=545.0 qo=8.000
+  cand[1] id=55 features=[0.0, 0.0] hc=3.88 re=1548.5 qo=0.000
+  qValues=[6.702779173851013, 6.576794505119324, 5.678821682929993, 5.747205376625061]  action=1  chosenParent=55
+1786351939831 POLICY_EVAL phase=193 states=89 choiceStates=59 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.390 meanGreedyReward=1.1018 meanBestReward=3.2219 meanRegret=2.1200 rewardRatio=0.342
+1786351958947 DECISION phase=194 mote=5 eps=0.187 cand=[57, 55] valid=[true, true, false, false]
+  cand[0] id=57 features=[8.0, 0.0] hc=4.68 re=483.2 qo=8.000
+  cand[1] id=55 features=[4.0, 0.0] hc=3.08 re=1389.4 qo=4.000
+  qValues=[7.722985625267029, 7.620482325553894, 6.57474958896637, 6.6491557359695435]  action=0  chosenParent=57
+1786351959305 POLICY_EVAL phase=194 states=93 choiceStates=61 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.426 meanGreedyReward=0.8841 meanBestReward=1.8800 meanRegret=0.9960 rewardRatio=0.470
+1786351977166 DECISION phase=195 mote=5 eps=0.187 cand=[57, 55] valid=[true, true, false, false]
+  cand[0] id=57 features=[8.0, 0.0] hc=3.56 re=420.3 qo=8.000
+  cand[1] id=55 features=[5.0, 0.0] hc=3.05 re=1213.3 qo=5.000
+  qValues=[7.749698340892792, 7.557781159877777, 6.636208713054657, 6.643174350261688]  action=0  chosenParent=57
+1786351977684 POLICY_EVAL phase=195 states=86 choiceStates=57 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.421 meanGreedyReward=0.9540 meanBestReward=2.0212 meanRegret=1.0672 rewardRatio=0.472
+1786351997800 DECISION phase=196 mote=5 eps=0.186 cand=[57, 55] valid=[true, true, false, false]
+  cand[0] id=57 features=[0.0, 0.0] hc=4.64 re=391.7 qo=0.000
+  cand[1] id=55 features=[1.0, 0.0] hc=3.88 re=1046.2 qo=1.000
+  qValues=[6.257378250360489, 5.958666950464249, 5.3214336931705475, 5.263371020555496]  action=0  chosenParent=57
+1786351998292 POLICY_EVAL phase=196 states=80 choiceStates=50 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.320 meanGreedyReward=1.2224 meanBestReward=3.2253 meanRegret=2.0030 rewardRatio=0.379
+1786352014894 POLICY_EVAL phase=197 states=88 choiceStates=56 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.339 meanGreedyReward=0.5944 meanBestReward=1.1947 meanRegret=0.6003 rewardRatio=0.498
+1786352034867 DECISION phase=198 mote=5 eps=0.185 cand=[55] valid=[true, false, false, false]
+  cand[0] id=55 features=[4.0, 0.0] hc=6.40 re=758.3 qo=4.000
+  qValues=[6.253127187490463, 5.928548663854599, 5.38229712843895, 5.206761807203293]  action=0  chosenParent=55
+1786352035384 POLICY_EVAL phase=198 states=89 choiceStates=64 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.375 meanGreedyReward=0.4621 meanBestReward=0.9159 meanRegret=0.4538 rewardRatio=0.505
+1786352049305 DECISION phase=199 mote=5 eps=0.185 cand=[42, 55] valid=[true, true, false, false]
+  cand[0] id=42 features=[0.0, 0.0] hc=5.49 re=1072.7 qo=0.000
+  cand[1] id=55 features=[0.0, 0.0] hc=6.23 re=512.2 qo=0.000
+  qValues=[6.050231963396072, 5.755261927843094, 5.213907867670059, 4.983737736940384]  action=0  chosenParent=42
+1786352049865 POLICY_EVAL phase=199 states=83 choiceStates=63 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.460 meanGreedyReward=1.0394 meanBestReward=2.3206 meanRegret=1.2812 rewardRatio=0.448
+1786352062831 DECISION phase=200 mote=5 eps=0.184 cand=[42, 55] valid=[true, true, false, false]
+  cand[0] id=42 features=[5.0, 0.0] hc=6.07 re=651.0 qo=5.000
+  cand[1] id=55 features=[2.0, 0.0] hc=7.25 re=221.6 qo=2.000
+  qValues=[6.756729692220688, 6.5008202493190765, 5.844633549451828, 5.565228313207626]  action=0  chosenParent=42
+1786352063366 POLICY_EVAL phase=200 states=81 choiceStates=61 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.541 meanGreedyReward=1.4744 meanBestReward=3.5625 meanRegret=2.0880 rewardRatio=0.414
+1786352075387 DECISION phase=201 mote=5 eps=0.183 cand=[42, 55] valid=[true, true, false, false]
+  cand[0] id=42 features=[0.0, 0.0] hc=6.07 re=336.6 qo=0.000
+  cand[1] id=55 features=[0.0, 0.0] hc=7.15 re=31.2 qo=0.000
+  qValues=[6.60791340470314, 6.298326879739761, 5.641576439142227, 5.306458026170731]  action=3
+1786352075850 POLICY_EVAL phase=201 states=75 choiceStates=54 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.315 meanGreedyReward=1.2232 meanBestReward=3.1773 meanRegret=1.9541 rewardRatio=0.385
+1786352087280 POLICY_EVAL phase=202 states=80 choiceStates=54 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.389 meanGreedyReward=1.5192 meanBestReward=3.9439 meanRegret=2.4247 rewardRatio=0.385
+1786352096424 POLICY_EVAL phase=203 states=61 choiceStates=45 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.378 meanGreedyReward=1.5523 meanBestReward=3.9173 meanRegret=2.3650 rewardRatio=0.396
+1786352109307 POLICY_EVAL phase=204 states=53 choiceStates=40 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.475 meanGreedyReward=0.6905 meanBestReward=1.2247 meanRegret=0.5342 rewardRatio=0.564
+1786352120772 POLICY_EVAL phase=205 states=58 choiceStates=39 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.282 meanGreedyReward=1.7873 meanBestReward=5.3092 meanRegret=3.5219 rewardRatio=0.337
+1786352135731 POLICY_EVAL phase=206 states=73 choiceStates=39 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.256 meanGreedyReward=1.4141 meanBestReward=4.2961 meanRegret=2.8820 rewardRatio=0.329
+1786352147608 POLICY_EVAL phase=207 states=72 choiceStates=45 invalidPicks=27 invalidPickRate=0.375 greedyTop1=0.333 meanGreedyReward=2.0116 meanBestReward=3.5195 meanRegret=1.5079 rewardRatio=0.572
+1786352162479 POLICY_EVAL phase=208 states=69 choiceStates=48 invalidPicks=21 invalidPickRate=0.304 greedyTop1=0.271 meanGreedyReward=0.8797 meanBestReward=1.8048 meanRegret=0.9251 rewardRatio=0.487
+1786352177018 POLICY_EVAL phase=209 states=67 choiceStates=49 invalidPicks=18 invalidPickRate=0.269 greedyTop1=0.347 meanGreedyReward=0.7862 meanBestReward=1.3436 meanRegret=0.5573 rewardRatio=0.585
+1786352193303 POLICY_EVAL phase=210 states=65 choiceStates=50 invalidPicks=15 invalidPickRate=0.231 greedyTop1=0.220 meanGreedyReward=0.6423 meanBestReward=1.1896 meanRegret=0.5472 rewardRatio=0.540
+1786352211107 POLICY_EVAL phase=211 states=64 choiceStates=49 invalidPicks=15 invalidPickRate=0.234 greedyTop1=0.245 meanGreedyReward=0.5329 meanBestReward=1.1171 meanRegret=0.5842 rewardRatio=0.477
+1786352226187 POLICY_EVAL phase=212 states=66 choiceStates=48 invalidPicks=18 invalidPickRate=0.273 greedyTop1=0.354 meanGreedyReward=0.6894 meanBestReward=1.0895 meanRegret=0.4001 rewardRatio=0.633
+1786352241165 POLICY_EVAL phase=213 states=66 choiceStates=47 invalidPicks=19 invalidPickRate=0.288 greedyTop1=0.319 meanGreedyReward=1.2422 meanBestReward=2.4059 meanRegret=1.1637 rewardRatio=0.516
+1786352257777 POLICY_EVAL phase=214 states=65 choiceStates=46 invalidPicks=19 invalidPickRate=0.292 greedyTop1=0.304 meanGreedyReward=0.7228 meanBestReward=1.1535 meanRegret=0.4307 rewardRatio=0.627
+1786352272655 POLICY_EVAL phase=215 states=63 choiceStates=47 invalidPicks=16 invalidPickRate=0.254 greedyTop1=0.362 meanGreedyReward=0.7180 meanBestReward=1.1963 meanRegret=0.4783 rewardRatio=0.600
+1786352289519 POLICY_EVAL phase=216 states=62 choiceStates=44 invalidPicks=18 invalidPickRate=0.290 greedyTop1=0.341 meanGreedyReward=0.7146 meanBestReward=1.0572 meanRegret=0.3426 rewardRatio=0.676
+1786352303233 POLICY_EVAL phase=217 states=62 choiceStates=45 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.356 meanGreedyReward=0.5738 meanBestReward=1.2043 meanRegret=0.6305 rewardRatio=0.476
+1786352315432 POLICY_EVAL phase=218 states=62 choiceStates=43 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.326 meanGreedyReward=1.5116 meanBestReward=4.4933 meanRegret=2.9816 rewardRatio=0.336
+1786352323688 POLICY_EVAL phase=219 states=62 choiceStates=44 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.341 meanGreedyReward=1.4311 meanBestReward=4.3955 meanRegret=2.9644 rewardRatio=0.326
+1786352330794 POLICY_EVAL phase=220 states=57 choiceStates=43 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.279 meanGreedyReward=1.5582 meanBestReward=3.9368 meanRegret=2.3787 rewardRatio=0.396
+1786352336503 POLICY_EVAL phase=221 states=54 choiceStates=40 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.325 meanGreedyReward=2.3344 meanBestReward=5.6206 meanRegret=3.2862 rewardRatio=0.415
+1786352344253 POLICY_EVAL phase=222 states=54 choiceStates=40 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.325 meanGreedyReward=2.1686 meanBestReward=5.6781 meanRegret=3.5095 rewardRatio=0.382
+1786352350282 POLICY_EVAL phase=223 states=54 choiceStates=40 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.325 meanGreedyReward=1.3486 meanBestReward=3.3436 meanRegret=1.9950 rewardRatio=0.403
+1786352357291 POLICY_EVAL phase=224 states=52 choiceStates=40 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.300 meanGreedyReward=2.1966 meanBestReward=5.8794 meanRegret=3.6828 rewardRatio=0.374
+1786352364097 POLICY_EVAL phase=225 states=51 choiceStates=39 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.308 meanGreedyReward=1.9331 meanBestReward=4.6037 meanRegret=2.6706 rewardRatio=0.420
+1786352372041 POLICY_EVAL phase=226 states=51 choiceStates=38 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.263 meanGreedyReward=1.8359 meanBestReward=4.7531 meanRegret=2.9172 rewardRatio=0.386
+1786352379405 POLICY_EVAL phase=227 states=52 choiceStates=39 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.308 meanGreedyReward=2.1849 meanBestReward=6.1352 meanRegret=3.9503 rewardRatio=0.356
+1786352385279 POLICY_EVAL phase=228 states=52 choiceStates=39 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.282 meanGreedyReward=1.6191 meanBestReward=4.0847 meanRegret=2.4656 rewardRatio=0.396
+1786352391886 POLICY_EVAL phase=229 states=52 choiceStates=40 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.325 meanGreedyReward=1.7669 meanBestReward=3.8559 meanRegret=2.0889 rewardRatio=0.458
+1786352398738 POLICY_EVAL phase=230 states=53 choiceStates=40 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.300 meanGreedyReward=1.6084 meanBestReward=4.3203 meanRegret=2.7120 rewardRatio=0.372
+1786352409820 POLICY_EVAL phase=231 states=76 choiceStates=40 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.150 meanGreedyReward=0.6654 meanBestReward=1.8012 meanRegret=1.1359 rewardRatio=0.369
+1786352423861 POLICY_EVAL phase=232 states=91 choiceStates=41 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.293 meanGreedyReward=1.6248 meanBestReward=3.8933 meanRegret=2.2685 rewardRatio=0.417
+1786352438601 POLICY_EVAL phase=233 states=83 choiceStates=41 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.268 meanGreedyReward=1.3781 meanBestReward=3.3806 meanRegret=2.0025 rewardRatio=0.408
+1786352451289 DECISION phase=234 mote=5 eps=0.164 cand=[64] valid=[true, false, false, false]
+  cand[0] id=64 features=[8.0, 0.0] hc=0.77 re=333.8 qo=8.000
+  qValues=[12.396058976650238, 9.995928704738617, 10.266591489315033, 9.315370261669159]  action=1
+1786352451795 POLICY_EVAL phase=234 states=85 choiceStates=46 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.239 meanGreedyReward=1.3358 meanBestReward=3.1799 meanRegret=1.8440 rewardRatio=0.420
+1786352465011 DECISION phase=235 mote=5 eps=0.164 cand=[64] valid=[true, false, false, false]
+  cand[0] id=64 features=[8.0, 0.0] hc=0.91 re=145.2 qo=8.000
+  qValues=[12.91543859243393, 10.432839334011078, 10.759098947048187, 9.760703265666962]  action=0  chosenParent=64
+1786352465517 POLICY_EVAL phase=235 states=84 choiceStates=53 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.340 meanGreedyReward=1.3879 meanBestReward=2.6787 meanRegret=1.2908 rewardRatio=0.518
+1786352481091 DECISION phase=236 mote=5 eps=0.163 cand=[64] valid=[true, false, false, false]
+  cand[0] id=64 features=[8.0, 0.0] hc=1.04 re=51.4 qo=8.000
+  qValues=[13.039734780788422, 10.58329051733017, 10.948921382427216, 9.938448369503021]  action=0  chosenParent=64
+1786352481552 POLICY_EVAL phase=236 states=85 choiceStates=59 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.407 meanGreedyReward=1.1453 meanBestReward=2.4085 meanRegret=1.2632 rewardRatio=0.476
+1786352499938 POLICY_EVAL phase=237 states=83 choiceStates=57 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.368 meanGreedyReward=1.2317 meanBestReward=2.7825 meanRegret=1.5508 rewardRatio=0.443
+1786352518998 DECISION phase=238 mote=5 eps=0.162 cand=[64, 36] valid=[true, true, false, false]
+  cand[0] id=64 features=[8.0, 0.0] hc=1.38 re=6.5 qo=8.000
+  cand[1] id=36 features=[7.0, 0.0] hc=1.48 re=1334.8 qo=7.000
+  qValues=[14.247531652450562, 11.733538150787354, 12.303349256515503, 11.110150337219238]  action=0  chosenParent=64
+1786352519531 POLICY_EVAL phase=238 states=87 choiceStates=60 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.367 meanGreedyReward=1.0618 meanBestReward=2.5724 meanRegret=1.5106 rewardRatio=0.413
+1786352538495 DECISION phase=239 mote=5 eps=0.161 cand=[36, 21] valid=[true, true, false, false]
+  cand[0] id=36 features=[8.0, 0.0] hc=1.32 re=1273.0 qo=8.000
+  cand[1] id=21 features=[8.0, 0.0] hc=3.69 re=573.7 qo=8.000
+  qValues=[14.415473699569702, 11.935763835906982, 12.602051973342896, 11.351436138153076]  action=0  chosenParent=36
+1786352539056 POLICY_EVAL phase=239 states=86 choiceStates=65 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.446 meanGreedyReward=1.0105 meanBestReward=1.8937 meanRegret=0.8832 rewardRatio=0.534
+1786352556556 DECISION phase=240 mote=5 eps=0.161 cand=[36, 21] valid=[true, true, false, false]
+  cand[0] id=36 features=[8.0, 0.0] hc=1.43 re=1217.3 qo=8.000
+  cand[1] id=21 features=[0.0, 0.0] hc=3.24 re=547.0 qo=0.000
+  qValues=[12.536819219589233, 10.429725408554077, 11.101857900619507, 9.963850736618042]  action=0  chosenParent=36
+1786352557043 POLICY_EVAL phase=240 states=85 choiceStates=68 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.471 meanGreedyReward=1.1587 meanBestReward=2.3616 meanRegret=1.2028 rewardRatio=0.491
+1786352573401 DECISION phase=241 mote=5 eps=0.160 cand=[70, 36, 21] valid=[true, true, true, false]
+  cand[0] id=70 features=[8.0, 0.0] hc=1.38 re=1467.8 qo=8.000
+  cand[1] id=36 features=[8.0, 0.0] hc=1.67 re=1166.2 qo=8.000
+  cand[2] id=21 features=[2.0, 0.0] hc=2.79 re=514.3 qo=2.000
+  qValues=[13.553887069225311, 11.471801221370697, 12.229824244976044, 11.03969544172287]  action=0  chosenParent=70
+1786352573801 POLICY_EVAL phase=241 states=86 choiceStates=71 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.563 meanGreedyReward=1.0175 meanBestReward=1.9762 meanRegret=0.9587 rewardRatio=0.515
+1786352591498 DECISION phase=242 mote=5 eps=0.160 cand=[70, 36, 21] valid=[true, true, true, false]
+  cand[0] id=70 features=[7.0, 0.0] hc=1.20 re=1351.3 qo=7.000
+  cand[1] id=36 features=[4.0, 0.0] hc=1.09 re=1106.6 qo=4.000
+  cand[2] id=21 features=[0.0, 0.0] hc=2.71 re=492.5 qo=0.000
+  qValues=[12.331206262111664, 10.481049001216888, 11.227909982204437, 10.157428443431854]  action=0  chosenParent=70
+1786352592066 POLICY_EVAL phase=242 states=86 choiceStates=69 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.478 meanGreedyReward=1.2145 meanBestReward=2.2259 meanRegret=1.0114 rewardRatio=0.546
+1786352607957 DECISION phase=243 mote=5 eps=0.159 cand=[70, 36, 21] valid=[true, true, true, false]
+  cand[0] id=70 features=[8.0, 0.0] hc=0.88 re=1189.5 qo=8.000
+  cand[1] id=36 features=[8.0, 0.0] hc=0.95 re=1011.9 qo=8.000
+  cand[2] id=21 features=[1.0, 0.0] hc=1.96 re=458.9 qo=1.000
+  qValues=[12.74475222826004, 10.944521009922028, 11.736775696277618, 10.657618820667267]  action=0  chosenParent=70
+1786352608472 POLICY_EVAL phase=243 states=88 choiceStates=74 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.459 meanGreedyReward=1.2827 meanBestReward=2.4055 meanRegret=1.1228 rewardRatio=0.533
+1786352625589 DECISION phase=244 mote=5 eps=0.158 cand=[70, 36, 21] valid=[true, true, true, false]
+  cand[0] id=70 features=[8.0, 0.0] hc=1.29 re=1063.9 qo=8.000
+  cand[1] id=36 features=[8.0, 0.0] hc=1.25 re=937.0 qo=8.000
+  cand[2] id=21 features=[8.0, 0.0] hc=2.58 re=429.7 qo=8.000
+  qValues=[13.71221673488617, 11.89976155757904, 12.76908004283905, 11.636252760887146]  action=0  chosenParent=70
+1786352626102 POLICY_EVAL phase=244 states=87 choiceStates=71 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.437 meanGreedyReward=1.4830 meanBestReward=2.7774 meanRegret=1.2944 rewardRatio=0.534
+1786352639659 DECISION phase=245 mote=5 eps=0.158 cand=[70, 36, 21] valid=[true, true, true, false]
+  cand[0] id=70 features=[8.0, 0.0] hc=1.28 re=904.8 qo=8.000
+  cand[1] id=36 features=[8.0, 0.0] hc=1.14 re=855.7 qo=8.000
+  cand[2] id=21 features=[1.0, 0.0] hc=1.64 re=379.8 qo=1.000
+  qValues=[12.866847932338715, 11.140491902828217, 12.008805215358734, 10.941435515880585]  action=0  chosenParent=70
+1786352640215 POLICY_EVAL phase=245 states=85 choiceStates=69 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.507 meanGreedyReward=1.2615 meanBestReward=2.5691 meanRegret=1.3076 rewardRatio=0.491
+1786352654780 DECISION phase=246 mote=5 eps=0.157 cand=[70, 36, 21] valid=[true, true, true, false]
+  cand[0] id=70 features=[8.0, 0.0] hc=1.04 re=689.2 qo=8.000
+  cand[1] id=36 features=[8.0, 0.0] hc=1.52 re=754.7 qo=8.000
+  cand[2] id=21 features=[0.0, 0.0] hc=1.89 re=344.5 qo=0.000
+  qValues=[13.163000524044037, 11.397307574748993, 12.356184899806976, 11.229068219661713]  action=0  chosenParent=70
+1786352655101 POLICY_EVAL phase=246 states=87 choiceStates=72 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.514 meanGreedyReward=1.3319 meanBestReward=2.6829 meanRegret=1.3510 rewardRatio=0.496
+1786352670378 DECISION phase=247 mote=5 eps=0.157 cand=[70, 36, 21] valid=[true, true, true, false]
+  cand[0] id=70 features=[7.0, 0.0] hc=1.09 re=489.8 qo=7.000
+  cand[1] id=36 features=[8.0, 0.0] hc=1.10 re=645.7 qo=8.000
+  cand[2] id=21 features=[0.0, 0.0] hc=1.84 re=310.9 qo=0.000
+  qValues=[13.72287267446518, 11.949726521968842, 12.951456487178802, 11.777204692363739]  action=0  chosenParent=70
+1786352670679 POLICY_EVAL phase=247 states=88 choiceStates=72 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.472 meanGreedyReward=1.6330 meanBestReward=2.9653 meanRegret=1.3324 rewardRatio=0.551
+1786352683268 DECISION phase=248 mote=5 eps=0.156 cand=[70, 36, 21] valid=[true, true, true, false]
+  cand[0] id=70 features=[4.0, 0.0] hc=1.28 re=311.7 qo=4.000
+  cand[1] id=36 features=[5.0, 0.0] hc=1.11 re=562.1 qo=5.000
+  cand[2] id=21 features=[1.0, 0.0] hc=2.20 re=290.8 qo=1.000
+  qValues=[13.991756558418274, 12.228103280067444, 13.261993050575256, 12.042698502540588]  action=0  chosenParent=70
+1786352683775 POLICY_EVAL phase=248 states=87 choiceStates=73 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.466 meanGreedyReward=1.4198 meanBestReward=2.7704 meanRegret=1.3506 rewardRatio=0.512
+1786352699606 DECISION phase=249 mote=5 eps=0.156 cand=[70, 36, 21] valid=[true, true, true, false]
+  cand[0] id=70 features=[8.0, 0.0] hc=1.06 re=125.0 qo=8.000
+  cand[1] id=36 features=[8.0, 0.0] hc=0.80 re=465.8 qo=8.000
+  cand[2] id=21 features=[0.0, 0.0] hc=1.64 re=266.5 qo=0.000
+  qValues=[13.575247347354889, 12.03371149301529, 12.85695081949234, 11.838346779346466]  action=0  chosenParent=70
+1786352700090 POLICY_EVAL phase=249 states=86 choiceStates=72 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.431 meanGreedyReward=1.2546 meanBestReward=2.5757 meanRegret=1.3211 rewardRatio=0.487
+1786352716085 DECISION phase=250 mote=5 eps=0.155 cand=[70, 36, 21, 62] valid=[true, true, true, true]
+  cand[0] id=70 features=[7.0, 0.0] hc=1.61 re=124.6 qo=7.000
+  cand[1] id=36 features=[8.0, 0.0] hc=0.75 re=363.3 qo=8.000
+  cand[2] id=21 features=[5.0, 0.0] hc=1.96 re=211.9 qo=5.000
+  cand[3] id=62 features=[3.0, 0.0] hc=1.27 re=11.3 qo=3.000
+  qValues=[13.838926434516907, 12.464933514595032, 13.129996418952942, 12.249424576759338]  action=0  chosenParent=70
+1786352716421 POLICY_EVAL phase=250 states=89 choiceStates=74 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.351 meanGreedyReward=1.1554 meanBestReward=2.5755 meanRegret=1.4201 rewardRatio=0.449
+1786352730921 DECISION phase=251 mote=5 eps=0.154 cand=[75, 36, 21, 62] valid=[true, true, true, true]
+  cand[0] id=75 features=[3.0, 0.0] hc=0.93 re=551.9 qo=3.000
+  cand[1] id=36 features=[8.0, 0.0] hc=0.85 re=267.1 qo=8.000
+  cand[2] id=21 features=[0.0, 0.0] hc=3.25 re=177.4 qo=0.000
+  cand[3] id=62 features=[3.0, 0.0] hc=1.27 re=11.3 qo=3.000
+  qValues=[12.523095905780792, 11.376510441303253, 11.852513134479523, 11.193929255008698]  action=0  chosenParent=75
+1786352731475 POLICY_EVAL phase=251 states=87 choiceStates=72 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.431 meanGreedyReward=1.2813 meanBestReward=2.4562 meanRegret=1.1749 rewardRatio=0.522
+1786352747979 DECISION phase=252 mote=5 eps=0.154 cand=[75, 36, 21, 62] valid=[true, true, true, true]
+  cand[0] id=75 features=[8.0, 0.0] hc=1.23 re=434.6 qo=8.000
+  cand[1] id=36 features=[8.0, 0.0] hc=0.81 re=187.7 qo=8.000
+  cand[2] id=21 features=[0.0, 0.0] hc=3.36 re=153.2 qo=0.000
+  cand[3] id=62 features=[3.0, 0.0] hc=1.27 re=11.3 qo=3.000
+  qValues=[12.299385070800781, 11.272360801696777, 11.618339538574219, 11.056046485900879]  action=0  chosenParent=75
+1786352748490 POLICY_EVAL phase=252 states=89 choiceStates=72 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.403 meanGreedyReward=1.0642 meanBestReward=1.9810 meanRegret=0.9168 rewardRatio=0.537
+1786352766089 DECISION phase=253 mote=5 eps=0.153 cand=[75, 36, 21, 62] valid=[true, true, true, true]
+  cand[0] id=75 features=[7.0, 0.0] hc=2.11 re=305.5 qo=7.000
+  cand[1] id=36 features=[7.0, 0.0] hc=1.13 re=119.4 qo=7.000
+  cand[2] id=21 features=[2.0, 0.0] hc=3.42 re=14.3 qo=2.000
+  cand[3] id=62 features=[3.0, 0.0] hc=1.27 re=11.3 qo=3.000
+  qValues=[12.105227530002594, 11.166781961917877, 11.404207289218903, 10.922301590442657]  action=0  chosenParent=75
+1786352766589 POLICY_EVAL phase=253 states=88 choiceStates=74 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.365 meanGreedyReward=0.9974 meanBestReward=2.1781 meanRegret=1.1807 rewardRatio=0.458
+1786352782830 DECISION phase=254 mote=5 eps=0.153 cand=[82] valid=[true, false, false, false]
+  cand[0] id=82 features=[1.0, 0.0] hc=4.00 re=642.6 qo=1.000
+  qValues=[10.938021719455719, 10.081620752811432, 10.239248812198639, 9.879982769489288]  action=0  chosenParent=82
+1786352783277 POLICY_EVAL phase=254 states=87 choiceStates=67 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.403 meanGreedyReward=1.3773 meanBestReward=2.6422 meanRegret=1.2649 rewardRatio=0.521
+1786352795740 DECISION phase=255 mote=5 eps=0.152 cand=[88, 82] valid=[true, true, false, false]
+  cand[0] id=88 features=[7.0, 0.0] hc=3.32 re=1508.7 qo=7.000
+  cand[1] id=82 features=[7.0, 0.0] hc=4.70 re=633.7 qo=7.000
+  qValues=[11.994738161563873, 11.103879749774933, 11.163094103336334, 10.880713522434235]  action=0  chosenParent=88
+1786352796244 POLICY_EVAL phase=255 states=81 choiceStates=63 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.381 meanGreedyReward=1.4396 meanBestReward=2.8965 meanRegret=1.4569 rewardRatio=0.497
+1786352811050 DECISION phase=256 mote=5 eps=0.152 cand=[82, 88] valid=[true, true, false, false]
+  cand[0] id=82 features=[0.0, 0.0] hc=2.77 re=597.2 qo=0.000
+  cand[1] id=88 features=[0.0, 0.0] hc=3.29 re=1458.5 qo=0.000
+  qValues=[11.790528118610382, 10.892671167850494, 10.89343148469925, 10.684309780597687]  action=0  chosenParent=82
+1786352811575 POLICY_EVAL phase=256 states=87 choiceStates=64 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.391 meanGreedyReward=1.4838 meanBestReward=2.9720 meanRegret=1.4882 rewardRatio=0.499
+1786352827145 DECISION phase=257 mote=5 eps=0.151 cand=[82, 88, 36] valid=[true, true, true, false]
+  cand[0] id=82 features=[6.0, 0.0] hc=2.84 re=593.5 qo=6.000
+  cand[1] id=88 features=[4.0, 0.0] hc=3.33 re=1434.0 qo=4.000
+  cand[2] id=36 features=[4.0, 0.0] hc=1.05 re=1.3 qo=4.000
+  qValues=[12.723580718040466, 11.820966124534607, 11.728097319602966, 11.594337344169617]  action=0  chosenParent=82
+1786352827452 POLICY_EVAL phase=257 states=87 choiceStates=65 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.385 meanGreedyReward=1.2242 meanBestReward=2.6372 meanRegret=1.4130 rewardRatio=0.464
+1786352843034 DECISION phase=258 mote=5 eps=0.150 cand=[82, 88, 36] valid=[true, true, true, false]
+  cand[0] id=82 features=[8.0, 0.0] hc=2.84 re=592.5 qo=8.000
+  cand[1] id=88 features=[1.0, 0.0] hc=3.13 re=1420.7 qo=1.000
+  cand[2] id=36 features=[4.0, 0.0] hc=1.05 re=1.3 qo=4.000
+  qValues=[12.72420871257782, 11.850693106651306, 11.686126589775085, 11.617908358573914]  action=0  chosenParent=82
+1786352843542 POLICY_EVAL phase=258 states=86 choiceStates=65 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.323 meanGreedyReward=1.2507 meanBestReward=2.6603 meanRegret=1.4096 rewardRatio=0.470
+1786352859918 DECISION phase=259 mote=5 eps=0.150 cand=[52] valid=[true, false, false, false]
+  cand[0] id=52 features=[0.0, 0.0] hc=3.34 re=161.6 qo=0.000
+  qValues=[11.974377453327179, 11.224087059497833, 10.987872898578644, 10.98304659128189]  action=0  chosenParent=52
+1786352860392 POLICY_EVAL phase=259 states=80 choiceStates=60 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.333 meanGreedyReward=1.1881 meanBestReward=2.6601 meanRegret=1.4721 rewardRatio=0.447
+1786352873407 DECISION phase=260 mote=5 eps=0.149 cand=[52, 88] valid=[true, true, false, false]
+  cand[0] id=52 features=[2.0, 0.0] hc=3.36 re=1.2 qo=2.000
+  cand[1] id=88 features=[3.0, 0.0] hc=3.87 re=1343.1 qo=3.000
+  qValues=[12.140424489974976, 11.466585397720337, 11.147438764572144, 11.257170915603638]  action=0  chosenParent=52
+1786352873779 POLICY_EVAL phase=260 states=79 choiceStates=57 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.404 meanGreedyReward=1.4802 meanBestReward=3.0992 meanRegret=1.6190 rewardRatio=0.478
+1786352884253 DECISION phase=261 mote=5 eps=0.149 cand=[88] valid=[true, false, false, false]
+  cand[0] id=88 features=[2.0, 0.0] hc=3.84 re=1318.7 qo=2.000
+  qValues=[12.134836435317993, 11.517116785049438, 11.27048659324646, 11.318603277206421]  action=2
+1786352884753 POLICY_EVAL phase=261 states=81 choiceStates=57 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.351 meanGreedyReward=1.7328 meanBestReward=3.6771 meanRegret=1.9443 rewardRatio=0.471
+1786352896984 DECISION phase=262 mote=5 eps=0.148 cand=[88] valid=[true, false, false, false]
+  cand[0] id=88 features=[0.0, 0.0] hc=7.67 re=1293.3 qo=0.000
+  qValues=[12.340383410453796, 11.775864481925964, 11.578841090202332, 11.573164343833923]  action=0  chosenParent=88
+1786352897426 POLICY_EVAL phase=262 states=80 choiceStates=52 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.385 meanGreedyReward=1.8828 meanBestReward=3.6965 meanRegret=1.8137 rewardRatio=0.509
+1786352907029 DECISION phase=263 mote=5 eps=0.147 cand=[88] valid=[true, false, false, false]
+  cand[0] id=88 features=[1.0, 0.0] hc=12.75 re=1224.3 qo=1.000
+  qValues=[12.557256817817688, 12.04004156589508, 11.890586972236633, 11.825186848640442]  action=0  chosenParent=88
+1786352907539 POLICY_EVAL phase=263 states=78 choiceStates=53 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.434 meanGreedyReward=1.8234 meanBestReward=3.8870 meanRegret=2.0636 rewardRatio=0.469
+1786352918893 DECISION phase=264 mote=5 eps=0.147 cand=[88] valid=[true, false, false, false]
+  cand[0] id=88 features=[1.0, 0.0] hc=22.07 re=1218.9 qo=1.000
+  qValues=[12.713504076004028, 12.242862462997437, 12.14342188835144, 11.986538171768188]  action=0  chosenParent=88
+1786352919308 POLICY_EVAL phase=264 states=78 choiceStates=51 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.451 meanGreedyReward=1.7185 meanBestReward=3.5858 meanRegret=1.8673 rewardRatio=0.479
+1786352929116 DECISION phase=265 mote=5 eps=0.146 cand=[88] valid=[true, false, false, false]
+  cand[0] id=88 features=[2.0, 0.0] hc=31.92 re=1192.7 qo=2.000
+  qValues=[12.792088031768799, 12.369217872619629, 12.320667743682861, 12.05055046081543]  action=0  chosenParent=88
+1786352929587 POLICY_EVAL phase=265 states=74 choiceStates=51 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.373 meanGreedyReward=1.9104 meanBestReward=3.7725 meanRegret=1.8622 rewardRatio=0.506
+1786352939141 DECISION phase=266 mote=5 eps=0.146 cand=[88] valid=[true, false, false, false]
+  cand[0] id=88 features=[6.0, 0.0] hc=3.82 re=1188.9 qo=6.000
+  qValues=[12.572953820228577, 12.190616726875305, 12.197941899299622, 11.779255986213684]  action=0  chosenParent=88
+1786352939602 POLICY_EVAL phase=266 states=73 choiceStates=52 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.442 meanGreedyReward=1.7835 meanBestReward=3.8831 meanRegret=2.0996 rewardRatio=0.459
+1786352951929 DECISION phase=267 mote=5 eps=0.145 cand=[88] valid=[true, false, false, false]
+  cand[0] id=88 features=[2.0, 0.0] hc=3.78 re=1128.3 qo=2.000
+  qValues=[12.866529941558838, 12.529727458953857, 12.574219703674316, 11.955029487609863]  action=0  chosenParent=88
+1786352952394 POLICY_EVAL phase=267 states=71 choiceStates=52 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.423 meanGreedyReward=1.6386 meanBestReward=3.6541 meanRegret=2.0155 rewardRatio=0.448
+1786352965068 DECISION phase=268 mote=5 eps=0.145 cand=[88] valid=[true, false, false, false]
+  cand[0] id=88 features=[8.0, 0.0] hc=3.64 re=1075.2 qo=8.000
+  qValues=[12.575687527656555, 12.288835167884827, 12.361094117164612, 11.581103920936584]  action=0  chosenParent=88
+1786352965592 POLICY_EVAL phase=268 states=74 choiceStates=52 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.423 meanGreedyReward=1.8545 meanBestReward=3.6115 meanRegret=1.7570 rewardRatio=0.513
+1786352976195 DECISION phase=269 mote=5 eps=0.144 cand=[88] valid=[true, false, false, false]
+  cand[0] id=88 features=[5.0, 0.0] hc=3.66 re=1072.0 qo=5.000
+  qValues=[13.074423670768738, 12.801024794578552, 12.935486674308777, 11.918026804924011]  action=0  chosenParent=88
+1786352976778 POLICY_EVAL phase=269 states=89 choiceStates=52 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.404 meanGreedyReward=1.8992 meanBestReward=3.7702 meanRegret=1.8710 rewardRatio=0.504
+1786352988895 DECISION phase=270 mote=5 eps=0.143 cand=[88] valid=[true, false, false, false]
+  cand[0] id=88 features=[6.0, 0.0] hc=3.69 re=1071.5 qo=6.000
+  qValues=[13.178017139434814, 12.92874526977539, 13.115743637084961, 11.9050612449646]  action=0  chosenParent=88
+1786352989390 POLICY_EVAL phase=270 states=89 choiceStates=52 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.385 meanGreedyReward=1.9285 meanBestReward=4.0472 meanRegret=2.1187 rewardRatio=0.477
+1786353001398 DECISION phase=271 mote=5 eps=0.143 cand=[88] valid=[true, false, false, false]
+  cand[0] id=88 features=[8.0, 0.0] hc=3.70 re=1004.3 qo=8.000
+  qValues=[13.282560169696808, 13.035867989063263, 13.181526958942413, 11.88294893503189]  action=0  chosenParent=88
+1786353001797 POLICY_EVAL phase=271 states=75 choiceStates=52 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.404 meanGreedyReward=1.8653 meanBestReward=3.8829 meanRegret=2.0176 rewardRatio=0.480
+1786353012300 DECISION phase=272 mote=5 eps=0.142 cand=[88] valid=[true, false, false, false]
+  cand[0] id=88 features=[8.0, 0.0] hc=3.74 re=941.2 qo=8.000
+  qValues=[13.616538047790527, 13.332283020019531, 13.388327598571777, 12.055658340454102]  action=0  chosenParent=88
+1786353012799 POLICY_EVAL phase=272 states=89 choiceStates=56 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.393 meanGreedyReward=1.2656 meanBestReward=2.4003 meanRegret=1.1347 rewardRatio=0.527
+1786353023916 DECISION phase=273 mote=5 eps=0.142 cand=[88] valid=[true, false, false, false]
+  cand[0] id=88 features=[2.0, 0.0] hc=45.37 re=896.4 qo=2.000
+  qValues=[14.571852207183838, 14.243821620941162, 14.183140277862549, 12.789248943328857]  action=0  chosenParent=88
+1786353024361 POLICY_EVAL phase=273 states=89 choiceStates=58 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.431 meanGreedyReward=1.8182 meanBestReward=3.6122 meanRegret=1.7940 rewardRatio=0.503
+1786353034414 DECISION phase=274 mote=5 eps=0.141 cand=[88] valid=[true, false, false, false]
+  cand[0] id=88 features=[2.0, 0.0] hc=43.49 re=895.0 qo=2.000
+  qValues=[14.629350244998932, 14.286687433719635, 14.12105518579483, 12.762460052967072]  action=0  chosenParent=88
+1786353035001 POLICY_EVAL phase=274 states=89 choiceStates=59 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.475 meanGreedyReward=1.6079 meanBestReward=3.2758 meanRegret=1.6679 rewardRatio=0.491
+1786353046676 DECISION phase=275 mote=5 eps=0.140 cand=[88] valid=[true, false, false, false]
+  cand[0] id=88 features=[7.0, 0.0] hc=43.48 re=895.0 qo=7.000
+  qValues=[13.905157387256622, 13.56118756532669, 13.264861404895782, 12.058569490909576]  action=0  chosenParent=88
+1786353047192 POLICY_EVAL phase=275 states=89 choiceStates=59 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.407 meanGreedyReward=1.7035 meanBestReward=3.4762 meanRegret=1.7727 rewardRatio=0.490
+1786353056530 DECISION phase=276 mote=5 eps=0.140 cand=[88] valid=[true, false, false, false]
+  cand[0] id=88 features=[0.0, 0.0] hc=43.99 re=859.0 qo=0.000
+  qValues=[14.210062801837921, 13.89283686876297, 13.44908219575882, 12.302166998386383]  action=0  chosenParent=88
+1786353057089 POLICY_EVAL phase=276 states=84 choiceStates=56 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.375 meanGreedyReward=1.7699 meanBestReward=3.5890 meanRegret=1.8192 rewardRatio=0.493
+1786353065565 DECISION phase=277 mote=5 eps=0.139 cand=[88] valid=[true, false, false, false]
+  cand[0] id=88 features=[8.0, 0.0] hc=44.00 re=806.1 qo=8.000
+  qValues=[13.140887141227722, 12.827666640281677, 12.302092432975769, 11.315077662467957]  action=0  chosenParent=88
+1786353066017 POLICY_EVAL phase=277 states=84 choiceStates=54 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.444 meanGreedyReward=1.7836 meanBestReward=3.6455 meanRegret=1.8618 rewardRatio=0.489
+1786353074522 DECISION phase=278 mote=5 eps=0.139 cand=[88] valid=[true, false, false, false]
+  cand[0] id=88 features=[6.0, 0.0] hc=43.48 re=802.1 qo=6.000
+  qValues=[13.353650271892548, 13.024881064891815, 12.390889346599579, 11.460216462612152]  action=0  chosenParent=88
+1786353075093 POLICY_EVAL phase=278 states=87 choiceStates=53 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.415 meanGreedyReward=1.9408 meanBestReward=3.9758 meanRegret=2.0350 rewardRatio=0.488
+1786353082516 DECISION phase=279 mote=5 eps=0.138 cand=[88] valid=[true, false, false, false]
+  cand[0] id=88 features=[0.0, 0.0] hc=43.46 re=802.1 qo=0.000
+  qValues=[14.775853514671326, 14.348029494285583, 13.563966155052185, 12.616174578666687]  action=0  chosenParent=88
+1786353083004 POLICY_EVAL phase=279 states=78 choiceStates=51 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.373 meanGreedyReward=1.7843 meanBestReward=3.6295 meanRegret=1.8452 rewardRatio=0.492
+1786353088261 DECISION phase=280 mote=5 eps=0.138 cand=[88] valid=[true, false, false, false]
+  cand[0] id=88 features=[0.0, 0.0] hc=16.00 re=802.1 qo=0.000
+  qValues=[15.027575552463531, 14.619591295719147, 13.688896238803864, 12.809437096118927]  action=0  chosenParent=88
+1786353088766 POLICY_EVAL phase=280 states=66 choiceStates=50 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.360 meanGreedyReward=2.1349 meanBestReward=4.2781 meanRegret=2.1432 rewardRatio=0.499
+1786353092843 DECISION phase=281 mote=5 eps=0.137 cand=[88] valid=[true, false, false, false]
+  cand[0] id=88 features=[0.0, 0.0] hc=16.00 re=802.1 qo=0.000
+  qValues=[15.113282144069672, 14.750060498714447, 13.703989446163177, 12.901459872722626]  action=0  chosenParent=88
+1786353093119 POLICY_EVAL phase=281 states=63 choiceStates=50 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.400 meanGreedyReward=1.9584 meanBestReward=3.8928 meanRegret=1.9345 rewardRatio=0.503
+1786353098057 DECISION phase=282 mote=5 eps=0.136 cand=[88] valid=[true, false, false, false]
+  cand[0] id=88 features=[0.0, 0.0] hc=16.00 re=802.1 qo=0.000
+  qValues=[15.08816373348236, 14.777651190757751, 13.63336455821991, 12.901241660118103]  action=0  chosenParent=88
+1786353098338 POLICY_EVAL phase=282 states=63 choiceStates=50 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.380 meanGreedyReward=2.0329 meanBestReward=4.1681 meanRegret=2.1353 rewardRatio=0.488
+1786353102915 DECISION phase=283 mote=5 eps=0.136 cand=[88] valid=[true, false, false, false]
+  cand[0] id=88 features=[0.0, 0.0] hc=16.00 re=802.1 qo=0.000
+  qValues=[15.14932382106781, 14.892613291740417, 13.664717555046082, 12.979269862174988]  action=0  chosenParent=88
+1786353103241 POLICY_EVAL phase=283 states=64 choiceStates=50 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.360 meanGreedyReward=2.1499 meanBestReward=4.3109 meanRegret=2.1611 rewardRatio=0.499
+1786353106902 DECISION phase=284 mote=5 eps=0.135 cand=[88] valid=[true, false, false, false]
+  cand[0] id=88 features=[0.0, 0.0] hc=16.00 re=802.1 qo=0.000
+  qValues=[15.168107688426971, 14.95770138502121, 13.656926333904266, 13.015203893184662]  action=0  chosenParent=88
+1786353107387 POLICY_EVAL phase=284 states=64 choiceStates=50 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.380 meanGreedyReward=1.8157 meanBestReward=3.8963 meanRegret=2.0806 rewardRatio=0.466
+1786353112960 DECISION phase=285 mote=5 eps=0.135 cand=[88] valid=[true, false, false, false]
+  cand[0] id=88 features=[0.0, 0.0] hc=16.00 re=802.1 qo=0.000
+  qValues=[15.242745399475098, 15.069039344787598, 13.70770788192749, 13.093323230743408]  action=0  chosenParent=88
+1786353113385 POLICY_EVAL phase=285 states=64 choiceStates=50 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.380 meanGreedyReward=1.9835 meanBestReward=4.1113 meanRegret=2.1278 rewardRatio=0.482
+1786353117924 DECISION phase=286 mote=5 eps=0.134 cand=[88] valid=[true, false, false, false]
+  cand[0] id=88 features=[0.0, 0.0] hc=16.00 re=802.1 qo=0.000
+  qValues=[15.303398847579956, 15.169952154159546, 13.746481657028198, 13.162567853927612]  action=0  chosenParent=88
+1786353118394 POLICY_EVAL phase=286 states=64 choiceStates=50 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.400 meanGreedyReward=2.0789 meanBestReward=4.1586 meanRegret=2.0797 rewardRatio=0.500
+1786353122498 DECISION phase=287 mote=5 eps=0.134 cand=[88] valid=[true, false, false, false]
+  cand[0] id=88 features=[0.0, 0.0] hc=16.00 re=802.1 qo=0.000
+  qValues=[15.45776903629303, 15.365591645240784, 13.876836895942688, 13.31354296207428]  action=0  chosenParent=88
+1786353122919 POLICY_EVAL phase=287 states=64 choiceStates=50 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.400 meanGreedyReward=1.7237 meanBestReward=3.5903 meanRegret=1.8666 rewardRatio=0.480
+1786353127845 DECISION phase=288 mote=5 eps=0.133 cand=[88] valid=[true, false, false, false]
+  cand[0] id=88 features=[0.0, 0.0] hc=16.00 re=802.1 qo=0.000
+  qValues=[15.67835021018982, 15.615521669387817, 14.05907416343689, 13.513661623001099]  action=0  chosenParent=88
+1786353128310 POLICY_EVAL phase=288 states=64 choiceStates=50 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.380 meanGreedyReward=1.5829 meanBestReward=3.4115 meanRegret=1.8286 rewardRatio=0.464
+1786353132817 DECISION phase=289 mote=5 eps=0.132 cand=[88] valid=[true, false, false, false]
+  cand[0] id=88 features=[0.0, 0.0] hc=16.00 re=802.1 qo=0.000
+  qValues=[16.14034855365753, 16.05824911594391, 14.439711689949036, 13.866375088691711]  action=0  chosenParent=88
+1786353133277 POLICY_EVAL phase=289 states=63 choiceStates=50 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.380 meanGreedyReward=1.4082 meanBestReward=2.7574 meanRegret=1.3492 rewardRatio=0.511
+1786353137034 DECISION phase=290 mote=5 eps=0.132 cand=[88] valid=[true, false, false, false]
+  cand[0] id=88 features=[0.0, 0.0] hc=16.00 re=802.1 qo=0.000
+  qValues=[16.384286522865295, 16.30635416507721, 14.620763897895813, 14.042271256446838]  action=0  chosenParent=88
+1786353137534 POLICY_EVAL phase=290 states=63 choiceStates=50 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.360 meanGreedyReward=1.9925 meanBestReward=4.2281 meanRegret=2.2356 rewardRatio=0.471
+1786353142150 DECISION phase=291 mote=5 eps=0.131 cand=[88] valid=[true, false, false, false]
+  cand[0] id=88 features=[0.0, 0.0] hc=16.00 re=802.0 qo=0.000
+  qValues=[16.470309138298035, 16.407239317893982, 14.668765902519226, 14.091087222099304]  action=0  chosenParent=88
+1786353142614 POLICY_EVAL phase=291 states=63 choiceStates=50 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.340 meanGreedyReward=1.6421 meanBestReward=3.9589 meanRegret=2.3168 rewardRatio=0.415
+1786353147130 DECISION phase=292 mote=5 eps=0.131 cand=[88] valid=[true, false, false, false]
+  cand[0] id=88 features=[0.0, 0.0] hc=16.00 re=802.0 qo=0.000
+  qValues=[16.568564653396606, 16.51652216911316, 14.725986242294312, 14.14804482460022]  action=3
+1786353147591 POLICY_EVAL phase=292 states=64 choiceStates=50 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.360 meanGreedyReward=1.7783 meanBestReward=4.0897 meanRegret=2.3113 rewardRatio=0.435
+1786353151394 DECISION phase=293 mote=5 eps=0.130 cand=[88] valid=[true, false, false, false]
+  cand[0] id=88 features=[0.0, 0.0] hc=16.00 re=802.0 qo=0.000
+  qValues=[16.768453240394592, 16.74407923221588, 14.876967549324036, 14.296504616737366]  action=0  chosenParent=88
+1786353151834 POLICY_EVAL phase=293 states=64 choiceStates=50 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.340 meanGreedyReward=1.4926 meanBestReward=3.0362 meanRegret=1.5436 rewardRatio=0.492
+1786353156265 DECISION phase=294 mote=5 eps=0.129 cand=[88] valid=[true, false, false, false]
+  cand[0] id=88 features=[0.0, 0.0] hc=16.00 re=802.0 qo=0.000
+  qValues=[17.141107439994812, 17.132989287376404, 15.159070372581482, 14.585074782371521]  action=0  chosenParent=88
+1786353156891 POLICY_EVAL phase=294 states=63 choiceStates=50 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.340 meanGreedyReward=1.8917 meanBestReward=4.0973 meanRegret=2.2056 rewardRatio=0.462
+1786353160151 DECISION phase=295 mote=5 eps=0.129 cand=[88] valid=[true, false, false, false]
+  cand[0] id=88 features=[0.0, 0.0] hc=16.00 re=802.0 qo=0.000
+  qValues=[17.41995882987976, 17.43163228034973, 15.359925985336304, 14.798385858535767]  action=2
+1786353160504 POLICY_EVAL phase=295 states=64 choiceStates=50 invalidPicks=12 invalidPickRate=0.188 greedyTop1=0.280 meanGreedyReward=2.3627 meanBestReward=4.0498 meanRegret=1.6872 rewardRatio=0.583
+1786353168173 DECISION phase=296 mote=5 eps=0.128 cand=[88] valid=[true, false, false, false]
+  cand[0] id=88 features=[0.0, 0.0] hc=16.00 re=802.0 qo=0.000
+  qValues=[17.36956477165222, 17.442675352096558, 15.279941320419312, 14.742703199386597]  action=1
+1786353168648 POLICY_EVAL phase=296 states=63 choiceStates=50 invalidPicks=13 invalidPickRate=0.206 greedyTop1=0.340 meanGreedyReward=1.5507 meanBestReward=2.7927 meanRegret=1.2420 rewardRatio=0.555
+1786353176323 DECISION phase=297 mote=5 eps=0.128 cand=[88] valid=[true, false, false, false]
+  cand[0] id=88 features=[0.0, 0.0] hc=16.00 re=802.0 qo=0.000
+  qValues=[17.810856223106384, 17.889057993888855, 15.592484831809998, 15.073018431663513]  action=1
+1786353176790 POLICY_EVAL phase=297 states=64 choiceStates=50 invalidPicks=14 invalidPickRate=0.219 greedyTop1=0.340 meanGreedyReward=1.6142 meanBestReward=2.6280 meanRegret=1.0138 rewardRatio=0.614
+1786353184368 DECISION phase=298 mote=5 eps=0.127 cand=[88] valid=[true, false, false, false]
+  cand[0] id=88 features=[0.0, 0.0] hc=16.00 re=802.0 qo=0.000
+  qValues=[18.11742663383484, 18.20979952812195, 15.791715383529663, 15.293022871017456]  action=1
+1786353184791 POLICY_EVAL phase=298 states=63 choiceStates=50 invalidPicks=13 invalidPickRate=0.206 greedyTop1=0.320 meanGreedyReward=1.8350 meanBestReward=3.0020 meanRegret=1.1670 rewardRatio=0.611
+1786353190041 DECISION phase=299 mote=5 eps=0.127 cand=[88] valid=[true, false, false, false]
+  cand[0] id=88 features=[0.0, 0.0] hc=16.00 re=802.0 qo=0.000
+  qValues=[18.659546613693237, 18.835188150405884, 16.23150372505188, 15.741893529891968]  action=1
+1786353190364 POLICY_EVAL phase=299 states=64 choiceStates=50 invalidPicks=14 invalidPickRate=0.219 greedyTop1=0.360 meanGreedyReward=0.9557 meanBestReward=1.3158 meanRegret=0.3601 rewardRatio=0.726
+1786353194850 DECISION phase=300 mote=5 eps=0.126 cand=[88] valid=[true, false, false, false]
+  cand[0] id=88 features=[0.0, 0.0] hc=16.00 re=802.0 qo=0.000
+  qValues=[17.332645416259766, 17.420072078704834, 15.132344245910645, 14.661134243011475]  action=1
+1786353195149 POLICY_EVAL phase=300 states=64 choiceStates=51 invalidPicks=13 invalidPickRate=0.203 greedyTop1=0.275 meanGreedyReward=1.1894 meanBestReward=2.2925 meanRegret=1.1031 rewardRatio=0.519
+1786353199427 DECISION phase=301 mote=5 eps=0.125 cand=[88] valid=[true, false, false, false]
+  cand[0] id=88 features=[0.0, 0.0] hc=16.00 re=802.0 qo=0.000
+  qValues=[16.355459928512573, 16.347493886947632, 14.314027070999146, 13.836458444595337]  action=0  chosenParent=88
+1786353199893 POLICY_EVAL phase=301 states=65 choiceStates=51 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.451 meanGreedyReward=1.0642 meanBestReward=2.0456 meanRegret=0.9814 rewardRatio=0.520
+1786353204953 DECISION phase=302 mote=5 eps=0.125 cand=[88] valid=[true, false, false, false]
+  cand[0] id=88 features=[0.0, 0.0] hc=16.00 re=802.0 qo=0.000
+  qValues=[15.390491843223572, 15.297922015190125, 13.50096309185028, 13.026092410087585]  action=0  chosenParent=88
+1786353205441 POLICY_EVAL phase=302 states=64 choiceStates=51 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.412 meanGreedyReward=2.0760 meanBestReward=4.0420 meanRegret=1.9660 rewardRatio=0.514
+1786353210019 DECISION phase=303 mote=5 eps=0.124 cand=[88] valid=[true, false, false, false]
+  cand[0] id=88 features=[0.0, 0.0] hc=16.00 re=802.0 qo=0.000
+  qValues=[14.666041612625122, 14.50253176689148, 12.925445795059204, 12.450715780258179]  action=0  chosenParent=88
+1786353210265 POLICY_EVAL phase=303 states=64 choiceStates=51 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.412 meanGreedyReward=1.8497 meanBestReward=3.8634 meanRegret=2.0137 rewardRatio=0.479
+1786353213911 DECISION phase=304 mote=5 eps=0.124 cand=[88] valid=[true, false, false, false]
+  cand[0] id=88 features=[0.0, 0.0] hc=16.00 re=802.0 qo=0.000
+  qValues=[14.845134139060974, 14.574183344841003, 13.099372029304504, 12.599531769752502]  action=0  chosenParent=88
+1786353214245 POLICY_EVAL phase=304 states=64 choiceStates=51 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.392 meanGreedyReward=1.7542 meanBestReward=3.6286 meanRegret=1.8744 rewardRatio=0.483
+1786353219060 DECISION phase=305 mote=5 eps=0.123 cand=[88] valid=[true, false, false, false]
+  cand[0] id=88 features=[0.0, 0.0] hc=16.00 re=802.0 qo=0.000
+  qValues=[15.404435515403748, 15.04558789730072, 13.596474051475525, 13.054736971855164]  action=0  chosenParent=88
+1786353219539 POLICY_EVAL phase=305 states=65 choiceStates=51 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.431 meanGreedyReward=1.8466 meanBestReward=3.4752 meanRegret=1.6287 rewardRatio=0.531
+1786353223895 DECISION phase=306 mote=5 eps=0.123 cand=[88] valid=[true, false, false, false]
+  cand[0] id=88 features=[0.0, 0.0] hc=16.00 re=802.0 qo=0.000
+  qValues=[16.08086371421814, 15.647576093673706, 14.191150903701782, 13.619231462478638]  action=0  chosenParent=88
+1786353224380 POLICY_EVAL phase=306 states=65 choiceStates=51 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.412 meanGreedyReward=2.1337 meanBestReward=4.0982 meanRegret=1.9645 rewardRatio=0.521
+1786353228297 DECISION phase=307 mote=5 eps=0.122 cand=[88] valid=[true, false, false, false]
+  cand[0] id=88 features=[0.0, 0.0] hc=16.00 re=802.0 qo=0.000
+  qValues=[16.816414058208466, 16.318728148937225, 14.833887755870819, 14.230959355831146]  action=0  chosenParent=88
+1786353228613 POLICY_EVAL phase=307 states=64 choiceStates=50 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.400 meanGreedyReward=1.5127 meanBestReward=3.2434 meanRegret=1.7307 rewardRatio=0.466
+1786353233521 DECISION phase=308 mote=5 eps=0.121 cand=[88] valid=[true, false, false, false]
+  cand[0] id=88 features=[0.0, 0.0] hc=16.00 re=802.0 qo=0.000
+  qValues=[17.39695453643799, 16.744874954223633, 15.48617696762085, 14.700500011444092]  action=0  chosenParent=88
+1786353233930 POLICY_EVAL phase=308 states=64 choiceStates=50 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.400 meanGreedyReward=1.7095 meanBestReward=3.5091 meanRegret=1.7996 rewardRatio=0.487
+1786353238683 DECISION phase=309 mote=5 eps=0.121 cand=[88] valid=[true, false, false, false]
+  cand[0] id=88 features=[0.0, 0.0] hc=16.00 re=802.0 qo=0.000
+  qValues=[17.702487587928772, 16.904035687446594, 15.8892160654068, 14.948337197303772]  action=0  chosenParent=88
+1786353239216 POLICY_EVAL phase=309 states=64 choiceStates=50 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.400 meanGreedyReward=1.8186 meanBestReward=3.6942 meanRegret=1.8757 rewardRatio=0.492
+1786353242795 DECISION phase=310 mote=5 eps=0.120 cand=[88] valid=[true, false, false, false]
+  cand[0] id=88 features=[0.0, 0.0] hc=16.00 re=802.0 qo=0.000
+  qValues=[17.411255836486816, 16.445013999938965, 15.758746147155762, 14.682400703430176]  action=0  chosenParent=88
+1786353243116 POLICY_EVAL phase=310 states=66 choiceStates=50 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.420 meanGreedyReward=1.7340 meanBestReward=3.4087 meanRegret=1.6747 rewardRatio=0.509
+1786353246415 DECISION phase=311 mote=5 eps=0.120 cand=[88] valid=[true, false, false, false]
+  cand[0] id=88 features=[0.0, 0.0] hc=16.00 re=802.0 qo=0.000
+  qValues=[17.018633246421814, 15.887435793876648, 15.518060088157654, 14.332584738731384]  action=0  chosenParent=88
+1786353246951 POLICY_EVAL phase=311 states=67 choiceStates=50 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.400 meanGreedyReward=1.9999 meanBestReward=3.9887 meanRegret=1.9888 rewardRatio=0.501
+1786353252508 DECISION phase=312 mote=5 eps=0.119 cand=[72, 88] valid=[true, true, false, false]
+  cand[0] id=72 features=[0.0, 0.0] hc=0.66 re=458.3 qo=0.000
+  cand[1] id=88 features=[1.0, 0.0] hc=1.58 re=802.0 qo=1.000
+  qValues=[16.786341071128845, 15.48705279827118, 15.39547574520111, 14.104804396629333]  action=0  chosenParent=72
+1786353252982 POLICY_EVAL phase=312 states=71 choiceStates=53 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.415 meanGreedyReward=1.8440 meanBestReward=3.6921 meanRegret=1.8481 rewardRatio=0.499
+1786353262410 DECISION phase=313 mote=5 eps=0.118 cand=[72, 88] valid=[true, true, false, false]
+  cand[0] id=72 features=[7.0, 0.0] hc=0.56 re=203.0 qo=7.000
+  cand[1] id=88 features=[0.0, 0.0] hc=1.34 re=794.8 qo=0.000
+  qValues=[14.905255794525146, 13.529280185699463, 13.680171012878418, 12.426789283752441]  action=0  chosenParent=72
+1786353262973 POLICY_EVAL phase=313 states=77 choiceStates=56 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.411 meanGreedyReward=1.4725 meanBestReward=2.6566 meanRegret=1.1841 rewardRatio=0.554
+1786353273068 DECISION phase=314 mote=5 eps=0.118 cand=[45, 88] valid=[true, true, false, false]
+  cand[0] id=45 features=[8.0, 0.0] hc=2.27 re=1374.4 qo=8.000
+  cand[1] id=88 features=[0.0, 0.0] hc=3.54 re=792.2 qo=0.000
+  qValues=[14.395784378051758, 12.976248264312744, 13.295856952667236, 12.091425895690918]  action=0  chosenParent=45
+1786353273398 POLICY_EVAL phase=314 states=90 choiceStates=62 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.371 meanGreedyReward=1.4159 meanBestReward=2.7784 meanRegret=1.3625 rewardRatio=0.510
+1786353282647 DECISION phase=315 mote=5 eps=0.117 cand=[45, 82, 88] valid=[true, true, true, false]
+  cand[0] id=45 features=[7.0, 0.0] hc=2.02 re=1372.2 qo=7.000
+  cand[1] id=82 features=[8.0, 0.0] hc=2.96 re=439.2 qo=8.000
+  cand[2] id=88 features=[0.0, 0.0] hc=16.00 re=792.2 qo=0.000
+  qValues=[13.839678168296814, 12.3801349401474, 12.830163836479187, 11.71589982509613]  action=3
+1786353282968 POLICY_EVAL phase=315 states=90 choiceStates=69 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.536 meanGreedyReward=1.3962 meanBestReward=2.7260 meanRegret=1.3298 rewardRatio=0.512
+1786353297888 POLICY_EVAL phase=316 states=92 choiceStates=71 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.451 meanGreedyReward=1.2492 meanBestReward=2.6016 meanRegret=1.3524 rewardRatio=0.480
+1786353311355 DECISION phase=317 mote=5 eps=0.116 cand=[89, 45, 82] valid=[true, true, true, false]
+  cand[0] id=89 features=[8.0, 0.0] hc=0.99 re=148.5 qo=8.000
+  cand[1] id=45 features=[2.0, 0.0] hc=2.34 re=1222.3 qo=2.000
+  cand[2] id=82 features=[0.0, 0.0] hc=2.33 re=372.7 qo=0.000
+  qValues=[14.49727350473404, 12.843298494815826, 13.604548513889313, 12.467133820056915]  action=0  chosenParent=89
+1786353311910 POLICY_EVAL phase=317 states=93 choiceStates=76 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.461 meanGreedyReward=1.1268 meanBestReward=2.2233 meanRegret=1.0965 rewardRatio=0.507
+1786353323064 DECISION phase=318 mote=5 eps=0.116 cand=[45, 82] valid=[true, true, false, false]
+  cand[0] id=45 features=[4.0, 0.0] hc=2.26 re=1149.9 qo=4.000
+  cand[1] id=82 features=[2.0, 0.0] hc=16.00 re=349.1 qo=2.000
+  qValues=[15.376288771629333, 13.611863017082214, 14.53995931148529, 13.367976546287537]  action=0  chosenParent=45
+1786353323611 POLICY_EVAL phase=318 states=89 choiceStates=72 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.361 meanGreedyReward=1.2172 meanBestReward=2.6673 meanRegret=1.4501 rewardRatio=0.456
+1786353334604 DECISION phase=319 mote=5 eps=0.115 cand=[82, 45] valid=[true, true, false, false]
+  cand[0] id=82 features=[0.0, 0.0] hc=4.39 re=340.3 qo=0.000
+  cand[1] id=45 features=[5.0, 0.0] hc=4.00 re=1149.9 qo=5.000
+  qValues=[14.44645357131958, 12.71665620803833, 13.678324699401855, 12.620853424072266]  action=0  chosenParent=82
+1786353335178 POLICY_EVAL phase=319 states=93 choiceStates=77 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.325 meanGreedyReward=1.2683 meanBestReward=2.5988 meanRegret=1.3305 rewardRatio=0.488
+1786353346531 DECISION phase=320 mote=5 eps=0.114 cand=[82, 45] valid=[true, true, false, false]
+  cand[0] id=82 features=[0.0, 0.0] hc=4.57 re=332.6 qo=0.000
+  cand[1] id=45 features=[6.0, 0.0] hc=3.33 re=1068.5 qo=6.000
+  qValues=[14.060441136360168, 12.33067238330841, 13.36408007144928, 12.493707776069641]  action=0  chosenParent=82
+1786353347048 POLICY_EVAL phase=320 states=92 choiceStates=76 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.395 meanGreedyReward=1.4255 meanBestReward=2.8441 meanRegret=1.4186 rewardRatio=0.501
+1786353357533 DECISION phase=321 mote=5 eps=0.114 cand=[82, 45] valid=[true, true, false, false]
+  cand[0] id=82 features=[0.0, 0.0] hc=16.00 re=332.6 qo=0.000
+  cand[1] id=45 features=[6.0, 0.0] hc=3.84 re=997.4 qo=6.000
+  qValues=[13.894038319587708, 12.161832928657532, 13.28730595111847, 12.557160019874573]  action=0  chosenParent=82
+1786353357873 POLICY_EVAL phase=321 states=91 choiceStates=75 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.387 meanGreedyReward=1.2170 meanBestReward=2.5174 meanRegret=1.3004 rewardRatio=0.483
+1786353368298 DECISION phase=322 mote=5 eps=0.113 cand=[63] valid=[true, false, false, false]
+  cand[0] id=63 features=[0.0, 0.0] hc=4.43 re=1076.9 qo=0.000
+  qValues=[15.931805729866028, 14.00512421131134, 15.339481472969055, 14.68564760684967]  action=0  chosenParent=63
+1786353368831 POLICY_EVAL phase=322 states=93 choiceStates=74 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.324 meanGreedyReward=1.2195 meanBestReward=2.6408 meanRegret=1.4213 rewardRatio=0.462
+1786353381270 DECISION phase=323 mote=5 eps=0.113 cand=[45, 63] valid=[true, true, false, false]
+  cand[0] id=45 features=[2.0, 0.0] hc=3.88 re=800.7 qo=2.000
+  cand[1] id=63 features=[0.0, 0.0] hc=4.56 re=1068.5 qo=0.000
+  qValues=[15.160977244377136, 13.30252492427826, 14.61687171459198, 14.159551501274109]  action=0  chosenParent=45
+1786353381811 POLICY_EVAL phase=323 states=93 choiceStates=74 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.446 meanGreedyReward=1.2188 meanBestReward=2.5471 meanRegret=1.3283 rewardRatio=0.478
+1786353391399 DECISION phase=324 mote=5 eps=0.112 cand=[45, 63] valid=[true, true, false, false]
+  cand[0] id=45 features=[2.0, 0.0] hc=3.88 re=747.1 qo=2.000
+  cand[1] id=63 features=[0.0, 0.0] hc=4.48 re=1060.8 qo=0.000
+  qValues=[14.943859934806824, 13.094969630241394, 14.430214762687683, 14.141169905662537]  action=0  chosenParent=45
+1786353391780 POLICY_EVAL phase=324 states=91 choiceStates=71 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.451 meanGreedyReward=1.1771 meanBestReward=2.4621 meanRegret=1.2850 rewardRatio=0.478
+1786353403999 DECISION phase=325 mote=5 eps=0.111 cand=[63, 45, 7] valid=[true, true, true, false]
+  cand[0] id=63 features=[0.0, 0.0] hc=4.55 re=1060.5 qo=0.000
+  cand[1] id=45 features=[2.0, 0.0] hc=5.05 re=653.4 qo=2.000
+  cand[2] id=7 features=[3.0, 0.0] hc=5.96 re=554.8 qo=3.000
+  qValues=[14.063337206840515, 12.278335928916931, 13.552975058555603, 13.43087899684906]  action=0  chosenParent=63
+1786353404571 POLICY_EVAL phase=325 states=91 choiceStates=73 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.356 meanGreedyReward=1.3009 meanBestReward=2.6909 meanRegret=1.3901 rewardRatio=0.483
+1786353415716 DECISION phase=326 mote=5 eps=0.111 cand=[50, 63, 45, 7] valid=[true, true, true, true]
+  cand[0] id=50 features=[1.0, 0.0] hc=6.59 re=666.6 qo=1.000
+  cand[1] id=63 features=[0.0, 0.0] hc=4.91 re=1058.9 qo=0.000
+  cand[2] id=45 features=[4.0, 0.0] hc=5.38 re=651.9 qo=4.000
+  cand[3] id=7 features=[0.0, 0.0] hc=6.20 re=544.9 qo=0.000
+  qValues=[13.592742383480072, 11.8378626704216, 13.076106011867523, 13.084616601467133]  action=2  chosenParent=45
+1786353416359 POLICY_EVAL phase=326 states=90 choiceStates=75 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.360 meanGreedyReward=1.1621 meanBestReward=2.5158 meanRegret=1.3537 rewardRatio=0.462
+1786353427213 DECISION phase=327 mote=5 eps=0.110 cand=[65, 63, 7, 45] valid=[true, true, true, true]
+  cand[0] id=65 features=[0.0, 0.0] hc=6.58 re=1644.1 qo=0.000
+  cand[1] id=63 features=[0.0, 0.0] hc=5.86 re=1057.3 qo=0.000
+  cand[2] id=7 features=[0.0, 0.0] hc=5.96 re=535.7 qo=0.000
+  cand[3] id=45 features=[4.0, 0.0] hc=5.85 re=643.4 qo=4.000
+  qValues=[14.740609288215637, 12.888635754585266, 14.216953873634338, 14.34335720539093]  action=3  chosenParent=45
+1786353427734 POLICY_EVAL phase=327 states=90 choiceStates=77 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.377 meanGreedyReward=1.2801 meanBestReward=2.6733 meanRegret=1.3932 rewardRatio=0.479
+1786353439662 DECISION phase=328 mote=5 eps=0.110 cand=[63, 7, 45, 65] valid=[true, true, true, true]
+  cand[0] id=63 features=[3.0, 0.0] hc=6.38 re=1045.5 qo=3.000
+  cand[1] id=7 features=[1.0, 0.0] hc=5.96 re=488.4 qo=1.000
+  cand[2] id=45 features=[8.0, 0.0] hc=5.87 re=636.8 qo=8.000
+  cand[3] id=65 features=[0.0, 0.0] hc=5.57 re=1631.7 qo=0.000
+  qValues=[12.256277203559875, 10.638505101203918, 11.764066338539124, 11.892394185066223]  action=0  chosenParent=63
+1786353440218 POLICY_EVAL phase=328 states=89 choiceStates=77 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.299 meanGreedyReward=1.2805 meanBestReward=2.6378 meanRegret=1.3573 rewardRatio=0.485
+1786353450324 DECISION phase=329 mote=5 eps=0.109 cand=[63, 7, 45, 65] valid=[true, true, true, true]
+  cand[0] id=63 features=[0.0, 0.0] hc=6.96 re=972.0 qo=0.000
+  cand[1] id=7 features=[0.0, 0.0] hc=16.00 re=348.6 qo=0.000
+  cand[2] id=45 features=[0.0, 0.0] hc=16.00 re=636.0 qo=0.000
+  cand[3] id=65 features=[0.0, 0.0] hc=5.55 re=1614.5 qo=0.000
+  qValues=[15.253185987472534, 13.380185842514038, 14.749786615371704, 14.906922578811646]  action=0  chosenParent=63
+1786353450755 POLICY_EVAL phase=329 states=83 choiceStates=70 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.329 meanGreedyReward=0.9314 meanBestReward=1.9389 meanRegret=1.0076 rewardRatio=0.480
+1786353454868 DECISION phase=330 mote=5 eps=0.109 cand=[63, 7, 45, 65] valid=[true, true, true, true]
+  cand[0] id=63 features=[0.0, 0.0] hc=6.96 re=952.2 qo=0.000
+  cand[1] id=7 features=[0.0, 0.0] hc=16.00 re=348.6 qo=0.000
+  cand[2] id=45 features=[0.0, 0.0] hc=16.00 re=636.0 qo=0.000
+  cand[3] id=65 features=[0.0, 0.0] hc=5.55 re=1607.3 qo=0.000
+  qValues=[15.179823994636536, 13.318210244178772, 14.674363255500793, 14.819545865058899]  action=0  chosenParent=63
+1786353455215 POLICY_EVAL phase=330 states=76 choiceStates=63 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.365 meanGreedyReward=1.6390 meanBestReward=3.2872 meanRegret=1.6482 rewardRatio=0.499
+1786353459409 POLICY_EVAL phase=331 states=66 choiceStates=53 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.377 meanGreedyReward=1.5965 meanBestReward=3.3008 meanRegret=1.7043 rewardRatio=0.484
+1786353462277 POLICY_EVAL phase=332 states=64 choiceStates=52 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.385 meanGreedyReward=1.5430 meanBestReward=3.5146 meanRegret=1.9716 rewardRatio=0.439
+1786353464522 POLICY_EVAL phase=333 states=64 choiceStates=52 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.385 meanGreedyReward=1.7077 meanBestReward=3.4671 meanRegret=1.7594 rewardRatio=0.493
+1786353467452 POLICY_EVAL phase=334 states=64 choiceStates=52 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.423 meanGreedyReward=1.7738 meanBestReward=3.7567 meanRegret=1.9829 rewardRatio=0.472
+1786353470427 POLICY_EVAL phase=335 states=64 choiceStates=52 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.404 meanGreedyReward=1.9000 meanBestReward=3.9335 meanRegret=2.0334 rewardRatio=0.483
+1786353473818 POLICY_EVAL phase=336 states=64 choiceStates=52 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.385 meanGreedyReward=1.9411 meanBestReward=4.0000 meanRegret=2.0589 rewardRatio=0.485
+1786353477574 POLICY_EVAL phase=337 states=63 choiceStates=51 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.392 meanGreedyReward=1.8434 meanBestReward=3.7638 meanRegret=1.9205 rewardRatio=0.490
+1786353481660 POLICY_EVAL phase=338 states=64 choiceStates=51 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.392 meanGreedyReward=1.9028 meanBestReward=3.9466 meanRegret=2.0438 rewardRatio=0.482
+1786353485951 POLICY_EVAL phase=339 states=64 choiceStates=51 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.392 meanGreedyReward=1.8743 meanBestReward=3.8764 meanRegret=2.0022 rewardRatio=0.483
+1786353489199 POLICY_EVAL phase=340 states=64 choiceStates=51 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.373 meanGreedyReward=1.5601 meanBestReward=3.2858 meanRegret=1.7257 rewardRatio=0.475
+1786353492569 POLICY_EVAL phase=341 states=64 choiceStates=51 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.412 meanGreedyReward=1.5675 meanBestReward=3.2747 meanRegret=1.7072 rewardRatio=0.479
+1786353496664 POLICY_EVAL phase=342 states=64 choiceStates=51 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.392 meanGreedyReward=1.7824 meanBestReward=3.6105 meanRegret=1.8281 rewardRatio=0.494
+1786353500644 POLICY_EVAL phase=343 states=64 choiceStates=51 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.373 meanGreedyReward=1.7443 meanBestReward=3.6525 meanRegret=1.9082 rewardRatio=0.478
+1786353504366 POLICY_EVAL phase=344 states=64 choiceStates=51 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.412 meanGreedyReward=1.3336 meanBestReward=2.8905 meanRegret=1.5569 rewardRatio=0.461
+1786353507102 POLICY_EVAL phase=345 states=64 choiceStates=51 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.392 meanGreedyReward=1.9153 meanBestReward=3.9303 meanRegret=2.0150 rewardRatio=0.487
+1786353510758 POLICY_EVAL phase=346 states=64 choiceStates=51 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.392 meanGreedyReward=1.6067 meanBestReward=3.3645 meanRegret=1.7579 rewardRatio=0.478
+1786353514710 POLICY_EVAL phase=347 states=64 choiceStates=51 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.431 meanGreedyReward=1.6321 meanBestReward=3.3427 meanRegret=1.7107 rewardRatio=0.488
+1786353519247 POLICY_EVAL phase=348 states=64 choiceStates=51 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.392 meanGreedyReward=1.4951 meanBestReward=3.1931 meanRegret=1.6980 rewardRatio=0.468
+1786353521934 POLICY_EVAL phase=349 states=64 choiceStates=51 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.412 meanGreedyReward=1.8096 meanBestReward=3.7936 meanRegret=1.9840 rewardRatio=0.477
+1786353526329 POLICY_EVAL phase=350 states=64 choiceStates=51 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.412 meanGreedyReward=1.6811 meanBestReward=3.5802 meanRegret=1.8990 rewardRatio=0.470
+1786353529818 POLICY_EVAL phase=351 states=64 choiceStates=51 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.412 meanGreedyReward=1.8362 meanBestReward=3.7821 meanRegret=1.9459 rewardRatio=0.486
+1786353532855 POLICY_EVAL phase=352 states=64 choiceStates=51 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.392 meanGreedyReward=1.8674 meanBestReward=3.8752 meanRegret=2.0077 rewardRatio=0.482
+1786353535523 POLICY_EVAL phase=353 states=64 choiceStates=52 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.385 meanGreedyReward=1.6843 meanBestReward=3.5360 meanRegret=1.8516 rewardRatio=0.476
+1786353537995 POLICY_EVAL phase=354 states=64 choiceStates=53 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.396 meanGreedyReward=1.7246 meanBestReward=3.8607 meanRegret=2.1361 rewardRatio=0.447
+1786353542016 POLICY_EVAL phase=355 states=64 choiceStates=53 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.377 meanGreedyReward=1.5246 meanBestReward=3.5854 meanRegret=2.0608 rewardRatio=0.425
+1786353545324 POLICY_EVAL phase=356 states=64 choiceStates=53 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.396 meanGreedyReward=1.7997 meanBestReward=3.8482 meanRegret=2.0485 rewardRatio=0.468
+1786353547961 POLICY_EVAL phase=357 states=64 choiceStates=53 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.377 meanGreedyReward=1.8156 meanBestReward=3.9209 meanRegret=2.1054 rewardRatio=0.463
+1786353551592 POLICY_EVAL phase=358 states=63 choiceStates=52 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.385 meanGreedyReward=1.7465 meanBestReward=3.6678 meanRegret=1.9212 rewardRatio=0.476
+1786353555209 POLICY_EVAL phase=359 states=64 choiceStates=52 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.404 meanGreedyReward=1.7989 meanBestReward=3.7469 meanRegret=1.9480 rewardRatio=0.480
+1786353558909 POLICY_EVAL phase=360 states=64 choiceStates=51 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.412 meanGreedyReward=1.9278 meanBestReward=3.8879 meanRegret=1.9602 rewardRatio=0.496
+1786353562232 POLICY_EVAL phase=361 states=64 choiceStates=51 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.431 meanGreedyReward=1.6664 meanBestReward=3.4648 meanRegret=1.7984 rewardRatio=0.481
+1786353564863 POLICY_EVAL phase=362 states=64 choiceStates=51 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.392 meanGreedyReward=1.8132 meanBestReward=3.8186 meanRegret=2.0053 rewardRatio=0.475
+1786353568496 POLICY_EVAL phase=363 states=64 choiceStates=51 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.412 meanGreedyReward=1.6860 meanBestReward=3.5332 meanRegret=1.8473 rewardRatio=0.477
+1786353571480 POLICY_EVAL phase=364 states=64 choiceStates=51 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.392 meanGreedyReward=1.8017 meanBestReward=3.7252 meanRegret=1.9235 rewardRatio=0.484
+1786353575739 POLICY_EVAL phase=365 states=64 choiceStates=51 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.353 meanGreedyReward=1.6381 meanBestReward=3.5748 meanRegret=1.9367 rewardRatio=0.458
+1786353578343 POLICY_EVAL phase=366 states=64 choiceStates=51 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.392 meanGreedyReward=1.6928 meanBestReward=3.7029 meanRegret=2.0102 rewardRatio=0.457
+1786353581756 POLICY_EVAL phase=367 states=63 choiceStates=51 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.392 meanGreedyReward=1.7389 meanBestReward=3.8479 meanRegret=2.1089 rewardRatio=0.452
+1786353585181 POLICY_EVAL phase=368 states=64 choiceStates=51 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.373 meanGreedyReward=1.5807 meanBestReward=3.7206 meanRegret=2.1400 rewardRatio=0.425
+1786353587135 POLICY_EVAL phase=369 states=64 choiceStates=51 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.373 meanGreedyReward=1.7394 meanBestReward=3.8435 meanRegret=2.1041 rewardRatio=0.453
+1786353590311 POLICY_EVAL phase=370 states=64 choiceStates=51 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.412 meanGreedyReward=1.5999 meanBestReward=3.5630 meanRegret=1.9631 rewardRatio=0.449
+1786353593483 POLICY_EVAL phase=371 states=64 choiceStates=51 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.392 meanGreedyReward=1.5864 meanBestReward=3.2880 meanRegret=1.7016 rewardRatio=0.482
+1786353597025 POLICY_EVAL phase=372 states=64 choiceStates=51 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.412 meanGreedyReward=1.8496 meanBestReward=3.8304 meanRegret=1.9808 rewardRatio=0.483
+1786353600513 POLICY_EVAL phase=373 states=64 choiceStates=51 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.392 meanGreedyReward=1.6274 meanBestReward=3.4621 meanRegret=1.8347 rewardRatio=0.470
+1786353602717 POLICY_EVAL phase=374 states=64 choiceStates=51 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.392 meanGreedyReward=1.7857 meanBestReward=3.7050 meanRegret=1.9193 rewardRatio=0.482
+1786353606058 POLICY_EVAL phase=375 states=64 choiceStates=51 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.373 meanGreedyReward=1.6908 meanBestReward=3.6275 meanRegret=1.9368 rewardRatio=0.466
+1786353609501 POLICY_EVAL phase=376 states=64 choiceStates=51 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.431 meanGreedyReward=1.7567 meanBestReward=3.7662 meanRegret=2.0095 rewardRatio=0.466
+1786353613680 POLICY_EVAL phase=377 states=64 choiceStates=51 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.392 meanGreedyReward=1.4371 meanBestReward=3.2831 meanRegret=1.8460 rewardRatio=0.438
+1786353617410 POLICY_EVAL phase=378 states=64 choiceStates=51 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.412 meanGreedyReward=1.6970 meanBestReward=3.6494 meanRegret=1.9525 rewardRatio=0.465
+1786353620247 POLICY_EVAL phase=379 states=64 choiceStates=51 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.373 meanGreedyReward=1.6978 meanBestReward=3.6966 meanRegret=1.9989 rewardRatio=0.459
+1786353624012 POLICY_EVAL phase=380 states=64 choiceStates=51 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.373 meanGreedyReward=1.4562 meanBestReward=3.5378 meanRegret=2.0815 rewardRatio=0.412
+1786353627462 POLICY_EVAL phase=381 states=64 choiceStates=51 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.373 meanGreedyReward=1.6587 meanBestReward=3.6511 meanRegret=1.9923 rewardRatio=0.454
+1786353630494 POLICY_EVAL phase=382 states=64 choiceStates=51 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.373 meanGreedyReward=1.5075 meanBestReward=3.5304 meanRegret=2.0229 rewardRatio=0.427
+1786353633096 POLICY_EVAL phase=383 states=64 choiceStates=51 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.373 meanGreedyReward=1.5984 meanBestReward=3.6579 meanRegret=2.0595 rewardRatio=0.437
+1786353636054 POLICY_EVAL phase=384 states=65 choiceStates=51 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.392 meanGreedyReward=1.6757 meanBestReward=3.6684 meanRegret=1.9926 rewardRatio=0.457
+1786353643603 DECISION phase=385 mote=5 eps=0.077 cand=[50] valid=[true, false, false, false]
+  cand[0] id=50 features=[6.0, 0.0] hc=0.95 re=477.1 qo=6.000
+  qValues=[17.448352575302124, 16.25553870201111, 15.601107358932495, 16.45071578025818]  action=0  chosenParent=50
+1786353644260 POLICY_EVAL phase=385 states=90 choiceStates=51 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.353 meanGreedyReward=1.5627 meanBestReward=3.6521 meanRegret=2.0895 rewardRatio=0.428
+1786353654473 DECISION phase=386 mote=5 eps=0.076 cand=[50] valid=[true, false, false, false]
+  cand[0] id=50 features=[8.0, 0.0] hc=0.57 re=1.1 qo=8.000
+  qValues=[16.3186993598938, 15.186756610870361, 14.603140830993652, 15.383651733398438]  action=0  chosenParent=50
+1786353654983 POLICY_EVAL phase=386 states=99 choiceStates=51 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.392 meanGreedyReward=1.7157 meanBestReward=3.8171 meanRegret=2.1014 rewardRatio=0.449
+1786353667281 POLICY_EVAL phase=387 states=87 choiceStates=60 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.383 meanGreedyReward=1.4167 meanBestReward=3.1258 meanRegret=1.7091 rewardRatio=0.453
+1786353678917 DECISION phase=388 mote=5 eps=0.075 cand=[37] valid=[true, false, false, false]
+  cand[0] id=37 features=[8.0, 0.0] hc=3.48 re=1249.4 qo=8.000
+  qValues=[15.79494833946228, 14.70499873161316, 14.383461713790894, 14.802141904830933]  action=0  chosenParent=37
+1786353679453 POLICY_EVAL phase=388 states=95 choiceStates=64 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.406 meanGreedyReward=1.3648 meanBestReward=2.9956 meanRegret=1.6308 rewardRatio=0.456
+1786353690946 DECISION phase=389 mote=5 eps=0.074 cand=[37] valid=[true, false, false, false]
+  cand[0] id=37 features=[2.0, 0.0] hc=3.24 re=1208.0 qo=2.000
+  qValues=[20.258367896080017, 19.0071142911911, 18.74726140499115, 19.040250182151794]  action=0  chosenParent=37
+1786353691472 POLICY_EVAL phase=389 states=96 choiceStates=65 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.400 meanGreedyReward=1.2957 meanBestReward=2.8750 meanRegret=1.5793 rewardRatio=0.451
+1786353704920 DECISION phase=390 mote=5 eps=0.074 cand=[37, 28] valid=[true, true, false, false]
+  cand[0] id=37 features=[5.0, 0.0] hc=4.96 re=1091.3 qo=5.000
+  cand[1] id=28 features=[4.0, 0.0] hc=4.96 re=1084.2 qo=4.000
+  qValues=[14.256864190101624, 13.313168168067932, 13.214975953102112, 13.201319813728333]  action=3
+1786353705455 POLICY_EVAL phase=390 states=97 choiceStates=73 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.356 meanGreedyReward=1.0505 meanBestReward=2.5187 meanRegret=1.4682 rewardRatio=0.417
+1786353718382 DECISION phase=391 mote=5 eps=0.073 cand=[28, 100, 3, 37] valid=[true, true, true, true]
+  cand[0] id=28 features=[3.0, 0.0] hc=5.08 re=1083.7 qo=3.000
+  cand[1] id=100 features=[0.0, 0.0] hc=5.45 re=652.0 qo=0.000
+  cand[2] id=3 features=[4.0, 0.0] hc=6.78 re=887.1 qo=4.000
+  cand[3] id=37 features=[3.0, 0.0] hc=5.39 re=1058.5 qo=3.000
+  qValues=[13.17950975894928, 12.337247490882874, 12.32597553730011, 12.113024353981018]  action=0  chosenParent=28
+1786353718912 POLICY_EVAL phase=391 states=97 choiceStates=77 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.351 meanGreedyReward=1.0999 meanBestReward=2.5542 meanRegret=1.4543 rewardRatio=0.431
+1786353728763 DECISION phase=392 mote=5 eps=0.073 cand=[28, 100, 37, 33] valid=[true, true, true, true]
+  cand[0] id=28 features=[7.0, 0.0] hc=4.97 re=940.3 qo=7.000
+  cand[1] id=100 features=[0.0, 0.0] hc=5.17 re=651.9 qo=0.000
+  cand[2] id=37 features=[0.0, 0.0] hc=5.36 re=826.8 qo=0.000
+  cand[3] id=33 features=[6.0, 0.0] hc=4.95 re=1356.3 qo=6.000
+  qValues=[12.075910925865173, 11.377627730369568, 11.43755328655243, 11.054457068443298]  action=0  chosenParent=28
+1786353729320 POLICY_EVAL phase=392 states=98 choiceStates=82 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.354 meanGreedyReward=0.9682 meanBestReward=2.2071 meanRegret=1.2390 rewardRatio=0.439
+1786353737862 DECISION phase=393 mote=5 eps=0.072 cand=[28, 100, 7, 37] valid=[true, true, true, true]
+  cand[0] id=28 features=[6.0, 0.0] hc=4.93 re=931.5 qo=6.000
+  cand[1] id=100 features=[0.0, 0.0] hc=5.69 re=648.4 qo=0.000
+  cand[2] id=7 features=[0.0, 0.0] hc=5.21 re=340.7 qo=0.000
+  cand[3] id=37 features=[0.0, 0.0] hc=5.36 re=821.6 qo=0.000
+  qValues=[13.875001788139343, 13.214247107505798, 13.358671069145203, 12.717569231987]  action=0  chosenParent=28
+1786353738477 POLICY_EVAL phase=393 states=97 choiceStates=82 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.341 meanGreedyReward=1.1320 meanBestReward=2.5294 meanRegret=1.3974 rewardRatio=0.448
+1786353749906 POLICY_EVAL phase=394 states=95 choiceStates=76 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.342 meanGreedyReward=1.1435 meanBestReward=2.4474 meanRegret=1.3039 rewardRatio=0.467
+1786353757030 DECISION phase=395 mote=5 eps=0.071 cand=[28] valid=[true, false, false, false]
+  cand[0] id=28 features=[0.0, 0.0] hc=16.00 re=929.2 qo=0.000
+  qValues=[17.580690026283264, 16.92677414417267, 17.306854844093323, 16.058048844337463]  action=0  chosenParent=28
+1786353757496 POLICY_EVAL phase=395 states=94 choiceStates=73 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.370 meanGreedyReward=1.1943 meanBestReward=2.6760 meanRegret=1.4817 rewardRatio=0.446
+1786353760926 DECISION phase=396 mote=5 eps=0.070 cand=[28] valid=[true, false, false, false]
+  cand[0] id=28 features=[0.0, 0.0] hc=16.00 re=929.2 qo=0.000
+  qValues=[19.415372490882874, 18.55783760547638, 19.130711674690247, 17.5015469789505]  action=0  chosenParent=28
+1786353761500 POLICY_EVAL phase=396 states=85 choiceStates=68 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.382 meanGreedyReward=1.2351 meanBestReward=2.8755 meanRegret=1.6404 rewardRatio=0.430
+1786353765211 POLICY_EVAL phase=397 states=76 choiceStates=63 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.349 meanGreedyReward=1.2704 meanBestReward=3.0066 meanRegret=1.7361 rewardRatio=0.423
+1786353767700 POLICY_EVAL phase=398 states=74 choiceStates=60 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.367 meanGreedyReward=1.3903 meanBestReward=3.1479 meanRegret=1.7576 rewardRatio=0.442
+1786353771805 POLICY_EVAL phase=399 states=72 choiceStates=58 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.328 meanGreedyReward=1.3139 meanBestReward=2.8321 meanRegret=1.5181 rewardRatio=0.464
+1786353774737 DECISION phase=400 mote=5 eps=0.068 cand=[63] valid=[true, false, false, false]
+  cand[0] id=63 features=[0.0, 0.0] hc=5.85 re=937.5 qo=0.000
+  qValues=[18.467713713645935, 17.788333773612976, 18.370903372764587, 16.48552167415619]  action=0  chosenParent=63
+1786353775177 POLICY_EVAL phase=400 states=70 choiceStates=56 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.357 meanGreedyReward=1.4972 meanBestReward=3.3156 meanRegret=1.8184 rewardRatio=0.452
+1786353778227 DECISION phase=401 mote=5 eps=0.067 cand=[63] valid=[true, false, false, false]
+  cand[0] id=63 features=[0.0, 0.0] hc=6.69 re=933.7 qo=0.000
+  qValues=[17.23813223838806, 16.71080994606018, 17.196523904800415, 15.43630576133728]  action=0  chosenParent=63
+1786353778499 POLICY_EVAL phase=401 states=70 choiceStates=55 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.345 meanGreedyReward=1.5769 meanBestReward=3.5051 meanRegret=1.9282 rewardRatio=0.450
+1786353780526 POLICY_EVAL phase=402 states=68 choiceStates=45 invalidPicks=20 invalidPickRate=0.294 greedyTop1=0.333 meanGreedyReward=2.1713 meanBestReward=3.5681 meanRegret=1.3969 rewardRatio=0.609
+1786353786734 POLICY_EVAL phase=403 states=68 choiceStates=50 invalidPicks=12 invalidPickRate=0.176 greedyTop1=0.380 meanGreedyReward=1.1895 meanBestReward=2.9512 meanRegret=1.7617 rewardRatio=0.403
+1786353790872 POLICY_EVAL phase=404 states=68 choiceStates=55 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.382 meanGreedyReward=1.2611 meanBestReward=2.8566 meanRegret=1.5955 rewardRatio=0.441
+1786353793683 POLICY_EVAL phase=405 states=68 choiceStates=55 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.345 meanGreedyReward=1.5148 meanBestReward=3.5373 meanRegret=2.0225 rewardRatio=0.428
+1786353797032 POLICY_EVAL phase=406 states=68 choiceStates=55 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.364 meanGreedyReward=1.4792 meanBestReward=3.4689 meanRegret=1.9897 rewardRatio=0.426
+1786353800457 POLICY_EVAL phase=407 states=68 choiceStates=55 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.345 meanGreedyReward=1.4629 meanBestReward=3.5018 meanRegret=2.0389 rewardRatio=0.418
+1786353803817 POLICY_EVAL phase=408 states=68 choiceStates=55 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.364 meanGreedyReward=1.5264 meanBestReward=3.5645 meanRegret=2.0381 rewardRatio=0.428
+1786353805847 POLICY_EVAL phase=409 states=68 choiceStates=55 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.364 meanGreedyReward=1.4700 meanBestReward=3.5567 meanRegret=2.0867 rewardRatio=0.413
+1786353807789 POLICY_EVAL phase=410 states=68 choiceStates=55 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.364 meanGreedyReward=1.4764 meanBestReward=3.6296 meanRegret=2.1532 rewardRatio=0.407
+1786353810309 POLICY_EVAL phase=411 states=68 choiceStates=55 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.382 meanGreedyReward=1.4414 meanBestReward=3.5762 meanRegret=2.1348 rewardRatio=0.403
+1786353813425 POLICY_EVAL phase=412 states=68 choiceStates=55 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.345 meanGreedyReward=1.4700 meanBestReward=3.6080 meanRegret=2.1379 rewardRatio=0.407
+1786353816178 POLICY_EVAL phase=413 states=68 choiceStates=55 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.327 meanGreedyReward=1.4601 meanBestReward=3.6284 meanRegret=2.1683 rewardRatio=0.402
+1786353819408 POLICY_EVAL phase=414 states=68 choiceStates=55 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.345 meanGreedyReward=1.2618 meanBestReward=3.4499 meanRegret=2.1881 rewardRatio=0.366
+1786353821857 POLICY_EVAL phase=415 states=68 choiceStates=55 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.345 meanGreedyReward=1.4541 meanBestReward=3.6466 meanRegret=2.1926 rewardRatio=0.399
+1786353824469 POLICY_EVAL phase=416 states=68 choiceStates=55 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.345 meanGreedyReward=1.3727 meanBestReward=3.4423 meanRegret=2.0696 rewardRatio=0.399
+1786353826230 POLICY_EVAL phase=417 states=68 choiceStates=55 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.327 meanGreedyReward=1.3768 meanBestReward=3.4357 meanRegret=2.0590 rewardRatio=0.401
+1786353827947 POLICY_EVAL phase=418 states=68 choiceStates=55 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.345 meanGreedyReward=1.4499 meanBestReward=3.6034 meanRegret=2.1535 rewardRatio=0.402
+1786353831033 POLICY_EVAL phase=419 states=67 choiceStates=54 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.352 meanGreedyReward=1.2374 meanBestReward=3.2379 meanRegret=2.0005 rewardRatio=0.382
+1786353834188 POLICY_EVAL phase=420 states=68 choiceStates=54 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.296 meanGreedyReward=1.1203 meanBestReward=2.7114 meanRegret=1.5911 rewardRatio=0.413
+1786353836376 POLICY_EVAL phase=421 states=68 choiceStates=54 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.370 meanGreedyReward=1.4603 meanBestReward=3.4023 meanRegret=1.9420 rewardRatio=0.429
+1786353839318 POLICY_EVAL phase=422 states=68 choiceStates=54 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.352 meanGreedyReward=1.4563 meanBestReward=3.4999 meanRegret=2.0436 rewardRatio=0.416
+1786353841416 POLICY_EVAL phase=423 states=68 choiceStates=54 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.352 meanGreedyReward=1.4754 meanBestReward=3.5478 meanRegret=2.0723 rewardRatio=0.416
+1786353844324 POLICY_EVAL phase=424 states=68 choiceStates=54 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.370 meanGreedyReward=1.4795 meanBestReward=3.5592 meanRegret=2.0797 rewardRatio=0.416
+1786353846419 POLICY_EVAL phase=425 states=68 choiceStates=54 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.315 meanGreedyReward=1.3120 meanBestReward=3.3212 meanRegret=2.0092 rewardRatio=0.395
+1786353848974 POLICY_EVAL phase=426 states=68 choiceStates=54 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.370 meanGreedyReward=1.4585 meanBestReward=3.5339 meanRegret=2.0754 rewardRatio=0.413
+1786353851531 POLICY_EVAL phase=427 states=67 choiceStates=54 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.370 meanGreedyReward=1.4196 meanBestReward=3.5691 meanRegret=2.1495 rewardRatio=0.398
+1786353853766 POLICY_EVAL phase=428 states=67 choiceStates=54 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.315 meanGreedyReward=1.3569 meanBestReward=3.3529 meanRegret=1.9960 rewardRatio=0.405
+1786353856887 POLICY_EVAL phase=429 states=68 choiceStates=54 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.333 meanGreedyReward=1.3370 meanBestReward=3.2646 meanRegret=1.9276 rewardRatio=0.410
+1786353859150 POLICY_EVAL phase=430 states=68 choiceStates=54 invalidPicks=9 invalidPickRate=0.132 greedyTop1=0.500 meanGreedyReward=1.9560 meanBestReward=2.8735 meanRegret=0.9176 rewardRatio=0.681
+1786353865032 POLICY_EVAL phase=431 states=68 choiceStates=54 invalidPicks=10 invalidPickRate=0.147 greedyTop1=0.315 meanGreedyReward=1.1541 meanBestReward=2.6832 meanRegret=1.5291 rewardRatio=0.430
+1786353869450 POLICY_EVAL phase=432 states=68 choiceStates=54 invalidPicks=10 invalidPickRate=0.147 greedyTop1=0.556 meanGreedyReward=1.8732 meanBestReward=2.5360 meanRegret=0.6629 rewardRatio=0.739
+1786353875622 POLICY_EVAL phase=433 states=68 choiceStates=54 invalidPicks=9 invalidPickRate=0.132 greedyTop1=0.370 meanGreedyReward=1.2051 meanBestReward=2.1054 meanRegret=0.9002 rewardRatio=0.572
+1786353881115 POLICY_EVAL phase=434 states=68 choiceStates=54 invalidPicks=11 invalidPickRate=0.162 greedyTop1=0.370 meanGreedyReward=1.6081 meanBestReward=2.3716 meanRegret=0.7635 rewardRatio=0.678
+1786353887208 POLICY_EVAL phase=435 states=68 choiceStates=54 invalidPicks=10 invalidPickRate=0.147 greedyTop1=0.352 meanGreedyReward=1.6826 meanBestReward=2.5563 meanRegret=0.8736 rewardRatio=0.658
+1786353891340 POLICY_EVAL phase=436 states=68 choiceStates=54 invalidPicks=9 invalidPickRate=0.132 greedyTop1=0.389 meanGreedyReward=1.5110 meanBestReward=2.3937 meanRegret=0.8827 rewardRatio=0.631
+1786353897616 POLICY_EVAL phase=437 states=68 choiceStates=54 invalidPicks=11 invalidPickRate=0.162 greedyTop1=0.389 meanGreedyReward=1.6342 meanBestReward=2.5010 meanRegret=0.8667 rewardRatio=0.653
+1786353903007 POLICY_EVAL phase=438 states=68 choiceStates=54 invalidPicks=11 invalidPickRate=0.162 greedyTop1=0.333 meanGreedyReward=1.3067 meanBestReward=2.0175 meanRegret=0.7108 rewardRatio=0.648
+1786353910155 POLICY_EVAL phase=439 states=68 choiceStates=54 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.333 meanGreedyReward=0.6460 meanBestReward=1.4181 meanRegret=0.7721 rewardRatio=0.456
+1786353912841 POLICY_EVAL phase=440 states=68 choiceStates=54 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.352 meanGreedyReward=1.4226 meanBestReward=3.4460 meanRegret=2.0234 rewardRatio=0.413
+1786353915553 POLICY_EVAL phase=441 states=68 choiceStates=54 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.333 meanGreedyReward=1.3054 meanBestReward=3.1203 meanRegret=1.8148 rewardRatio=0.418
+1786353917855 POLICY_EVAL phase=442 states=68 choiceStates=54 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.352 meanGreedyReward=1.4204 meanBestReward=3.4446 meanRegret=2.0243 rewardRatio=0.412
+1786353920565 POLICY_EVAL phase=443 states=68 choiceStates=54 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.352 meanGreedyReward=1.4060 meanBestReward=3.3459 meanRegret=1.9399 rewardRatio=0.420
+1786353923699 POLICY_EVAL phase=444 states=68 choiceStates=54 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.315 meanGreedyReward=1.3279 meanBestReward=3.1940 meanRegret=1.8662 rewardRatio=0.416
+1786353925919 POLICY_EVAL phase=445 states=68 choiceStates=54 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.352 meanGreedyReward=1.2465 meanBestReward=3.2316 meanRegret=1.9851 rewardRatio=0.386
+1786353928065 POLICY_EVAL phase=446 states=68 choiceStates=54 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.352 meanGreedyReward=1.4098 meanBestReward=3.3976 meanRegret=1.9878 rewardRatio=0.415
+1786353929890 POLICY_EVAL phase=447 states=68 choiceStates=54 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.333 meanGreedyReward=1.4243 meanBestReward=3.3868 meanRegret=1.9625 rewardRatio=0.421
+1786353932448 POLICY_EVAL phase=448 states=68 choiceStates=54 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.370 meanGreedyReward=1.4051 meanBestReward=3.3794 meanRegret=1.9743 rewardRatio=0.416
+1786353934817 POLICY_EVAL phase=449 states=67 choiceStates=54 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.352 meanGreedyReward=1.2422 meanBestReward=3.2345 meanRegret=1.9923 rewardRatio=0.384
+1786353936698 POLICY_EVAL phase=450 states=68 choiceStates=54 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.352 meanGreedyReward=1.4365 meanBestReward=3.4253 meanRegret=1.9888 rewardRatio=0.419
+1786353938346 POLICY_EVAL phase=451 states=68 choiceStates=54 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.352 meanGreedyReward=1.3527 meanBestReward=3.2118 meanRegret=1.8591 rewardRatio=0.421
+1786353940763 POLICY_EVAL phase=452 states=68 choiceStates=54 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.352 meanGreedyReward=1.1160 meanBestReward=2.7966 meanRegret=1.6805 rewardRatio=0.399
+1786353943430 POLICY_EVAL phase=453 states=68 choiceStates=54 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.352 meanGreedyReward=1.4103 meanBestReward=3.3897 meanRegret=1.9794 rewardRatio=0.416
+1786353945510 POLICY_EVAL phase=454 states=68 choiceStates=54 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.352 meanGreedyReward=1.4097 meanBestReward=3.3711 meanRegret=1.9613 rewardRatio=0.418
+1786353948161 POLICY_EVAL phase=455 states=68 choiceStates=54 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.333 meanGreedyReward=1.3197 meanBestReward=3.1548 meanRegret=1.8351 rewardRatio=0.418
+1786353950647 POLICY_EVAL phase=456 states=68 choiceStates=54 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.352 meanGreedyReward=1.4110 meanBestReward=3.3947 meanRegret=1.9837 rewardRatio=0.416
+1786353953123 POLICY_EVAL phase=457 states=68 choiceStates=54 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.352 meanGreedyReward=1.4312 meanBestReward=3.4138 meanRegret=1.9826 rewardRatio=0.419
+1786353955590 POLICY_EVAL phase=458 states=68 choiceStates=54 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.352 meanGreedyReward=1.3115 meanBestReward=3.0217 meanRegret=1.7102 rewardRatio=0.434
+1786353958450 POLICY_EVAL phase=459 states=68 choiceStates=54 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.352 meanGreedyReward=1.3802 meanBestReward=3.2726 meanRegret=1.8924 rewardRatio=0.422
+1786353960885 POLICY_EVAL phase=460 states=68 choiceStates=54 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.352 meanGreedyReward=1.4287 meanBestReward=3.4034 meanRegret=1.9747 rewardRatio=0.420
+1786353963456 POLICY_EVAL phase=461 states=68 choiceStates=54 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.352 meanGreedyReward=1.3939 meanBestReward=3.3680 meanRegret=1.9742 rewardRatio=0.414
+1786353965959 POLICY_EVAL phase=462 states=68 choiceStates=54 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.352 meanGreedyReward=1.3896 meanBestReward=3.2906 meanRegret=1.9011 rewardRatio=0.422
+1786353968414 POLICY_EVAL phase=463 states=68 choiceStates=54 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.352 meanGreedyReward=1.4172 meanBestReward=3.3694 meanRegret=1.9522 rewardRatio=0.421
+1786353970772 POLICY_EVAL phase=464 states=68 choiceStates=54 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.352 meanGreedyReward=1.4147 meanBestReward=3.3669 meanRegret=1.9522 rewardRatio=0.420
+1786353973248 POLICY_EVAL phase=465 states=68 choiceStates=54 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.352 meanGreedyReward=1.4252 meanBestReward=3.3862 meanRegret=1.9610 rewardRatio=0.421
+1786353976141 POLICY_EVAL phase=466 states=68 choiceStates=54 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.352 meanGreedyReward=1.3652 meanBestReward=3.1749 meanRegret=1.8097 rewardRatio=0.430
+1786353978087 POLICY_EVAL phase=467 states=68 choiceStates=54 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.315 meanGreedyReward=1.1628 meanBestReward=2.6776 meanRegret=1.5148 rewardRatio=0.434
+1786353980041 POLICY_EVAL phase=468 states=68 choiceStates=54 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.352 meanGreedyReward=1.3788 meanBestReward=3.3481 meanRegret=1.9693 rewardRatio=0.412
+1786353981915 POLICY_EVAL phase=469 states=68 choiceStates=54 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.352 meanGreedyReward=1.4130 meanBestReward=3.3650 meanRegret=1.9520 rewardRatio=0.420
+1786353983974 POLICY_EVAL phase=470 states=68 choiceStates=54 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.352 meanGreedyReward=1.3615 meanBestReward=3.1948 meanRegret=1.8333 rewardRatio=0.426
+1786353985555 POLICY_EVAL phase=471 states=68 choiceStates=54 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.352 meanGreedyReward=1.4022 meanBestReward=3.3688 meanRegret=1.9665 rewardRatio=0.416
+1786353987403 POLICY_EVAL phase=472 states=68 choiceStates=54 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.352 meanGreedyReward=1.4191 meanBestReward=3.3848 meanRegret=1.9657 rewardRatio=0.419
+1786353989900 POLICY_EVAL phase=473 states=68 choiceStates=54 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.352 meanGreedyReward=1.3755 meanBestReward=3.3357 meanRegret=1.9602 rewardRatio=0.412
+1786353992268 POLICY_EVAL phase=474 states=68 choiceStates=54 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.352 meanGreedyReward=1.4176 meanBestReward=3.3778 meanRegret=1.9603 rewardRatio=0.420
+1786353994268 POLICY_EVAL phase=475 states=68 choiceStates=54 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.352 meanGreedyReward=1.3915 meanBestReward=3.2992 meanRegret=1.9077 rewardRatio=0.422
+1786353996138 POLICY_EVAL phase=476 states=68 choiceStates=54 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.333 meanGreedyReward=1.2967 meanBestReward=3.1901 meanRegret=1.8934 rewardRatio=0.406
+1786353997966 POLICY_EVAL phase=477 states=68 choiceStates=54 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.352 meanGreedyReward=1.3004 meanBestReward=3.1705 meanRegret=1.8701 rewardRatio=0.410
+1786354000022 POLICY_EVAL phase=478 states=68 choiceStates=54 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.352 meanGreedyReward=1.4144 meanBestReward=3.3391 meanRegret=1.9246 rewardRatio=0.424
+1786354001657 POLICY_EVAL phase=479 states=67 choiceStates=54 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.352 meanGreedyReward=1.4136 meanBestReward=3.3478 meanRegret=1.9342 rewardRatio=0.422
+1786354003781 POLICY_EVAL phase=480 states=68 choiceStates=54 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.352 meanGreedyReward=1.3541 meanBestReward=3.1500 meanRegret=1.7959 rewardRatio=0.430
+1786354006558 POLICY_EVAL phase=481 states=68 choiceStates=54 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.352 meanGreedyReward=1.4121 meanBestReward=3.3443 meanRegret=1.9322 rewardRatio=0.422
+1786354009132 POLICY_EVAL phase=482 states=68 choiceStates=54 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.352 meanGreedyReward=1.4114 meanBestReward=3.3426 meanRegret=1.9312 rewardRatio=0.422
+1786354012044 POLICY_EVAL phase=483 states=68 choiceStates=54 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.352 meanGreedyReward=1.3742 meanBestReward=3.2116 meanRegret=1.8374 rewardRatio=0.428
+1786354014118 POLICY_EVAL phase=484 states=68 choiceStates=54 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.352 meanGreedyReward=1.4102 meanBestReward=3.3356 meanRegret=1.9254 rewardRatio=0.423
+1786354015648 POLICY_EVAL phase=485 states=68 choiceStates=54 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.352 meanGreedyReward=1.4095 meanBestReward=3.3369 meanRegret=1.9274 rewardRatio=0.422
+1786354017462 POLICY_EVAL phase=486 states=68 choiceStates=54 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.352 meanGreedyReward=1.3608 meanBestReward=3.2809 meanRegret=1.9201 rewardRatio=0.415
+1786354019643 POLICY_EVAL phase=487 states=68 choiceStates=54 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.352 meanGreedyReward=1.3716 meanBestReward=3.2128 meanRegret=1.8413 rewardRatio=0.427
+1786354021904 POLICY_EVAL phase=488 states=68 choiceStates=54 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.352 meanGreedyReward=1.4072 meanBestReward=3.3327 meanRegret=1.9255 rewardRatio=0.422
+1786354024123 POLICY_EVAL phase=489 states=68 choiceStates=54 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.352 meanGreedyReward=1.4065 meanBestReward=3.3309 meanRegret=1.9244 rewardRatio=0.422
+1786354026180 POLICY_EVAL phase=490 states=68 choiceStates=54 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.352 meanGreedyReward=1.3739 meanBestReward=3.2974 meanRegret=1.9236 rewardRatio=0.417
+1786354028849 POLICY_EVAL phase=491 states=68 choiceStates=54 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.352 meanGreedyReward=1.4051 meanBestReward=3.3277 meanRegret=1.9226 rewardRatio=0.422
+1786354031558 POLICY_EVAL phase=492 states=68 choiceStates=54 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.352 meanGreedyReward=1.4044 meanBestReward=3.3119 meanRegret=1.9075 rewardRatio=0.424
+1786354033768 POLICY_EVAL phase=493 states=68 choiceStates=54 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.333 meanGreedyReward=1.3147 meanBestReward=3.0969 meanRegret=1.7822 rewardRatio=0.425
+1786354036052 POLICY_EVAL phase=494 states=68 choiceStates=55 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.345 meanGreedyReward=1.3785 meanBestReward=3.3933 meanRegret=2.0148 rewardRatio=0.406
+1786354038755 POLICY_EVAL phase=495 states=68 choiceStates=55 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.345 meanGreedyReward=1.3319 meanBestReward=3.2787 meanRegret=1.9468 rewardRatio=0.406
+1786354041128 POLICY_EVAL phase=496 states=68 choiceStates=55 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.327 meanGreedyReward=1.2929 meanBestReward=3.1548 meanRegret=1.8620 rewardRatio=0.410
+1786354044264 POLICY_EVAL phase=497 states=68 choiceStates=55 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.345 meanGreedyReward=1.3287 meanBestReward=3.1997 meanRegret=1.8710 rewardRatio=0.415
+1786354046663 POLICY_EVAL phase=498 states=68 choiceStates=55 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.345 meanGreedyReward=1.3756 meanBestReward=3.3874 meanRegret=2.0117 rewardRatio=0.406
+1786354048870 POLICY_EVAL phase=499 states=68 choiceStates=55 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.345 meanGreedyReward=1.3750 meanBestReward=3.2718 meanRegret=1.8968 rewardRatio=0.420
+1786354049662 POLICY_EVAL phase=500 states=68 choiceStates=55 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.345 meanGreedyReward=1.3750 meanBestReward=3.2718 meanRegret=1.8968 rewardRatio=0.420
+1786354050136 POLICY_EVAL phase=501 states=68 choiceStates=55 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.345 meanGreedyReward=1.3750 meanBestReward=3.2718 meanRegret=1.8968 rewardRatio=0.420
+1786354050600 POLICY_EVAL phase=502 states=68 choiceStates=55 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.345 meanGreedyReward=1.3750 meanBestReward=3.2718 meanRegret=1.8968 rewardRatio=0.420
+1786354051215 POLICY_EVAL phase=503 states=68 choiceStates=55 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.345 meanGreedyReward=1.3750 meanBestReward=3.2718 meanRegret=1.8968 rewardRatio=0.420
+1786354051944 POLICY_EVAL phase=504 states=68 choiceStates=55 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.345 meanGreedyReward=1.3750 meanBestReward=3.2718 meanRegret=1.8968 rewardRatio=0.420
+1786354052751 POLICY_EVAL phase=505 states=68 choiceStates=55 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.345 meanGreedyReward=1.3750 meanBestReward=3.2718 meanRegret=1.8968 rewardRatio=0.420
+1786354053342 POLICY_EVAL phase=506 states=68 choiceStates=55 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.345 meanGreedyReward=1.3750 meanBestReward=3.2718 meanRegret=1.8968 rewardRatio=0.420
+1786354053968 POLICY_EVAL phase=507 states=68 choiceStates=55 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.345 meanGreedyReward=1.3750 meanBestReward=3.2718 meanRegret=1.8968 rewardRatio=0.420
+1786354054485 POLICY_EVAL phase=508 states=68 choiceStates=55 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.345 meanGreedyReward=1.3750 meanBestReward=3.2718 meanRegret=1.8968 rewardRatio=0.420
+1786354055097 POLICY_EVAL phase=509 states=68 choiceStates=55 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.345 meanGreedyReward=1.3750 meanBestReward=3.2718 meanRegret=1.8968 rewardRatio=0.420
+1786354056044 POLICY_EVAL phase=510 states=68 choiceStates=55 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.345 meanGreedyReward=1.3750 meanBestReward=3.2718 meanRegret=1.8968 rewardRatio=0.420
+1786354056532 POLICY_EVAL phase=511 states=68 choiceStates=55 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.345 meanGreedyReward=1.3750 meanBestReward=3.2718 meanRegret=1.8968 rewardRatio=0.420
+1786354056988 POLICY_EVAL phase=512 states=68 choiceStates=55 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.345 meanGreedyReward=1.3750 meanBestReward=3.2718 meanRegret=1.8968 rewardRatio=0.420
+1786354057493 POLICY_EVAL phase=513 states=68 choiceStates=55 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.345 meanGreedyReward=1.3750 meanBestReward=3.2718 meanRegret=1.8968 rewardRatio=0.420
+1786354058154 POLICY_EVAL phase=514 states=68 choiceStates=55 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.345 meanGreedyReward=1.3750 meanBestReward=3.2718 meanRegret=1.8968 rewardRatio=0.420
+1786354058620 POLICY_EVAL phase=515 states=68 choiceStates=55 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.345 meanGreedyReward=1.3750 meanBestReward=3.2718 meanRegret=1.8968 rewardRatio=0.420
+1786354059042 POLICY_EVAL phase=516 states=68 choiceStates=55 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.345 meanGreedyReward=1.3750 meanBestReward=3.2718 meanRegret=1.8968 rewardRatio=0.420
+1786354059443 POLICY_EVAL phase=517 states=68 choiceStates=55 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.345 meanGreedyReward=1.3750 meanBestReward=3.2718 meanRegret=1.8968 rewardRatio=0.420
+1786354060142 POLICY_EVAL phase=518 states=68 choiceStates=55 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.345 meanGreedyReward=1.3750 meanBestReward=3.2718 meanRegret=1.8968 rewardRatio=0.420
+1786354060994 POLICY_EVAL phase=519 states=68 choiceStates=55 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.345 meanGreedyReward=1.3750 meanBestReward=3.2718 meanRegret=1.8968 rewardRatio=0.420
+1786354061619 POLICY_EVAL phase=520 states=68 choiceStates=55 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.345 meanGreedyReward=1.3750 meanBestReward=3.2718 meanRegret=1.8968 rewardRatio=0.420
+1786354062443 POLICY_EVAL phase=521 states=68 choiceStates=55 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.345 meanGreedyReward=1.3750 meanBestReward=3.2718 meanRegret=1.8968 rewardRatio=0.420
+1786354063158 POLICY_EVAL phase=522 states=68 choiceStates=55 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.345 meanGreedyReward=1.3750 meanBestReward=3.2718 meanRegret=1.8968 rewardRatio=0.420
+1786354063671 POLICY_EVAL phase=523 states=68 choiceStates=55 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.345 meanGreedyReward=1.3750 meanBestReward=3.2718 meanRegret=1.8968 rewardRatio=0.420
+1786354064403 POLICY_EVAL phase=524 states=68 choiceStates=55 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.345 meanGreedyReward=1.3750 meanBestReward=3.2718 meanRegret=1.8968 rewardRatio=0.420
+1786354064919 POLICY_EVAL phase=525 states=68 choiceStates=55 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.345 meanGreedyReward=1.3750 meanBestReward=3.2718 meanRegret=1.8968 rewardRatio=0.420
+1786354065615 POLICY_EVAL phase=526 states=68 choiceStates=55 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.345 meanGreedyReward=1.3750 meanBestReward=3.2718 meanRegret=1.8968 rewardRatio=0.420
+1786354066662 POLICY_EVAL phase=527 states=68 choiceStates=55 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.345 meanGreedyReward=1.3750 meanBestReward=3.2718 meanRegret=1.8968 rewardRatio=0.420
+1786354067401 POLICY_EVAL phase=528 states=68 choiceStates=55 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.345 meanGreedyReward=1.3750 meanBestReward=3.2718 meanRegret=1.8968 rewardRatio=0.420
+1786354068218 POLICY_EVAL phase=529 states=68 choiceStates=55 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.345 meanGreedyReward=1.3750 meanBestReward=3.2718 meanRegret=1.8968 rewardRatio=0.420
+1786354068922 POLICY_EVAL phase=530 states=68 choiceStates=55 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.345 meanGreedyReward=1.3750 meanBestReward=3.2718 meanRegret=1.8968 rewardRatio=0.420
+1786354069669 POLICY_EVAL phase=531 states=68 choiceStates=55 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.345 meanGreedyReward=1.3750 meanBestReward=3.2718 meanRegret=1.8968 rewardRatio=0.420
+1786354070286 POLICY_EVAL phase=532 states=68 choiceStates=55 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.345 meanGreedyReward=1.3750 meanBestReward=3.2718 meanRegret=1.8968 rewardRatio=0.420
+1786354070980 POLICY_EVAL phase=533 states=68 choiceStates=55 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.345 meanGreedyReward=1.3750 meanBestReward=3.2718 meanRegret=1.8968 rewardRatio=0.420
+1786354071522 POLICY_EVAL phase=534 states=68 choiceStates=55 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.345 meanGreedyReward=1.3750 meanBestReward=3.2718 meanRegret=1.8968 rewardRatio=0.420
+1786354072348 POLICY_EVAL phase=535 states=68 choiceStates=55 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.345 meanGreedyReward=1.3750 meanBestReward=3.2718 meanRegret=1.8968 rewardRatio=0.420
+1786354073007 POLICY_EVAL phase=536 states=68 choiceStates=55 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.345 meanGreedyReward=1.3750 meanBestReward=3.2718 meanRegret=1.8968 rewardRatio=0.420
+1786354073681 POLICY_EVAL phase=537 states=68 choiceStates=55 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.345 meanGreedyReward=1.3750 meanBestReward=3.2718 meanRegret=1.8968 rewardRatio=0.420
+1786354074368 POLICY_EVAL phase=538 states=68 choiceStates=55 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.345 meanGreedyReward=1.3750 meanBestReward=3.2718 meanRegret=1.8968 rewardRatio=0.420
+1786354075100 POLICY_EVAL phase=539 states=68 choiceStates=55 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.345 meanGreedyReward=1.3750 meanBestReward=3.2718 meanRegret=1.8968 rewardRatio=0.420
+1786354075912 POLICY_EVAL phase=540 states=68 choiceStates=55 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.345 meanGreedyReward=1.3750 meanBestReward=3.2718 meanRegret=1.8968 rewardRatio=0.420
+1786354076632 POLICY_EVAL phase=541 states=68 choiceStates=55 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.345 meanGreedyReward=1.3750 meanBestReward=3.2718 meanRegret=1.8968 rewardRatio=0.420
+1786354077315 POLICY_EVAL phase=542 states=68 choiceStates=55 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.345 meanGreedyReward=1.3750 meanBestReward=3.2718 meanRegret=1.8968 rewardRatio=0.420
+1786354078123 POLICY_EVAL phase=543 states=68 choiceStates=55 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.345 meanGreedyReward=1.3750 meanBestReward=3.2718 meanRegret=1.8968 rewardRatio=0.420
+1786354078890 POLICY_EVAL phase=544 states=68 choiceStates=55 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.345 meanGreedyReward=1.3750 meanBestReward=3.2718 meanRegret=1.8968 rewardRatio=0.420
+1786354079634 POLICY_EVAL phase=545 states=68 choiceStates=55 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.345 meanGreedyReward=1.3750 meanBestReward=3.2718 meanRegret=1.8968 rewardRatio=0.420
+1786354080095 POLICY_EVAL phase=546 states=68 choiceStates=55 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.345 meanGreedyReward=1.3750 meanBestReward=3.2718 meanRegret=1.8968 rewardRatio=0.420
+1786354080868 POLICY_EVAL phase=547 states=68 choiceStates=55 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.345 meanGreedyReward=1.3750 meanBestReward=3.2718 meanRegret=1.8968 rewardRatio=0.420
+1786354081720 POLICY_EVAL phase=548 states=68 choiceStates=55 invalidPicks=0 invalidPickRate=0.000 greedyTop1=0.345 meanGreedyReward=1.3750 meanBestReward=3.2718 meanRegret=1.8968 rewardRatio=0.420
