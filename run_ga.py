@@ -306,7 +306,7 @@ def parse_args() -> GAConfig:
     ap.add_argument("--random-seed", type=int, default=1337)
     ap.add_argument("--allow-empty-mask", action="store_true", help="Allow evaluating empty submask")
 
-    # Default weights per your request: NLT 50%, PRR 25%, Delay 25%.
+    # Default weights: NLT 50%, PRR 25%, Delay 25%.
     ap.add_argument("--w-nlt", type=float, default=0.50)
     ap.add_argument("--w-prr", type=float, default=0.25)
     ap.add_argument("--w-dly", type=float, default=0.25)
@@ -510,7 +510,9 @@ def compute_fitness(
             "found_scenarios": 0,
         }
 
-    duration_ms = max(1.0, cfg.duration_sf * 1000.0)
+    # NLT normalized to the observed range of achieved lifetimes (ms)
+    NLT_FLOOR = 450000.0
+    NLT_CEILING = 1200000.0
     delay_scale = max(1.0, cfg.delay_scale_ms)
 
     per_s_scores: List[float] = []
@@ -530,7 +532,10 @@ def compute_fitness(
         runs_valid_raw = sc.get("runs_valid")
 
         prr_norm = min(1.0, max(0.0, float(prr_raw) if prr_raw is not None else 0.0))
-        nlt_norm = min(1.0, max(0.0, (float(nlt_raw) / duration_ms) if nlt_raw is not None else 0.0))
+        if nlt_raw is None:
+            nlt_norm = 0.0
+        else:
+            nlt_norm = min(1.0, max(0.0, (float(nlt_raw) - NLT_FLOOR) / (NLT_CEILING - NLT_FLOOR)))
         if delay_raw is None:
             delay_score = 0.0
         else:
