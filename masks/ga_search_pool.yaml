@@ -1,0 +1,24 @@
+run:
+  id: ga_search_pool
+  notes: "GA search space, 2026-08-05: 8-feature Tier 1 pool from solo_v2 composite-fitness ranking (etx, re, qlr, str dropped as Tier 2/3 laggards)"
+
+features:
+  all: false
+
+  # LINK
+  etx:  false
+  rssi:  true
+  pfi:  true
+
+  # NODE
+  re:  false
+  qo:  true
+  mpiq:  true
+  qlr:  false
+  si:  true
+  cc:  true
+
+  # NETWORK
+  hc:  true
+  str:  false
+  sr:  true
