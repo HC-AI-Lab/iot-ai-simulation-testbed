@@ -63,6 +63,7 @@ uint32_t status_parent_switches = 0;
 uint8_t  status_global_stop     = 0;   /* set by simulation.js */
 static uint8_t wrapup_done      = 0;
 
+// Must match the struct in node.c (64-byte payload)
 typedef struct {
   uint32_t t_sent;
   uint16_t origin_id;

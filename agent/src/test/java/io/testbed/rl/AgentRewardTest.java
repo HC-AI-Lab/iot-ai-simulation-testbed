@@ -25,23 +25,24 @@ class AgentRewardTest {
         Agent agent = new Agent(4, etxOnlyMask(), 2000.0);
 
         int moteId = 1;
-        int[] candIds = {100};
-        boolean[] valid = {true, false, false, false};
+        // All four candidates identical and valid, since action selection is unmasked
+        int[] candIds = {100, 101, 102, 103};
+        boolean[] valid = {true, true, true, true};
         Agent.Counters ctrs = new Agent.Counters();
 
-        // Phase 1: the only candidate parent looks great (no loss, full energy).
-        double[][] s1 = {{0.1}};
-        double[] hc1 = {2.0};
-        double[] re1 = {2000.0};
-        double[] ql1 = {0.0};
+        // Phase 1: every candidate parent looks great (no loss, full energy).
+        double[][] s1 = {{0.1}, {0.1}, {0.1}, {0.1}};
+        double[] hc1 = {2.0, 2.0, 2.0, 2.0};
+        double[] re1 = {2000.0, 2000.0, 2000.0, 2000.0};
+        double[] ql1 = {0.0, 0.0, 0.0, 0.0};
         agent.decide(moteId, s1, valid, ctrs, candIds, hc1, re1, ql1);
 
-        // Reality between phase 1 and phase 2: that same parent's queue
+        // Reality between phase 1 and phase 2: every candidate's queue
         // collapses (qlr jumps to 0.9) by the time the next phase begins.
-        double[][] s2 = {{0.1}};
-        double[] hc2 = {2.0};
-        double[] re2 = {2000.0};
-        double[] ql2 = {0.9};
+        double[][] s2 = {{0.1}, {0.1}, {0.1}, {0.1}};
+        double[] hc2 = {2.0, 2.0, 2.0, 2.0};
+        double[] re2 = {2000.0, 2000.0, 2000.0, 2000.0};
+        double[] ql2 = {0.9, 0.9, 0.9, 0.9};
 
         agent.endPhase();
         agent.decide(moteId, s2, valid, ctrs, candIds, hc2, re2, ql2);
@@ -73,17 +74,18 @@ class AgentRewardTest {
         Agent agent = new Agent(4, etxOnlyMask(), 2000.0);
 
         int moteId = 7;
-        int[] candIds = {200};
-        boolean[] valid = {true, false, false, false};
+        // All four candidates identical (see test above)
+        int[] candIds = {200, 201, 202, 203};
+        boolean[] valid = {true, true, true, true};
         Agent.Counters ctrs = new Agent.Counters();
-        double[][] s = {{0.1}};
-        double[] hc = {1.0};
-        double[] re = {2000.0};
+        double[][] s = {{0.1}, {0.1}, {0.1}, {0.1}};
+        double[] hc = {1.0, 1.0, 1.0, 1.0};
+        double[] re = {2000.0, 2000.0, 2000.0, 2000.0};
 
         double[] qlrByPhase = {0.0, 0.2, 0.9, 0.1};
 
         for (double qlr : qlrByPhase) {
-            agent.decide(moteId, s, valid, ctrs, candIds, hc, re, new double[]{qlr});
+            agent.decide(moteId, s, valid, ctrs, candIds, hc, re, new double[]{qlr, qlr, qlr, qlr});
             agent.endPhase();
         }
 

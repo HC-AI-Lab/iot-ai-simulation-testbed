@@ -333,13 +333,20 @@ function rankToHops(rank){
   return Math.floor((rank - RPL_ROOT_RANK)/RPL_MIN_HOPRANKINC);
 }
 
-// Use this wherever a hop-count FEATURE OR REWARD VALUE is needed (not just
-// diagnostics) -- substitutes a fixed worst-case value for the invalid
-// sentinel so it scales to a distinct, learnable "maximally bad" signal
-// instead of collapsing back into a real hop-count range.
+// Hop count for the HC state feature; invalid ranks map to HOP_INVALID_FALLBACK
 function rankToHopsOrWorstCase(rank){
   var hops = rankToHops(rank);
   return (hops < 0) ? HOP_INVALID_FALLBACK : hops;
+}
+
+// Continuous path cost from RPL rank, used for the reward rank term (Eq. 11)
+function rankToPathCost(rank){
+  if(rank < RPL_ROOT_RANK || rank >= RPL_INFINITE_RANK) return -1;
+  return (rank - RPL_ROOT_RANK) / RPL_MIN_HOPRANKINC;
+}
+function rankToPathCostOrWorstCase(rank){
+  var cost = rankToPathCost(rank);
+  return (cost < 0) ? HOP_INVALID_FALLBACK : cost;
 }
 // Calibrated to this project's actual UDGM radio config (transmitting_range
 // 150m, interference_range 160m -> SS_STRONG=-10dBm .. SS_WEAK=-95dBm, per
@@ -527,8 +534,9 @@ function buildCandidateMatrixFor(mote, candIds, candEtx){
     // qo = status_qo (live queue occupancy, 0..QUEUEBUF_CONF_NUM), matching
     // the paper's QU(a) = q/Q congestion term (Eq. 12) -- NOT status_qlr,
     // which is a cumulative-since-boot loss ratio the paper doesn't use here.
+    // hc for the reward uses the continuous path cost (Eq. 11)
     if(pm){
-      hcArr.push(rankToHopsOrWorstCase(getInt160(pm,"status_rank")));
+      hcArr.push(rankToPathCostOrWorstCase(getInt160(pm,"status_rank")));
       reArr.push(getDouble0(pm,"status_residual_energy"));
       qoArr.push(getInt320(pm,"status_qo"));
     } else {
@@ -608,8 +616,18 @@ function decideAndSetParentFor(mote){
   );
 
   var idx = (typeof choice==="number") ? (choice|0) : 0;
-  if(idx<0 || idx>=candIds.length) idx=0;
-  
+
+  // Invalid slot: keep the current parent (Lei & Liu 2024, Algorithm 2)
+  if (idx < 0 || idx >= candIds.length) {
+    if (DEBUG_ON && mid === DEBUG_NODE_ID) {
+      log.log("DBG_CHOICE node="+mid+" phase="+_phase+
+              " idx="+idx+" INVALID -- keeping current parent\n");
+    }
+    dbgOnce(mid, mats, candIds, candEtx, valid, idx);
+    setInt8(mote,"agent_waiting",0);
+    return;
+  }
+
   if (DEBUG_ON && mid === DEBUG_NODE_ID) {
   log.log("DBG_CHOICE node="+mid+" phase="+_phase+
           " idx="+idx+" parent="+candIds[idx]+"\n");

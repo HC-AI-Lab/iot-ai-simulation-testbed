@@ -49,6 +49,7 @@
 #define E_ELEC          50e-9
 #define EPS_FS          10e-12
 #define EPS_MP          10e-12
+// 64-byte payload: 128 bytes exceeds the 802.15.4 frame and forces 6LoWPAN fragmentation
 #define PKT_BITS       (64*8)
 
 /* ==== Parent table ==== */
@@ -124,6 +125,7 @@ typedef enum {
   END_GLOBAL = 3
 } end_reason_t;
 
+// Must match the struct in sink.c
 typedef struct {
   uint32_t t_sent;
   uint16_t origin_id;

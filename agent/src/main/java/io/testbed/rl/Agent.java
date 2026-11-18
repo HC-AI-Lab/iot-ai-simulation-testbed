@@ -155,7 +155,7 @@ public class Agent implements Serializable {
 
     private double betaStart = 0.40, betaEnd = 1.00;
     private int betaAnneal = 500;
-    private double perBeta = betaStart; // NOTE: not yet used in loss weighting
+    private double perBeta = betaStart; // Eq. 22 IS-weight exponent; applied in trainOneBatch()
 
     private double gamma = 0.90;
     private int batchSize = 32;
@@ -166,6 +166,7 @@ public class Agent implements Serializable {
     private long policyEvalStates = 0;
     private long policyEvalChoiceStates = 0;
     private long policyEvalGreedyTop1 = 0;
+    private long policyEvalInvalidPicks = 0;
     private double policyEvalGreedyRewardSum = 0.0;
     private double policyEvalBestRewardSum = 0.0;
 
@@ -222,7 +223,8 @@ public class Agent implements Serializable {
             new NeuralNetConfiguration.Builder()
                 .seed(SEED)
                 .optimizationAlgo(OptimizationAlgorithm.STOCHASTIC_GRADIENT_DESCENT)
-                .updater(new Adam(1e-3))
+                // Learning rate 0.01 (Lei & Liu 2024, Table 1)
+                .updater(new Adam(1e-2))
                 .convolutionMode(ConvolutionMode.Same)
                 .graphBuilder()
                 .addInputs("input")
@@ -281,10 +283,11 @@ public class Agent implements Serializable {
         }
 
         double[] q = qValues(online, flat);
-        int greedy = argmaxMasked(q, valid);
+        // Eq. 28: epsilon-greedy over all k actions, including invalid slots
+        int greedy = argmax(q);
         trackPolicyEvidence(valid, candIds, hcArr, reArr, qoArr, greedy);
         int action = (rnd.nextDouble() < epsilon)
-                ? randomValid(valid)
+                ? rnd.nextInt(k)
                 : greedy;
 
 		// DEBUG line:
@@ -361,6 +364,17 @@ public class Agent implements Serializable {
             idx[i] = lowerBound(pref, u);
         }
 
+        // Eq. 22: PER importance-sampling weights, normalized by the batch max
+        double[] isW = new double[bs];
+        double maxIsW = 0.0;
+        for (int i = 0; i < bs; i++) {
+            double Pj = (c > 0) ? (p[idx[i]] / c) : (1.0 / D);
+            double w = Math.pow(D * Pj, -perBeta);
+            isW[i] = w;
+            if (w > maxIsW) maxIsW = w;
+        }
+        for (int i = 0; i < bs; i++) isW[i] = (maxIsW > 0) ? (isW[i] / maxIsW) : 1.0;
+
         INDArray X    = Nd4j.create(bs, 1, k, Factive);
         INDArray Yadv = Nd4j.create(bs, k);
         INDArray Yval = Nd4j.create(bs, 1);
@@ -386,7 +400,8 @@ public class Agent implements Serializable {
                 targetQ = t.r;
             } else {
                 double[] Qn = qValues(online, t.s2);
-                int aStar = argmaxMasked(Qn, t.valid2);
+                // Eq. 18: argmax over all k actions
+                int aStar = argmax(Qn);
 
                 INDArray[] outT = target.output(false, conv(t.s2));
                 double[] At = outT[0].toDoubleVector();
@@ -403,11 +418,16 @@ public class Agent implements Serializable {
 
             newP[i] = Math.abs(td) + 1e-3;
 
+            // Apply IS weight w to the TD update: label = pred + w * (target - pred)
+            double w = isW[i];
+
             double[] A_lbl = Arrays.copyOf(A, k);
-            A_lbl[a] = targetQ - V + meanA;
+            double fullTargetA = targetQ - V + meanA;
+            A_lbl[a] = A[a] + w * (fullTargetA - A[a]);
             Yadv.getRow(i).assign(Nd4j.create(A_lbl));
 
-            double V_lbl = targetQ - (A[a] - meanA);
+            double fullTargetV = targetQ - (A[a] - meanA);
+            double V_lbl = V + w * (fullTargetV - V);
             Yval.putScalar(i, 0, V_lbl);
         }
 
@@ -507,6 +527,10 @@ public class Agent implements Serializable {
         policyEvalStates++;
 
         int upper = Math.min(k, candidates);
+
+        // Count greedy picks of invalid slots
+        if (greedy < 0 || greedy >= upper) policyEvalInvalidPicks++;
+
         int validCount = 0;
         int best = -1;
         double bestReward = Double.NEGATIVE_INFINITY;
@@ -537,7 +561,11 @@ public class Agent implements Serializable {
         StringBuilder sb = new StringBuilder();
         sb.append("POLICY_EVAL phase=").append(phase)
           .append(" states=").append(policyEvalStates)
-          .append(" choiceStates=").append(policyEvalChoiceStates);
+          .append(" choiceStates=").append(policyEvalChoiceStates)
+          .append(" invalidPicks=").append(policyEvalInvalidPicks)
+          .append(" invalidPickRate=").append(policyEvalStates > 0
+                  ? String.format("%.3f", (double) policyEvalInvalidPicks / policyEvalStates)
+                  : "0.000");
 
         if (policyEvalChoiceStates > 0) {
             double meanGreedy = policyEvalGreedyRewardSum / policyEvalChoiceStates;
@@ -560,6 +588,7 @@ public class Agent implements Serializable {
         policyEvalStates = 0;
         policyEvalChoiceStates = 0;
         policyEvalGreedyTop1 = 0;
+        policyEvalInvalidPicks = 0;
         policyEvalGreedyRewardSum = 0.0;
         policyEvalBestRewardSum = 0.0;
     }
@@ -647,6 +676,9 @@ public class Agent implements Serializable {
                                  int[] candIds,
                                  double[] hcArr, double[] reArr, double[] qoArr)
     {
+        // Eq. 10: reward -1 for an invalid slot (parentId stays 0)
+        if (ep.parentId == 0) return -1.0;
+
         int idx = -1;
         for (int i=0;i<candIds.length;i++)
             if (candIds[i] == ep.parentId) idx = i;
@@ -713,31 +745,14 @@ public class Agent implements Serializable {
         return v==null?null:Arrays.copyOf(v,v.length);
     }
 
-    // FIX: robust to valid.length < k
-    private static int argmaxMasked(double[] q, boolean[] valid){
-        int b=-1;
-        double bv=Double.NEGATIVE_INFINITY;
-        for (int i=0;i<q.length;i++){
-            boolean ok = (valid == null) || (i < valid.length && valid[i]);
-            if (ok){
-                if (q[i]>bv){ bv=q[i]; b=i; }
-            }
+    // Argmax over all k actions (Eq. 18, Eq. 28)
+    private static int argmax(double[] q){
+        int b = 0;
+        double bv = q[0];
+        for (int i = 1; i < q.length; i++) {
+            if (q[i] > bv) { bv = q[i]; b = i; }
         }
-        return (b<0)?0:b;
-    }
-
-    // FIX: robust to valid.length < k
-    private int randomValid(boolean[] valid){
-        if (valid == null) {
-            return rnd.nextInt(k);
-        }
-        List<Integer> L = new ArrayList<>();
-        for (int i=0;i<k;i++) {
-            if (i < valid.length && valid[i]) {
-                L.add(i);
-            }
-        }
-        return L.isEmpty() ? 0 : L.get(rnd.nextInt(L.size()));
+        return b;
     }
 
     private static int lowerBound(double[] a, double x){
