@@ -17,8 +17,8 @@ CONTIKI_SUBMODULE="contiki-ng"
 CONTIKI_DIR="$REPO_ROOT/$CONTIKI_SUBMODULE"
 COOJA_SUBMODULE="contiki-ng/tools/cooja"
 COOJA_DIR="$REPO_ROOT/$COOJA_SUBMODULE"
-EXPECTED_CONTIKI_REMOTE="https://github.com/HI-AI-Lab/contiki-ng.git"
-EXPECTED_REMOTE="https://github.com/HI-AI-Lab/cooja.git"
+EXPECTED_CONTIKI_REMOTE="https://github.com/HC-AI-Lab/contiki-ng.git"
+EXPECTED_REMOTE="https://github.com/HC-AI-Lab/cooja.git"
 
 fail() {
     echo "[ERROR] $1" >&2
@@ -54,7 +54,7 @@ ensure_cooja_ready() {
     actual_contiki_remote="$(git -C "$CONTIKI_DIR" remote get-url origin 2>/dev/null || true)"
 
     case "$actual_contiki_remote" in
-        *HI-AI-Lab/contiki-ng.git|*HI-AI-Lab/contiki-ng)
+        *HC-AI-Lab/contiki-ng.git|*HC-AI-Lab/contiki-ng)
             ;;
         *)
             fail "Unexpected Contiki-NG remote '$actual_contiki_remote'. Expected $EXPECTED_CONTIKI_REMOTE."
@@ -69,7 +69,7 @@ ensure_cooja_ready() {
     actual_remote="$(git -C "$COOJA_DIR" remote get-url origin 2>/dev/null || true)"
 
     case "$actual_remote" in
-        *HI-AI-Lab/cooja.git|*HI-AI-Lab/cooja)
+        *HC-AI-Lab/cooja.git|*HC-AI-Lab/cooja)
             ;;
         *)
             fail "Unexpected Cooja remote '$actual_remote'. Expected $EXPECTED_REMOTE."
