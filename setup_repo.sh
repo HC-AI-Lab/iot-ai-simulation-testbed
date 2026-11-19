@@ -4,8 +4,8 @@ set -euo pipefail
 REPO_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 CONTIKI_DIR="$REPO_ROOT/contiki-ng"
 COOJA_DIR="$CONTIKI_DIR/tools/cooja"
-EXPECTED_CONTIKI_REMOTE="https://github.com/HI-AI-Lab/contiki-ng.git"
-EXPECTED_COOJA_REMOTE="https://github.com/HI-AI-Lab/cooja.git"
+EXPECTED_CONTIKI_REMOTE="https://github.com/HC-AI-Lab/contiki-ng.git"
+EXPECTED_COOJA_REMOTE="https://github.com/HC-AI-Lab/cooja.git"
 
 say() {
     echo "[setup] $1"

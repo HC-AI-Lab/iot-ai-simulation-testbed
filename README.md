@@ -50,8 +50,8 @@ filesystem.
 
 This repository uses pinned lab forks:
 
-- `contiki-ng/` from `https://github.com/HI-AI-Lab/contiki-ng.git`
-- `contiki-ng/tools/cooja/` from `https://github.com/HI-AI-Lab/cooja.git`
+- `contiki-ng/` from `https://github.com/HC-AI-Lab/contiki-ng.git`
+- `contiki-ng/tools/cooja/` from `https://github.com/HC-AI-Lab/cooja.git`
 
 Do not manually clone upstream Contiki-NG or Cooja into this repository. Use
 `setup_repo.sh` so the expected paths and pinned checkouts are initialized
@@ -62,7 +62,7 @@ correctly.
 Clone the repository:
 
 ```bash
-git clone https://github.com/HI-AI-Lab/iot-ai-simulation-testbed.git
+git clone https://github.com/HC-AI-Lab/iot-ai-simulation-testbed.git
 cd iot-ai-simulation-testbed
 ```
 
